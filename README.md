@@ -1,10 +1,20 @@
 # Apps needed
 
+- yay
 - kitty
 - bash
-- waybar or hyprpanel
+- waybar
+- walker
+- wallrizz
 - yazi and/or nautilus
-
+- pipewire & wireplumber
+- Nerd Font or FontAwesome
+- qt5/6-wayland / hyprpolkitagent / XDPH
+- hypridle / hyprsunset / hyprlock / hyprcursor 
+- no login manager / disk encyption
+- fastfetch / fzf /
+- bluetui /
+- btop
 
 # Pref apps
 
