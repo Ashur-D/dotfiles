@@ -1,1 +1,24 @@
-Theres nothing yet but im making this to remind my self to make a hyprland insipred setup from others dotfiles as well as some of my own scripts.
+# Apps needed
+
+- kitty
+- bash
+- waybar or hyprpanel
+- yazi and/or nautilus
+
+
+# Pref apps
+
+- Steam
+- floorp-bin
+- vesktop-bin
+- astroterm
+- asciinema
+- gdu
+- ncdu
+- cbonsai
+- catnap-git
+- auto-cpufreq
+- stormy
+- stacer-bin
+- obsidian
+- localsend-bin
