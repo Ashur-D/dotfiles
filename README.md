@@ -39,3 +39,4 @@
 - localsend-bin
 - efibootmgr
 - git / lazygit / openssh
+- gamescope
