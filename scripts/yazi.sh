@@ -10,13 +10,6 @@ if ! pacman -Q yazi &>/dev/null; then
   exit 0
 fi
 
-# Prompt user once for the full setup
-read -rp "Yazi is installed. Do you want to copy Yazi config, plugins add the shell wrapper to your ~/.bashrc? (y/n): " choice
-if [[ ! "$choice" =~ ^[Yy]$ ]]; then
-  echo "Skipping Yazi setup."
-  exit 0
-fi
-
 # Create destination directory
 mkdir -p "$DEST_DIR"
 
