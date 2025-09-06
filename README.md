@@ -8,7 +8,7 @@ waybar
 walker
 wallrizz
 limine
-btop
+btop / bottom
 mako
 neovim / lazyvim / astrovim
 yazi and/or nautilus
@@ -17,10 +17,11 @@ Nerd Font or FontAwesome
 qt5/6-wayland / hyprpolkitagent / XDPH
 hypridle / hyprsunset / hyprlock / hyprcursor / hypr-qtutils / 
 no login manager / disk encyption
-fastfetch / fzf / eza / fd / gum / zoxide 
+fastfetch / fzf / eza / fd / gum / zoxide / starship
 bluetui /
 NVIDIA: egl-wayland,libva-nvidia-driver / lib32-nvidia-utils / nvidia-open-dkms / nvidia-utils
-wl -screenrec / clip-clipboard / clip-persist 
+wl -screenrec / clip-clipboard / clip-persist
+pywal for themes?
 ```
 
 # Pref apps
