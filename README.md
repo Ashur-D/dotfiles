@@ -27,7 +27,7 @@ pywal for themes?
 # Pref apps
 ```
 Steam
-floorp-bin
+browser floorp / zen / helium
 vesktop-bin
 astroterm
 asciinema
