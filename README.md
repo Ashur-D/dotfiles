@@ -22,6 +22,7 @@ bluetui /
 NVIDIA: egl-wayland,libva-nvidia-driver / lib32-nvidia-utils / nvidia-open-dkms / nvidia-utils
 wl -screenrec / clip-clipboard / clip-persist
 pywal for themes?
+swayosd?
 ```
 
 # Pref apps
