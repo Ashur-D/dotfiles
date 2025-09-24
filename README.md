@@ -44,4 +44,5 @@ efibootmgr
 git / lazygit / openssh
 gamescope
 terminaltexteffects
+NetSonar
 ```
