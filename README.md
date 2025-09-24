@@ -43,5 +43,5 @@ localsend-bin
 efibootmgr
 git / lazygit / openssh
 gamescope
-virt-manager
+terminaltexteffects
 ```
