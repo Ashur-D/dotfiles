@@ -1,19 +1,19 @@
 # Apps needed
 
 ```
-yay
+yay (need to build)
 kitty
 bash
 waybar
 walker
-wallrizz
-limine
+wallrizz (need to change)
+limine (pick when installing arch)
 btop / bottom
 mako
-neovim / lazyvim / astrovim
-yazi and/or nautilus
+neovim / lazyvim / astrovim (most likely neovim)
+yazi and maybe nautilus
 pipewire & wireplumber
-Nerd Font or FontAwesome
+cascadia mono nerd font
 qt5/6-wayland / hyprpolkitagent / XDPH
 hypridle / hyprsunset / hyprlock / hyprcursor / hypr-qtutils / 
 no login manager / disk encyption
