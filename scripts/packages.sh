@@ -1,13 +1,16 @@
 #!/bin/bash
 
+# ==========================
+# Install packages
+# ==========================
+
+
 # List of packages to install
 packages=(
-  floorp-bin
+  zen-browser-bin
   vesktop-bin
   steam
   yazi
-  obsidian
-  localsend-bin
 )
 
 # Check for yay
