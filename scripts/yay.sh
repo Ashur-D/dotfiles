@@ -1,3 +1,9 @@
+#!/bin/bash
+
+# ==========================
+# Build AUR helper
+# ==========================
+
 if ! command -v yay &>/dev/null; then
   echo "Installing yay AUR helper..."
   sudo pacman -S --needed git base-devel --noconfirm
