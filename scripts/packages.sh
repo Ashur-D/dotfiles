@@ -7,6 +7,7 @@
 
 # List of packages to install
 packages=(
+  hyprland
   zen-browser-bin
   vesktop-bin
   steam
