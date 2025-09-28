@@ -18,5 +18,7 @@ mkdir -p "$DEST_DIR"
 
 # Copy all contents from source to destination
 cp -a "$SOURCE_DIR/"* "$DEST_DIR/"
+cp -a "dotfiles/.bashrc" "$HOME"
+
 echo "✅ Configs copied successfully."
 
