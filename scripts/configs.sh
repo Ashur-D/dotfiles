@@ -1,15 +1,22 @@
+#!/bin/bash
+
 # ==========================
-# move configs
+# Move config files
 # ==========================
 
-# Define source and destination directories
-SOURCE_DIR="$HOME/hypr-dotfiles/.configs"
-DEST_DIR="$HOME/Downloads"
+SOURCE_DIR="$HOME/dotfiles/.configs"
+DEST_DIR="$HOME/.config/"
 
-# Create destination directory if it doesn't exist
+# Check if source exists
+if [ ! -d "$SOURCE_DIR" ]; then
+  echo "❌ Source directory does not exist: $SOURCE_DIR"
+  exit 1
+fi
+
+# Create destination if it doesn't exist
 mkdir -p "$DEST_DIR"
 
-# Move all files and folders from .configs to ~/.config
-mv -v "$SOURCE_DIR"/* "$DEST_DIR"/
+# Copy all contents from source to destination
+cp -a "$SOURCE_DIR/"* "$DEST_DIR/"
+echo "✅ Configs copied successfully."
 
-echo "✅ All files from .configs have been moved to ~/.config"
