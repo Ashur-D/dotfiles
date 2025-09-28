@@ -8,7 +8,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 LOGFILE=~/Downloads/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log
 exec > >(tee -a "$LOGFILE") 2>&1
-echo "Log saved to: $LOGFILE "
+echo "Log saving to: $LOGFILE "
 
 # ==========================
 # clears before starting, quits if an error occurs and updates the system
@@ -51,3 +51,5 @@ chmod +x "$SCRIPT_DIR/configs.sh"
 
 chmod +x "$SCRIPT_DIR/cappuccincursor.sh"
 "$SCRIPT_DIR/cappuccincursor.sh"
+
+#=============================
