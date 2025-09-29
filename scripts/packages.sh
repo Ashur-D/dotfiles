@@ -8,11 +8,11 @@
 # List of packages to install
 packages=(
   #Nvidia
-  egl-wayland-git
-  libva-nvidia-driver-git
-  lib32-nvidia-utils-git
-  nvidia-open-dkms-git
-  nvidia-utils-git
+  # egl-wayland-git
+  # libva-nvidia-driver-git
+  # lib32-nvidia-utils-git
+  # nvidia-open-dkms-git
+  # nvidia-utils-git
   #terminal
   fastfetch
   eza-git
