@@ -8,6 +8,7 @@
 # List of packages to install
 packages=(
   hyprland
+  visual-studio-code-bin
   zen-browser-bin
   vesktop-bin
   steam
