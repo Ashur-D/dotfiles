@@ -1,25 +1,25 @@
 # Apps needed
 
 ```
-yay (need to build)
-kitty
-bash
-waybar
-walker
-wallrizz (need to change)
+yay | done
+kitty | done
+bash | done
+waybar | done
+walker | done
 limine (pick when installing arch)
-btop / bottom
-mako
-neovim / lazyvim / astrovim (most likely neovim)
-yazi and maybe nautilus
-pipewire & wireplumber
-cascadia mono nerd font
-qt5/6-wayland / hyprpolkitagent / XDPH
-hypridle / hyprsunset / hyprlock / hyprcursor / hypr-qtutils / 
+btop / bottom | done 
+mako | done
+lazyvim | done
+yazi (maybe nautilus) | done
+pipewire & wireplumber | done
+cascadia mono nerd font | done
+qt5/6-wayland | done 
+XDPH | done
+hyprpolkitagent / hypridle / hyprsunset / hyprlock / hyprcursor / hypr-qtutils / hyprpaper / | done 
 no login manager / disk encyption
-fastfetch / fzf / eza / fd / gum / zoxide / starship
+fastfetch / fzf / eza / fd / gum / zoxide / starship | done
 bluetui /
-NVIDIA: egl-wayland,libva-nvidia-driver / lib32-nvidia-utils / nvidia-open-dkms / nvidia-utils
+NVIDIA: egl-wayland / libva-nvidia-driver / lib32-nvidia-utils / nvidia-open-dkms / nvidia-utils | done
 wl -screenrec / clip-clipboard / clip-persist
 pywal for themes?
 swayosd?
