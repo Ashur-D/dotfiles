@@ -39,6 +39,13 @@ chmod +x "$SCRIPT_DIR/packages.sh"
 "$SCRIPT_DIR/packages.sh"
 
 # ==========================
+# Optional: List of nvidia packages
+# ==========================
+
+chmod +x "$SCRIPT_DIR/nvidia.sh"
+"$SCRIPT_DIR/nvidia.sh"
+
+# ==========================
 # move configs
 # ==========================
 
