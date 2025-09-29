@@ -28,7 +28,8 @@ swayosd?
 # Pref apps
 ```
 Steam
-browser floorp / zen / helium
+zen
+vscode
 vesktop-bin
 astroterm
 asciinema
@@ -47,6 +48,3 @@ gamescope
 terminaltexteffects
 NetSonar
 ```
-# Notes to self
-- make a main script with only bash
-- later on add a menu using walker like omarchy?
