@@ -23,7 +23,7 @@ packages=(
   fzf-igt
   #main
   hyprpaper-git
-  hyprland-qtutils-git
+  # hyprland-qtutils-git
   hyprcursor-git
   hyprlock-git
   hyprsunset-git
