@@ -1,0 +1,12 @@
+CHANGELOG.md
+README.md
+webpack.config.js
+LICENSE
+.gitignore
+tsconfig.json
+tsconfig.extension.json
+.eslintrc.json
+out
+media
+.vscode
+tsconfig.panel.json

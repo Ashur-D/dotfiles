@@ -1,0 +1,5 @@
+[docstring_to_markdown]
+cpython = docstring_to_markdown.cpython:CPythonConverter
+google = docstring_to_markdown.google:GoogleConverter
+plain = docstring_to_markdown.plain:PlainTextConverter
+rst = docstring_to_markdown.rst:ReStructuredTextConverter

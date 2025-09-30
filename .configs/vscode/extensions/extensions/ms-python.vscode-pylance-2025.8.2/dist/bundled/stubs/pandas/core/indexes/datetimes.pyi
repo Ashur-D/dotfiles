@@ -1,0 +1,218 @@
+from collections.abc import (
+    Hashable,
+    Sequence,
+)
+from datetime import (
+    datetime,
+    timedelta,
+    tzinfo as _tzinfo,
+)
+from typing import (
+    final,
+    overload,
+)
+
+import numpy as np
+from pandas import (
+    DataFrame,
+    Index,
+    Timedelta,
+    TimedeltaIndex,
+    Timestamp,
+)
+from pandas.core.indexes.accessors import DatetimeIndexProperties
+from pandas.core.indexes.datetimelike import DatetimeTimedeltaMixin
+from pandas.core.series import (
+    TimedeltaSeries,
+    TimestampSeries,
+)
+from typing_extensions import Self
+
+from pandas._libs.tslibs.offsets import DateOffset
+from pandas._typing import (
+    AxesData,
+    DateAndDatetimeLike,
+    Dtype,
+    Frequency,
+    IntervalClosedType,
+    TimeUnit,
+    TimeZones,
+    np_ndarray_dt,
+    np_ndarray_td,
+)
+
+from pandas.core.dtypes.dtypes import DatetimeTZDtype
+
+from pandas.tseries.offsets import BaseOffset
+
+class DatetimeIndex(
+    DatetimeTimedeltaMixin[Timestamp, np.datetime64], DatetimeIndexProperties
+):
+    def __new__(
+        cls,
+        data: AxesData,
+        freq: Frequency = ...,
+        tz: TimeZones = ...,
+        ambiguous: str = ...,
+        dayfirst: bool = ...,
+        yearfirst: bool = ...,
+        dtype: Dtype = ...,
+        copy: bool = ...,
+        name: Hashable = ...,
+    ) -> Self: ...
+    def __reduce__(self): ...
+    # various ignores needed for mypy, as we do want to restrict what can be used in
+    # arithmetic for these types
+    @overload  # type: ignore[override]
+    def __add__(self, other: TimedeltaSeries) -> TimestampSeries: ...
+    @overload
+    def __add__(  # pyright: ignore[reportIncompatibleMethodOverride]
+        self, other: timedelta | Timedelta | TimedeltaIndex | BaseOffset
+    ) -> DatetimeIndex: ...
+    @overload  # type: ignore[override]
+    def __sub__(self, other: TimedeltaSeries) -> TimestampSeries: ...
+    @overload
+    def __sub__(
+        self,
+        other: timedelta | np.timedelta64 | np_ndarray_td | TimedeltaIndex | BaseOffset,
+    ) -> DatetimeIndex: ...
+    @overload
+    def __sub__(  # pyright: ignore[reportIncompatibleMethodOverride]
+        self, other: datetime | np.datetime64 | np_ndarray_dt | DatetimeIndex
+    ) -> TimedeltaIndex: ...
+    @final
+    def to_series(self, index=..., name: Hashable = ...) -> TimestampSeries: ...
+    def snap(self, freq: str = ...): ...
+    def slice_indexer(self, start=..., end=..., step=...): ...
+    def searchsorted(self, value, side: str = ..., sorter=...): ...
+    @property
+    def inferred_type(self) -> str: ...
+    def indexer_at_time(self, time, asof: bool = ...): ...
+    def indexer_between_time(
+        self,
+        start_time: datetime | str,
+        end_time: datetime | str,
+        include_start: bool = True,
+        include_end: bool = True,
+    ): ...
+    def to_julian_date(self) -> Index[float]:
+        """
+Convert Datetime Array to float64 ndarray of Julian Dates.
+0 Julian date is noon January 1, 4713 BC.
+https://en.wikipedia.org/wiki/Julian_day
+        """
+        pass
+    def isocalendar(self) -> DataFrame:
+        """
+Calculate year, week, and day according to the ISO 8601 standard.
+
+Returns
+-------
+DataFrame
+    With columns year, week and day.
+
+See Also
+--------
+Timestamp.isocalendar : Function return a 3-tuple containing ISO year,
+    week number, and weekday for the given Timestamp object.
+datetime.date.isocalendar : Return a named tuple object with
+    three components: year, week and weekday.
+
+Examples
+--------
+>>> idx = pd.date_range(start='2019-12-29', freq='D', periods=4)
+>>> idx.isocalendar()
+            year  week  day
+2019-12-29  2019    52    7
+2019-12-30  2020     1    1
+2019-12-31  2020     1    2
+2020-01-01  2020     1    3
+>>> idx.isocalendar().week
+2019-12-29    52
+2019-12-30     1
+2019-12-31     1
+2020-01-01     1
+Freq: D, Name: week, dtype: UInt32
+        """
+        pass
+    @property
+    def tzinfo(self) -> _tzinfo | None: ...
+    @property
+    def dtype(self) -> np.dtype | DatetimeTZDtype: ...
+    def shift(
+        self, periods: int = 1, freq: DateOffset | Timedelta | str | None = None
+    ) -> Self: ...
+
+@overload
+def date_range(
+    start: str | DateAndDatetimeLike,
+    end: str | DateAndDatetimeLike,
+    freq: str | timedelta | Timedelta | BaseOffset | None = None,
+    tz: TimeZones = None,
+    normalize: bool = False,
+    name: Hashable | None = None,
+    inclusive: IntervalClosedType = "both",
+    unit: TimeUnit | None = None,
+) -> DatetimeIndex: ...
+@overload
+def date_range(
+    start: str | DateAndDatetimeLike,
+    end: str | DateAndDatetimeLike,
+    periods: int,
+    tz: TimeZones = None,
+    normalize: bool = False,
+    name: Hashable | None = None,
+    inclusive: IntervalClosedType = "both",
+    unit: TimeUnit | None = None,
+) -> DatetimeIndex: ...
+@overload
+def date_range(
+    start: str | DateAndDatetimeLike,
+    *,
+    periods: int,
+    freq: str | timedelta | Timedelta | BaseOffset | None = None,
+    tz: TimeZones = None,
+    normalize: bool = False,
+    name: Hashable | None = None,
+    inclusive: IntervalClosedType = "both",
+    unit: TimeUnit | None = None,
+) -> DatetimeIndex: ...
+@overload
+def date_range(
+    *,
+    end: str | DateAndDatetimeLike,
+    periods: int,
+    freq: str | timedelta | Timedelta | BaseOffset | None = None,
+    tz: TimeZones = None,
+    normalize: bool = False,
+    name: Hashable | None = None,
+    inclusive: IntervalClosedType = "both",
+    unit: TimeUnit | None = None,
+) -> DatetimeIndex: ...
+@overload
+def bdate_range(
+    start: str | DateAndDatetimeLike | None = ...,
+    end: str | DateAndDatetimeLike | None = ...,
+    periods: int | None = ...,
+    freq: str | timedelta | Timedelta | BaseOffset = ...,
+    tz: TimeZones = ...,
+    normalize: bool = ...,
+    name: Hashable | None = ...,
+    weekmask: str | None = ...,
+    holidays: None = ...,
+    inclusive: IntervalClosedType = ...,
+) -> DatetimeIndex: ...
+@overload
+def bdate_range(
+    start: str | DateAndDatetimeLike | None = ...,
+    end: str | DateAndDatetimeLike | None = ...,
+    periods: int | None = ...,
+    *,
+    freq: str | timedelta | Timedelta | BaseOffset,
+    tz: TimeZones = ...,
+    normalize: bool = ...,
+    name: Hashable | None = ...,
+    weekmask: str | None = ...,
+    holidays: Sequence[str | DateAndDatetimeLike],
+    inclusive: IntervalClosedType = ...,
+) -> DatetimeIndex: ...
