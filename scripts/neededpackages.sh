@@ -8,13 +8,13 @@
 # List of packages to install
 packages=(
   hyprland-git
-  #hyprpaper-git
-  #hyprland-qtutils-git
-  #hyprcursor-git
-  #hyprlock-git
-  #hyprsunset-git
-  #hypridle-git
-  #hyprpolkitagent-git
+  hyprpaper-git
+  hyprland-qtutils-git
+  hyprcursor-git
+  hyprlock-git
+  hyprsunset-git
+  hypridle-git
+  hyprpolkitagent-git
   xdg-desktop-portal-hyprland-git
   qt6-wayland
   qt5-wayland
