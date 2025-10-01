@@ -20,3 +20,5 @@ function y() {
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export BAT_THEME=ansi
+
+eval "$(starship init bash)"
