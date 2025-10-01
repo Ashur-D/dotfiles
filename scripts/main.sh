@@ -32,14 +32,14 @@ chmod +x "$SCRIPT_DIR/yay.sh"
 "$SCRIPT_DIR/yay.sh"
 
 # ==========================
-# Optional: List of packages and installation
+# List of needed packages installation
 # ==========================
 
-chmod +x "$SCRIPT_DIR/packages.sh"
-"$SCRIPT_DIR/packages.sh"
+chmod +x "$SCRIPT_DIR/neededpackages.sh"
+"$SCRIPT_DIR/neededpackages.sh"
 
 # ==========================
-# Optional: List of nvidia packages
+# Optional: Install Nvidia nvidia packages
 # ==========================
 
 chmod +x "$SCRIPT_DIR/nvidia.sh"
@@ -51,6 +51,15 @@ chmod +x "$SCRIPT_DIR/nvidia.sh"
 
 chmod +x "$SCRIPT_DIR/configs.sh"
 "$SCRIPT_DIR/configs.sh"
+
+
+# ==========================
+# optional: Install packages like browsers,file managers etc.
+# ==========================
+
+chmod +x "$SCRIPT_DIR/prefpackages.sh.sh"
+"$SCRIPT_DIR/prefpackages.sh.sh"
+
 
 # ==========================
 # Install custom cursor
