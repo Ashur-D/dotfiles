@@ -18,6 +18,10 @@ mkdir -p "$DEST_DIR"
 
 # Copy all contents from source to destination
 cp -a "$SOURCE_DIR/"* "$DEST_DIR/"
-cp -a "dotfiles/.bashrc" "$HOME"
+cp -a "$HOME/dotfiles/.bashrc" "$HOME"
+
+#lazyvim install
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 
 echo "✅ Configs copied successfully."
