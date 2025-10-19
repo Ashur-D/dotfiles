@@ -5,7 +5,7 @@ yay | done
 kitty | done
 bash | done
 waybar | done
-walker | done
+walker | done > planning to change to hyprlauncher
 limine (pick when installing arch)
 btop / bottom | done 
 mako | done
