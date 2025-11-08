@@ -12,6 +12,7 @@ packages=(
   steam
   yazi
   obsidian
+  zed-git
   localsend-bin
   btop
   bottom-git
