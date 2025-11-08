@@ -10,6 +10,10 @@
   "notification_panel": {
     "button": false
   },
+  "indent_guides": {
+  "background_coloring": "indent_aware",
+  "coloring": "indent_aware"
+  },
   "vim_mode": true,
   "scrollbar": {
     "show": "never"
