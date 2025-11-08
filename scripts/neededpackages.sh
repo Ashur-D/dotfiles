@@ -20,10 +20,10 @@ packages=(
   kitty-git # terminal
   qt6-wayland
   qt5-wayland
-  ttf-cascadia-mono-nerd
+  ttf-cascadia-mono-nerd # font
   wireplumber-git
   pipewire-git
-  neovim-git
+  neovim-git # editor
   mako-git # notifcation deamon
   waybar-git # topbar
   bluetui # bluetooth tui
