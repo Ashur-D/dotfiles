@@ -7,8 +7,6 @@
 
 # List of packages to install
 packages=(
-  kitty-git
-  #hypr
   hyprland-git
   hyprpaper-git
   #hyprland-qtutils-git
@@ -19,15 +17,15 @@ packages=(
   #hyprpolkitagent-git
   xdg-desktop-portal-hyprland-git
   #################################################
+  kitty-git # terminal
   qt6-wayland
   qt5-wayland
   ttf-cascadia-mono-nerd
   wireplumber-git
   pipewire-git
-  neovim-git 
+  neovim-git
   mako-git # notifcation deamon
   waybar-git # topbar
-  walker-bin # application launcher/dmenu > planning to change to hyprlauncher
   bluetui # bluetooth tui
   impala # wifi tui
   wiremix-git # audio tui
