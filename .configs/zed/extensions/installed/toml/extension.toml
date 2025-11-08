@@ -1,0 +1,25 @@
+id = "toml"
+name = "TOML"
+version = "1.0.0"
+schema_version = 1
+description = "TOML support."
+repository = "https://github.com/zed-extensions/toml"
+authors = ["Max Brunsfeld <max@zed.dev>", "Ammar Arif <evergreenkary@gmail.com>"]
+themes = []
+icon_themes = []
+languages = ["languages/toml"]
+capabilities = []
+
+[lib]
+
+[grammars.toml]
+repository = "https://github.com/tree-sitter/tree-sitter-toml"
+rev = "342d9be207c2dba869b9967124c679b5e6fd0ebe"
+
+[language_servers]
+
+[context_servers]
+
+[slash_commands]
+
+[indexed_docs_providers]
