@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "notification_panel": {
+    "button": false
+  },
+  "indent_guides": {
+  "background_coloring": "indent_aware",
+  "coloring": "indent_aware"
+  },
   "vim_mode": true,
   "scrollbar": {
     "show": "never"
@@ -32,9 +39,6 @@
   "tabs": {
     "git_status": false
   },
-  "preview_tabs": {
-    "enabled": true
-  },
   "tab_bar": {
     "show_nav_history_buttons": false,
     "show": true
@@ -47,7 +51,6 @@
     "show_project_items": false,
     "show_branch_name": false
   },
-  "bottom_dock_layout": "contained",
   "debugger": {
     "button": false
   },
@@ -67,9 +70,14 @@
   },
   "status_bar": {
     "cursor_position_button": false,
-    "active_language_button": true
+    "active_language_button": false
   },
   "project_panel": {
+    "scrollbar": {},
+    "git_status": true,
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "standard",
     "button": true
   },
   "buffer_line_height": "comfortable",
