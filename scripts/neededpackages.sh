@@ -9,12 +9,12 @@
 packages=(
   hyprland-git
   hyprpaper-git
-  #hyprland-qtutils-git
+  hyprland-qtutils-git
   hyprcursor-git
   hyprlock-git
   hyprsunset-git
   hypridle-git
-  #hyprpolkitagent-git
+  hyprpolkitagent-git
   xdg-desktop-portal-hyprland-git
   #################################################
   kitty-git # terminal
