@@ -31,6 +31,7 @@ packages=(
   openssh
   gamescope
   terminaltexteffects
+  systemctl-tui
   # NetSonar needs app image
   fastfetch
   eza-git
@@ -58,4 +59,4 @@ for package in "${packages[@]}"; do
       echo "Failed to install $package."
     fi
   fi
-done  
+done
