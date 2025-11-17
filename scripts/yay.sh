@@ -16,10 +16,10 @@ if ! command -v yay &>/dev/null; then
   fi
 
   cd yay || exit
-  echo "Building yay... yaaaaayyyyy"
+  echo "Building yay..."
   makepkg -si --noconfirm
   cd ..
   rm -rf yay
 else
-  echo "yay is already installed"
+  echo "yay is already installed."
 fi
