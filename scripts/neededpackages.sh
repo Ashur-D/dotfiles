@@ -21,8 +21,8 @@ packages=(
   qt6-wayland
   qt5-wayland
   ttf-cascadia-mono-nerd # font
-  wireplumber-git
-  pipewire-git
+  wireplumber-git # audio
+  pipewire-git # audio
   neovim-git # editor
   mako-git # notifcation deamon
   waybar-git # topbar
