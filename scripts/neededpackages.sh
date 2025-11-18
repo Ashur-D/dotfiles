@@ -7,6 +7,7 @@
 
 # List of packages to install
 packages=(
+    # hyprland
   hyprland-git
   hyprpaper-git
   hyprland-qtutils-git
