@@ -54,7 +54,7 @@ chmod +x "$SCRIPT_DIR/configs.sh"
 
 
 # ==========================
-# optional: Install packages like browsers,file managers etc.
+# Install packages like browsers,file managers etc.
 # ==========================
 
 chmod +x "$SCRIPT_DIR/prefpackages.sh.sh"
