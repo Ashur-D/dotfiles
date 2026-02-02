@@ -9,7 +9,7 @@ DEST_DIR="$HOME/.config/"
 
 # Check if source exists
 if [ ! -d "$SOURCE_DIR" ]; then
-  echo "❌ Source directory does not exist: $SOURCE_DIR"
+  echo "Source directory does not exist: $SOURCE_DIR"
   exit 1
 fi
 
@@ -24,4 +24,4 @@ cp -a "$HOME/dotfiles/.bashrc" "$HOME"
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
-echo "✅ Configs copied successfully."
+echo "Configs copied successfully."
