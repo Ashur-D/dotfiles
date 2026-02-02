@@ -18,7 +18,7 @@ unzip -oq "$CURSOR_ZIP_PATH" -d "$TEMP_UNZIP_DIR"
 
 # Remove existing theme if it exists
 if [ -d "$ICONS_DIR/$CURSOR_THEME_DIR" ]; then
-    echo "⚠️ Existing theme found at $ICONS_DIR/$CURSOR_THEME_DIR. Replacing..."
+    echo "Existing theme found at $ICONS_DIR/$CURSOR_THEME_DIR. Replacing..."
     rm -rf "$ICONS_DIR/$CURSOR_THEME_DIR"
 fi
 
@@ -35,4 +35,4 @@ cat >"$ICONS_DIR/default/index.theme" <<EOF
 Inherits=catppuccin-mocha-dark-cursors
 EOF
 
-echo "✅ Catppuccin Mocha Dark cursors installed and set as default (user level)."
+echo "Catppuccin Mocha Dark cursors installed and set as default (user level)."
