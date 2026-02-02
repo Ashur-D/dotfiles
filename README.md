@@ -2,12 +2,12 @@
 
 ```
 
-pywal for themes?
-swayosd?
-wlogout?
+pywal for themes
+swayosd
+wlogout
 limine (pick when installing arch)
-no login manager maybe SDDM?/ disk encyption
+no login manager, maybe SDDM?/disk encyption
 mpv for video player
 imv for image viewer
-look into hyprpanel?
+look into hyprpanel
 
