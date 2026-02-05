@@ -9,5 +9,5 @@ limine (pick when installing arch)
 no login manager, maybe SDDM?/disk encyption
 mpv for video player
 imv for image viewer
-look into hyprpanel
+use linux zen
 
