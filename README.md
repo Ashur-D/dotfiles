@@ -2,7 +2,7 @@
 
 ```
 
-pywal for themes
+https://github.com/InioX/matugen for themes
 swayosd
 wlogout
 limine (pick when installing arch)
