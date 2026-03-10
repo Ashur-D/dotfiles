@@ -9,5 +9,4 @@ limine (pick when installing arch)
 no login manager, maybe SDDM?/disk encyption
 mpv for video player
 imv for image viewer
-use linux zen
-
+use zen kernal
