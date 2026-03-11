@@ -42,8 +42,8 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 # List of needed packages installation
 # ==========================
 
-chmod +x "$SCRIPT_DIR/neededpackages.sh"
-"$SCRIPT_DIR/neededpackages.sh"
+chmod +x "$SCRIPT_DIR/core.sh"
+"$SCRIPT_DIR/core.sh"
 
 # ==========================
 # Optional: Install Nvidia packages
