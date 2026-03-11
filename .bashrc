@@ -22,3 +22,12 @@ export SUDO_EDITOR="$EDITOR"
 export BAT_THEME=ansi
 
 eval "$(starship init bash)"
+
+# aliases
+# git config --global alias.aa 'add .'
+# git config --global alias.p 'push'
+# git config --global alias.ci 'commit'
+
+alias ga='git add .'
+alias gp='git push'
+alias gc='git commit -m "updates"'

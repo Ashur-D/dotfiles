@@ -1,20 +1,20 @@
 #!/bin/bash
 
 # ==========================
-# Install hypr packges  
+# Install hypr packges
 # ==========================
 
 # List of packages to install
 packages=(
-  hyprland
-  hyprpaper
-  hyprland-qtutils
-  hyprcursor
-  hyprlock
-  hyprsunset
-  hypridle
-  hyprpolkitagent
-  xdg-desktop-portal-hyprland
+    hyprland
+    hyprpaper
+    hyprland-qtutils
+    hyprcursor
+    hyprlock
+    hyprsunset
+    hypridle
+    hyprpolkitagent
+    xdg-desktop-portal-hyprland
 )
 
 # Check for yay
