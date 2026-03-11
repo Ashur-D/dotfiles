@@ -1,29 +1,20 @@
 #!/bin/bash
 
 # ==========================
-# Install needed packages
+# Install hypr packges  
 # ==========================
 
 # List of packages to install
 packages=(
-  kitty # terminal
-  qt6-wayland
-  qt5-wayland
-  ttf-cascadia-mono-nerd # font
-  wireplumber # audio
-  pipewire # audio
-  neovim # editor
-  mako # notifcation deamon
-  waybar # topbar
-  bluetui # bluetooth tui
-  impala # wifi tui
-  wiremix # audio tui
-  gpu-screen-recorder # or wl-screenrec
-  slurp
-  wl-clipboard
-  wl-clip-persist
-  grim
-  satty
+  hyprland
+  hyprpaper
+  hyprland-qtutils
+  hyprcursor
+  hyprlock
+  hyprsunset
+  hypridle
+  hyprpolkitagent
+  xdg-desktop-portal-hyprland
 )
 
 # Check for yay
