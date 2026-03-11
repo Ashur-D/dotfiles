@@ -7,13 +7,13 @@
 # List of packages to install
 packages=(
     hyprland
-    hyprpaper
-    hyprland-qtutils
-    hyprcursor
-    hyprlock
-    hyprsunset
-    hypridle
-    hyprpolkitagent
+    hyprlauncher # launcher
+    hyprpaper # wallpaper
+    hyprcursor # cursor
+    hyprlock # lock screen
+    hyprsunset # warm light
+    hypridle # idler
+    hyprpolkitagent # authentication
     xdg-desktop-portal-hyprland
 )
 
