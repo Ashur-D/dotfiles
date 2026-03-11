@@ -16,14 +16,15 @@ function y() {
   [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
   rm -f -- "$tmp"
 }
-# Editor used by CLI
+
+# --- Editor used by CLI ---
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export BAT_THEME=ansi
 
 eval "$(starship init bash)"
 
-# aliases
+# --- aliases ---
 # git config --global alias.aa 'add .'
 # git config --global alias.p 'push'
 # git config --global alias.ci 'commit'
