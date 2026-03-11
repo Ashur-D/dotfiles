@@ -6,24 +6,21 @@
 
 # List of packages to install
 packages=(
-  kitty # terminal
-  qt6-wayland
-  qt5-wayland
-  ttf-cascadia-mono-nerd # font
-  wireplumber # audio
-  pipewire # audio
-  neovim # editor
-  mako # notifcation deamon
-  waybar # topbar
-  bluetui # bluetooth tui
-  impala # wifi tui
-  wiremix # audio tui
-  gpu-screen-recorder # or wl-screenrec
-  slurp
-  wl-clipboard
-  wl-clip-persist
-  grim
-  satty
+    qt6-wayland # APIs for Wayland
+    qt5-wayland # APIs for Wayland
+    kitty # terminal
+    ttf-cascadia-mono-nerd # font
+    wireplumber # audio
+    pipewire # audio
+    pipewire-pulse # audio
+    pipewire-audio # audio
+    pipewire-alsa # audio
+    wiremix # audio tui
+    impala # wifi tui
+    iwd # wifi
+    # bluez #bluetooth
+    # bluez-utils #bluetooth
+    # bluetui #bluetooth
 )
 
 # Check for yay
