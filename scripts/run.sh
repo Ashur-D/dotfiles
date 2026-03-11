@@ -32,6 +32,13 @@ chmod +x "$SCRIPT_DIR/yay.sh"
 "$SCRIPT_DIR/yay.sh"
 
 # ==========================
+# installs yay if not already installed
+# ==========================
+
+chmod +x "$SCRIPT_DIR/hypr.sh"
+"$SCRIPT_DIR/hypr.sh"
+
+# ==========================
 # List of needed packages installation
 # ==========================
 
