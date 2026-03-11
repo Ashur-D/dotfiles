@@ -32,7 +32,7 @@ chmod +x "$SCRIPT_DIR/yay.sh"
 "$SCRIPT_DIR/yay.sh"
 
 # ==========================
-# installs yay if not already installed
+# installs hypr packages
 # ==========================
 
 chmod +x "$SCRIPT_DIR/hypr.sh"
@@ -46,7 +46,7 @@ chmod +x "$SCRIPT_DIR/neededpackages.sh"
 "$SCRIPT_DIR/neededpackages.sh"
 
 # ==========================
-# Optional: Install Nvidia nvidia packages
+# Optional: Install Nvidia packages
 # ==========================
 
 chmod +x "$SCRIPT_DIR/nvidia.sh"
@@ -74,5 +74,3 @@ chmod +x "$SCRIPT_DIR/prefpackages.sh"
 
 chmod +x "$SCRIPT_DIR/cappuccincursor.sh"
 "$SCRIPT_DIR/cappuccincursor.sh"
-
-#=============================
