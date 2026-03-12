@@ -1,6 +1,9 @@
 [config]
 # The path to the default wallpaper
 wallpaper = '~/Pictures/Wallpapers/default.jpg'
+set_wallpaper = true
+wallpaper_tool = 'Hyprpaper'
+reload_apps = true
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'

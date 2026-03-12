@@ -23,6 +23,8 @@ packages=(
     mpv-full # media player
     imv # image viewer
     matugen # color generator
+    rofi # app launcher
+    catppuccin-cursors-mocha # cursor
 
     # ======== audio ========
     wireplumber # audio
