@@ -14,7 +14,8 @@ packages=(
     hyprsunset # warm light
     hypridle # idler
     hyprpolkitagent # authentication
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-hyprland #  xdg-desktop-portal backend for hyprland
+    hyprtoolkit #  GUI toolkit
 )
 
 # Check for yay
