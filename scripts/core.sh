@@ -6,21 +6,46 @@
 
 # List of packages to install
 packages=(
+    # ======== wayland tools ========
     qt6-wayland # APIs for Wayland
     qt5-wayland # APIs for Wayland
     kitty # terminal
     ttf-cascadia-mono-nerd # font
+    neovim # editor
+    mako # notifications
+    waybar # topbar
+    power-profiles-daemon # power profiles
+    wl-clipboard # clipboard
+    grim # screenshot
+    slurp # screenshot
+    swayosd # on screen display
+    wlogout # logout menu
+    mpv-full # media player
+    imv # image viewer
+    matugen # color generator
+
+    # ======== audio ========
     wireplumber # audio
     pipewire # audio
     pipewire-pulse # audio
     pipewire-audio # audio
     pipewire-alsa # audio
     wiremix # audio tui
+
+    # ======== wifi ========
     impala # wifi tui
     iwd # wifi
+
+    # # ======== bluetooth ========
     # bluez #bluetooth
     # bluez-utils #bluetooth
     # bluetui #bluetooth
+
+    # ======== terminal/file explorer ========
+    starship # terminal prompt
+    fastfetch # system info tool
+    yazi # tui file explorer
+    nautilus # gui file explorer
 )
 
 # Check for yay
