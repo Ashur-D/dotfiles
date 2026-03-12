@@ -39,7 +39,7 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 "$SCRIPT_DIR/hypr.sh"
 
 # ==========================
-# List of needed packages installation
+# Install core packages
 # ==========================
 
 chmod +x "$SCRIPT_DIR/core.sh"
@@ -49,8 +49,8 @@ chmod +x "$SCRIPT_DIR/core.sh"
 # Optional: Install Nvidia packages
 # ==========================
 
-chmod +x "$SCRIPT_DIR/nvidia.sh"
-"$SCRIPT_DIR/nvidia.sh"
+#chmod +x "$SCRIPT_DIR/nvidia.sh"
+#"$SCRIPT_DIR/nvidia.sh"
 
 # ==========================
 # move configs
@@ -61,7 +61,7 @@ chmod +x "$SCRIPT_DIR/nvidia.sh"
 
 
 # ==========================
-# Install packages like browsers,file managers etc.
+# Install optional/prefrence packages
 # ==========================
 
 #chmod +x "$SCRIPT_DIR/optional.sh"
