@@ -8,7 +8,9 @@ color_prompt=yes
 PS1=$'\uf0a9 '
 PS1="\[\e]0;\w\a\]$PS1"
 
-# --- yazi shell wrapper ---
+eval "$(starship init bash)"
+
+# ====== yazi shell wrapper ======
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
@@ -17,14 +19,12 @@ function y() {
   rm -f -- "$tmp"
 }
 
-# --- Editor used by CLI ---
+# ====== Editor used by CLI ======
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export BAT_THEME=ansi
 
-eval "$(starship init bash)"
-
-# --- aliases ---
+# ====== aliases ======
 # git config --global alias.aa 'add .'
 # git config --global alias.p 'push'
 # git config --global alias.ci 'commit'

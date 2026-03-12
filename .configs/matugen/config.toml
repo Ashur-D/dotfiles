@@ -1,0 +1,29 @@
+[config]
+# The path to the default wallpaper
+wallpaper = '~/Pictures/Wallpapers/default.jpg'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+[templates.steam]
+input_path = '~/.config/matugen/templates/steam.css'
+output_path = '~/.config/AdwSteamGtk/custom.css'
+post_hook =  'adwaita-steam-gtk -i'
+
+[templates.zed]
+input_path = '~/.config/matugen/templates/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
