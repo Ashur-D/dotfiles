@@ -7,47 +7,43 @@
 
 # List of packages to install
 packages=(
-    git
+
+    # ======== main ========
     zen-browser-bin
     vesktop-bin
-    steam
-    yazi
     obsidian
-    zed
     localsend
+
+    # ======== Gaming ========
+    steam
+    gamescope
+
+    # ======== dev ========
+    git
+    lazygit
+    zed
+    openssh
+
+    # ======== System Monitoring/utility ========
     btop
     bottom
-    astroterm
-    asciinema
+    systemctl-tui
+    stacer-bin
+    netsonar-bin
     gdu
     ncdu
+    auto-cpufreq
+    efibootmgr
+
+    # ======== terminal rice ========
+    astroterm
+    asciinema
     cbonsai
     catnap-git
-    auto-cpufreq
     stormy-bin
-    stacer-bin
-    efibootmgr
-    lazygit
-    openssh
-    gamescope
     terminaltexteffects
-    systemctl-tui
-    netsonar-bin
-    # --- Wayland Tools ---
-    neovim # editor
-    mako # notifications
-    waybar # topbar
-    wl-clipboard # clipboard
-    grim # screenshot
-    slurp # screenshot
-    swayosd # on screen display
-    wlogout # logout menu
-    mpv # media player
-    imv # image viewer
-    # --- Terminal ---
-    starship # terminal prompt
-    fastfetch # system info tool
-    yazi # tui file explorer
+
+    # ======== terminal ========
     eza # ls replacment
     fd # alternative to find
     zoxide # smarter cd

@@ -7,11 +7,12 @@
 
 # List of packages to install
 packages=(
-    egl-wayland-git
-    libva-nvidia-driver-git
-    lib32-nvidia-utils-git
-    nvidia-open-dkms-git
-    nvidia-utils-git
+    linux-headers
+    egl-wayland
+    libva-nvidia-driver
+    lib32-nvidia-utils
+    nvidia-open-dkms
+    nvidia-utils
 )
 
 # Check for yay
