@@ -72,13 +72,6 @@ chmod +x "$SCRIPT_DIR/configs.sh"
 "$SCRIPT_DIR/configs.sh"
 
 # ==========================
-# get wallpapers
-# ==========================
-
-chmod +x "$SCRIPT_DIR/wallpapers.sh"
-"$SCRIPT_DIR/wallpapers.sh"
-
-# ==========================
 # Install optional/prefrence packages
 # ==========================
 
