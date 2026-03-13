@@ -19,7 +19,7 @@ packages=(
     grim # screenshot
     slurp # screenshot
     swayosd # on screen display
-    wlogout # logout menu
+    # wlogout # logout menu
     mpv # media player
     imv # image viewer
     matugen # color generator
