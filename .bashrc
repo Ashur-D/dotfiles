@@ -35,3 +35,7 @@ function y() {
 alias ga='git add .'
 alias gp='git push'
 alias gc='git commit -m "updates"'
+
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec Hyprland
+fi
