@@ -1,16 +1,24 @@
-# ~/.bashrc
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
 
-# Technicolor dreams
+###------------------- Technicolor -----------------------###
 force_color_prompt=yes
 color_prompt=yes
 
-# Simple prompt with path in the window/pane title and caret for typing line
-PS1=$'\uf0a9 '
-PS1="\[\e]0;\w\a\]$PS1"
+###------------------- Editor used by CLI -----------------------###
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
 
+###------------------- starship -----------------------###
 eval "$(starship init bash)"
 
-# ====== yazi shell wrapper ======
+###------------------- prompt -----------------------###
+#PS1="\[\e[1;31m\]\$(parse_git_branch)\[\033[34m\]\$(parse_git_dirty)\n\[\033[1;33m\] \[\e[1;37m\] \w \[\e[1;33m\]󰅂\[\e[0;37m\] "
+#PS1=$'\uf0a9 '
+#PS1="\[\e]0;\w\a\]$PS1"
+
+###------------------- yazi shell wrapper -----------------------###
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
@@ -19,12 +27,7 @@ function y() {
   rm -f -- "$tmp"
 }
 
-# ====== Editor used by CLI ======
-export EDITOR="nvim"
-export SUDO_EDITOR="$EDITOR"
-export BAT_THEME=ansi
-
-# ====== aliases ======
+###------------------- aliases -----------------------###
 # git config --global alias.aa 'add .'
 # git config --global alias.p 'push'
 # git config --global alias.ci 'commit'

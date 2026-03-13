@@ -44,7 +44,6 @@ packages=(
     # bluetui #bluetooth
 
     # ======== terminal/file explorer ========
-    starship # terminal prompt
     fastfetch # system info tool
     yazi # tui file explorer
     nautilus # gui file explorer

@@ -44,6 +44,7 @@ packages=(
     terminaltexteffects
 
     # ======== terminal ========
+    starship # terminal prompt
     eza # ls replacment
     fd # alternative to find
     zoxide # smarter cd
