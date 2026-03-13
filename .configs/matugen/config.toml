@@ -5,9 +5,15 @@ set_wallpaper = true
 wallpaper_tool = 'Hyprpaper'
 reload_apps = true
 
+# [config.wallpaper]
+# command = "swww"
+# arguments = ["img", "--transition-type", "any", "--transition-fps", "60"]
+# set = true
+
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
 
 [templates.waybar]
 input_path = '~/.config/matugen/templates/waybar-colors.css'
@@ -17,6 +23,7 @@ post_hook = 'pkill -SIGUSR2 waybar'
 [templates.kitty]
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
+post_hook = "kill -SIGUSR1 $(pidof kitty)"
 
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
