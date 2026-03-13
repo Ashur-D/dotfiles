@@ -20,7 +20,7 @@ packages=(
     slurp # screenshot
     swayosd # on screen display
     wlogout # logout menu
-    mpv-full # media player
+    mpv # media player
     imv # image viewer
     matugen # color generator
     rofi # app launcher

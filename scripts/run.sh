@@ -10,6 +10,18 @@ LOGFILE=~/Downloads/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log
 exec > >(tee -a "$LOGFILE") 2>&1
 echo "Log saving to: $LOGFILE "
 
+
+# ==========================
+# Authenticate upfront and keep sudo alive
+# ==========================
+
+echo "Please enter your password for the installation process."
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
 # ==========================
 # clears before starting, quits if an error occurs and updates the system
 # ==========================
@@ -56,9 +68,15 @@ chmod +x "$SCRIPT_DIR/core.sh"
 # move configs
 # ==========================
 
-#chmod +x "$SCRIPT_DIR/configs.sh"
-#"$SCRIPT_DIR/configs.sh"
+chmod +x "$SCRIPT_DIR/configs.sh"
+"$SCRIPT_DIR/configs.sh"
 
+# ==========================
+# get wallpapers
+# ==========================
+
+chmod +x "$SCRIPT_DIR/wallpapers.sh"
+"$SCRIPT_DIR/wallpapers.sh"
 
 # ==========================
 # Install optional/prefrence packages
@@ -66,11 +84,3 @@ chmod +x "$SCRIPT_DIR/core.sh"
 
 #chmod +x "$SCRIPT_DIR/optional.sh"
 #"$SCRIPT_DIR/optional.sh"
-
-
-# ==========================
-# Install custom cursor
-# ==========================
-
-#chmod +x "$SCRIPT_DIR/cappuccincursor.sh"
-#"$SCRIPT_DIR/cappuccincursor.sh"
