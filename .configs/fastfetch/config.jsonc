@@ -52,7 +52,7 @@
         {
           "type": "terminalfont",
           "key": "",
-          "keyColor": "blue"
+          "keyColor": "33"
         },
         {
             "type": "command",
