@@ -16,8 +16,8 @@ packages=(
     waybar # topbar
     power-profiles-daemon # power profiles
     wl-clipboard # clipboard
-    grim # screenshot
-    slurp # screenshot
+    hyprshot # screenshots
+    satty # screenshot + annotater
     swayosd # on screen display
     # wlogout # logout menu
     mpv # media player

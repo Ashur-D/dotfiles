@@ -1,2 +1,6 @@
 @import "colors.css";
-@bg, @fg, @primary
+
+/* Only to see that the colors actually get applied */
+* {
+    background-color: @primary_container;
+}
