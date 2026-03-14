@@ -16,7 +16,7 @@ output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
 [templates.waybar]
-input_path = '~/.config/matugen/templates/waybar-colors.css'
+input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
@@ -29,11 +29,15 @@ post_hook = "kill -SIGUSR1 $(pidof kitty)"
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
 
-[templates.steam]
-input_path = '~/.config/matugen/templates/steam.css'
-output_path = '~/.config/AdwSteamGtk/custom.css'
-post_hook =  'adwaita-steam-gtk -i'
+# [templates.steam]
+# input_path = '~/.config/matugen/templates/steam.css'
+# output_path = '~/.config/AdwSteamGtk/custom.css'
+# post_hook =  'adwaita-steam-gtk -i'
 
-[templates.zed]
-input_path = '~/.config/matugen/templates/zed-colors.json'
-output_path = '~/.config/zed/themes/matugen.json'
+# [templates.zed]
+# input_path = '~/.config/matugen/templates/zed-colors.json'
+# output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.css'
+output_path = '~/.config/starship.toml'

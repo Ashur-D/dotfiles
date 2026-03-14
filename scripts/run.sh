@@ -68,8 +68,8 @@ chmod +x "$SCRIPT_DIR/core.sh"
 # move configs
 # ==========================
 
-chmod +x "$SCRIPT_DIR/configs.sh"
-"$SCRIPT_DIR/configs.sh"
+# chmod +x "$SCRIPT_DIR/configs.sh"
+# "$SCRIPT_DIR/configs.sh"
 
 # ==========================
 # Install optional/prefrence packages
