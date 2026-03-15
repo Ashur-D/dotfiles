@@ -4,6 +4,7 @@
 ###------------------- Technicolor -----------------------###
 force_color_prompt=yes
 color_prompt=yes
+export TERM=xterm-256color
 
 ###------------------- Editor used by CLI -----------------------###
 export EDITOR="nvim"
@@ -28,7 +29,7 @@ function y() {
 }
 
 ###------------------- aliases -----------------------###
-alias ga='add .'
+alias ga='git add .'
 alias gp='git push'
 #alias gc='git commit -m'
 
@@ -44,4 +45,6 @@ function gc() {
 ###------------------- hyprland -----------------------###
 alias start-hyprland='hyprland'
 
-export TERM=xterm-256color
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec Hyprland
+fi
