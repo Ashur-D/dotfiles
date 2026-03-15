@@ -1,16 +1,5 @@
 #!/bin/bash
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# ==========================
-# logs the entire script and saves to downloads
-# ==========================
-
-LOGFILE=~/Downloads/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log
-exec > >(tee -a "$LOGFILE") 2>&1
-echo "Log saving to: $LOGFILE "
-
-
 # ==========================
 # Authenticate upfront and keep sudo alive
 # ==========================
@@ -27,6 +16,15 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# ==========================
+# logs the entire script and saves to downloads
+# ==========================
+
+LOGFILE=~/Downloads/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log
+exec > >(tee -a "$LOGFILE") 2>&1
+echo "Log saving to: $LOGFILE "
 
 # ==========================
 # clears before starting, quits if an error occurs and updates the system
@@ -70,12 +68,12 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 #chmod +x "$SCRIPT_DIR/nvidia.sh"
 #"$SCRIPT_DIR/nvidia.sh"
 
-# ==========================
-# move configs
-# ==========================
+==========================
+move configs
+==========================
 
-# chmod +x "$SCRIPT_DIR/config.sh"
-# "$SCRIPT_DIR/config.sh"
+chmod +x "$SCRIPT_DIR/config.sh"
+"$SCRIPT_DIR/config.sh"
 
 # ==========================
 # Install optional/prefrence packages

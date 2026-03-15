@@ -7,6 +7,7 @@
 # List of packages to install
 packages=(
     # ======== Desktop UI Components ========
+    zen-browser-bin
     waybar # topbar
     mako # notifications
     rofi # app launcher
