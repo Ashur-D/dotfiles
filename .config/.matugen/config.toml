@@ -1,0 +1,43 @@
+[config]
+# The path to the default wallpaper
+wallpaper = '~/Pictures/Wallpapers/default.jpg'
+set_wallpaper = true
+wallpaper_tool = 'Hyprpaper'
+reload_apps = true
+
+# [config.wallpaper]
+# command = "swww"
+# arguments = ["img", "--transition-type", "any", "--transition-fps", "60"]
+# set = true
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = "kill -SIGUSR1 $(pidof kitty)"
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+# [templates.steam]
+# input_path = '~/.config/matugen/templates/steam.css'
+# output_path = '~/.config/AdwSteamGtk/custom.css'
+# post_hook =  'adwaita-steam-gtk -i'
+
+# [templates.zed]
+# input_path = '~/.config/matugen/templates/zed-colors.json'
+# output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.css'
+output_path = '~/.config/starship.toml'
