@@ -17,12 +17,16 @@ packages=(
     qt5-wayland # APIs for Wayland
     qt6-wayland # APIs for Wayland
     power-profiles-daemon # power profiles
-    # lemurs # tui login manager  # locking me out, will fix later
 
     # ======== Terminal & Editors ========
     kitty # terminal
     neovim # editor
     gum # shell scripts
+
+    # ======== Theming & Fonts ========
+    matugen # color generator
+    catppuccin-cursors-mocha # cursor
+    ttf-cascadia-mono-nerd # font
 
     # ======== Screenshot & Clipboard ========
     wl-clipboard # clipboard
@@ -30,11 +34,6 @@ packages=(
     wl-clip-persist
     hyprshot # screenshots
     satty # screenshot + annotater
-
-    # ======== Theming & Fonts ========
-    matugen # color generator
-    catppuccin-cursors-mocha # cursor
-    ttf-cascadia-mono-nerd # font
 
     # ======== Media Viewers ========
     mpv # media player

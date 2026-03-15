@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/
 
 # Use gum with minimal styling flags to create a centered, clean menu
 action=$(gum choose \
