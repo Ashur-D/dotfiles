@@ -58,15 +58,15 @@ fi
 # Set up Lemurs Display Manager
 # ==========================
 
-# Write the launch script
-echo -e "#! /bin/sh\nexec Hyprland" | sudo tee /etc/lemurs/wayland/hyprland > /dev/null
+# # Write the launch script
+# echo -e "#! /bin/sh\nexec Hyprland" | sudo tee /etc/lemurs/wayland/hyprland > /dev/null
 
-# Make it executable
-sudo chmod 755 /etc/lemurs/wayland/hyprland
+# # Make it executable
+# sudo chmod 755 /etc/lemurs/wayland/hyprland
 
-echo "Enabling Lemurs systemd service..."
-# Disable common display managers just in case they are active
-sudo systemctl disable gdm lightdm sddm lxdm 2>/dev/null || true
+# echo "Enabling Lemurs systemd service..."
+# # Disable common display managers just in case they are active
+# sudo systemctl disable gdm lightdm sddm lxdm 2>/dev/null || true
 
-# Enable Lemurs
-sudo systemctl enable lemurs.service
+# # Enable Lemurs
+# sudo systemctl enable lemurs.service

@@ -28,17 +28,20 @@ function y() {
 }
 
 ###------------------- aliases -----------------------###
-# git config --global alias.aa 'add .'
-# git config --global alias.p 'push'
-# git config --global alias.ci 'commit'
-
-alias ga='git add .'
+alias ga='add .'
 alias gp='git push'
-alias gc='git commit -m "updated"'
+#alias gc='git commit -m'
+
+function gc() {
+    MESSAGE=$(gum input --placeholder "Enter commit message..." --width 50)
+    if [ -n "$MESSAGE" ]; then
+        git commit -m "$MESSAGE"
+    else
+        echo "Commit aborted."
+    fi
+}
 
 ###------------------- hyprland -----------------------###
-# if [ "$(tty)" = "/dev/tty1" ]; then
-#   exec start-hyprland
-# fi
-
 alias start-hyprland='hyprland'
+
+export TERM=xterm-256color
