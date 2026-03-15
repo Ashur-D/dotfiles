@@ -17,7 +17,7 @@ packages=(
     qt5-wayland # APIs for Wayland
     qt6-wayland # APIs for Wayland
     power-profiles-daemon # power profiles
-    lemurs # tui login manager
+    # lemurs # tui login manager  # locking me out, will fix later
 
     # ======== Terminal & Editors ========
     kitty # terminal
