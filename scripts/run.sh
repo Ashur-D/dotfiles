@@ -15,7 +15,13 @@ echo "Log saving to: $LOGFILE "
 # Authenticate upfront and keep sudo alive
 # ==========================
 
-echo "Please enter your password for the installation process."
+# Print directly to the terminal to avoid being delayed by the 'tee' pipe
+echo "Please enter your password for the installation process." > /dev/tty
+
+# Invalidate the user's cached credentials to force a prompt
+sudo -k
+
+# Ask for the password and validate it
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished
@@ -44,18 +50,18 @@ chmod +x "$SCRIPT_DIR/yay.sh"
 "$SCRIPT_DIR/yay.sh"
 
 # ==========================
-# installs hypr packages
-# ==========================
-
-chmod +x "$SCRIPT_DIR/hypr.sh"
-"$SCRIPT_DIR/hypr.sh"
-
-# ==========================
 # Install core packages
 # ==========================
 
 chmod +x "$SCRIPT_DIR/core.sh"
 "$SCRIPT_DIR/core.sh"
+
+# ==========================
+# installs hypr packages
+# ==========================
+
+chmod +x "$SCRIPT_DIR/hypr.sh"
+"$SCRIPT_DIR/hypr.sh"
 
 # ==========================
 # Optional: Install Nvidia packages
@@ -68,8 +74,8 @@ chmod +x "$SCRIPT_DIR/core.sh"
 # move configs
 # ==========================
 
-# chmod +x "$SCRIPT_DIR/configs.sh"
-# "$SCRIPT_DIR/configs.sh"
+# chmod +x "$SCRIPT_DIR/config.sh"
+# "$SCRIPT_DIR/config.sh"
 
 # ==========================
 # Install optional/prefrence packages

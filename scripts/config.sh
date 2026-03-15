@@ -4,7 +4,7 @@
 # Move config files
 # ==========================
 
-SOURCE_DIR="$HOME/dotfiles/.configs"
+SOURCE_DIR="$HOME/dotfiles/.config"
 DEST_DIR="$HOME/.config/"
 
 # Check if source exists
