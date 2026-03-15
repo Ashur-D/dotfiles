@@ -46,5 +46,5 @@ function gc() {
 alias start-hyprland='hyprland'
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-  exec Hyprland
+  exec start-hyprland
 fi
