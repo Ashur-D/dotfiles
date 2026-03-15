@@ -36,7 +36,9 @@ alias ga='git add .'
 alias gp='git push'
 alias gc='git commit -m "updated"'
 
-###------------------- launcher hyprland after logging in -----------------------###
-if [ "$(tty)" = "/dev/tty1" ]; then
-  exec Hyprland
-fi
+###------------------- hyprland -----------------------###
+# if [ "$(tty)" = "/dev/tty1" ]; then
+#   exec start-hyprland
+# fi
+
+alias start-hyprland='hyprland'

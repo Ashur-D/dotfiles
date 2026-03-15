@@ -48,7 +48,6 @@ packages=(
     eza # ls replacment
     fd # alternative to find
     zoxide # smarter cd
-    gum # shell scripts
     fzf # fuzzy finder
 )
 

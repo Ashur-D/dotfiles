@@ -6,25 +6,39 @@
 
 # List of packages to install
 packages=(
-    # ======== wayland tools ========
-    qt6-wayland # APIs for Wayland
-    qt5-wayland # APIs for Wayland
-    kitty # terminal
-    ttf-cascadia-mono-nerd # font
-    neovim # editor
-    mako # notifications
+    # ======== Desktop UI Components ========
     waybar # topbar
-    power-profiles-daemon # power profiles
-    wl-clipboard # clipboard
-    hyprshot # screenshots
-    satty # screenshot + annotater
+    mako # notifications
+    rofi # app launcher
     swayosd # on screen display
     # wlogout # logout menu
+
+    # ======== Core Wayland & System ========
+    qt5-wayland # APIs for Wayland
+    qt6-wayland # APIs for Wayland
+    power-profiles-daemon # power profiles
+    lemurs # tui login manager
+
+    # ======== Terminal & Editors ========
+    kitty # terminal
+    neovim # editor
+    gum # shell scripts
+
+    # ======== Screenshot & Clipboard ========
+    wl-clipboard # clipboard
+    cliphist
+    wl-clip-persist
+    hyprshot # screenshots
+    satty # screenshot + annotater
+
+    # ======== Theming & Fonts ========
+    matugen # color generator
+    catppuccin-cursors-mocha # cursor
+    ttf-cascadia-mono-nerd # font
+
+    # ======== Media Viewers ========
     mpv # media player
     imv # image viewer
-    matugen # color generator
-    rofi # app launcher
-    catppuccin-cursors-mocha # cursor
 
     # ======== audio ========
     wireplumber # audio
