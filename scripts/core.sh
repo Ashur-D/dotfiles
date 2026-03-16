@@ -12,7 +12,7 @@ packages=(
     mako # notifications
     rofi # app launcher
     swayosd # on screen display
-    # wlogout # logout menu
+    wlogout # logout menu
 
     # ======== Core Wayland & System ========
     qt5-wayland # APIs for Wayland
@@ -22,7 +22,6 @@ packages=(
     # ======== Terminal & Editors ========
     kitty # terminal
     neovim # editor
-    gum # shell scripts
 
     # ======== Theming & Fonts ========
     matugen # color generator

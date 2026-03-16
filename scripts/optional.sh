@@ -45,6 +45,7 @@ packages=(
 
     # ======== terminal ========
     starship # terminal prompt
+    gum # shell scripts
     eza # ls replacment
     fd # alternative to find
     zoxide # smarter cd
