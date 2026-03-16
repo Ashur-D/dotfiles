@@ -21,7 +21,7 @@
         {
             "type": "os",
             "key": " ",
-            "keyColor": "33"  // = color3
+            "keyColor": "33"
         },
         {
             "type": "kernel",
