@@ -2,5 +2,5 @@
 
 ```
 use zen kernel and grub
-might need - playerctl / libnotify /
+might need -  libnotify /
 no display manager, later might add > lemurs/ly/lidm or SDDM/greet

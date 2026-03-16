@@ -40,6 +40,7 @@ packages=(
     imv # image viewer
 
     # ======== audio ========
+    playerctl #  media player
     wireplumber # audio
     pipewire # audio
     pipewire-pulse # audio
