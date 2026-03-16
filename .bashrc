@@ -29,6 +29,7 @@ function y() {
 }
 
 ###------------------- aliases -----------------------###
+alias f="fastfetch"
 alias ga='git add .'
 alias gp='git push'
 #alias gc='git commit -m'
@@ -46,5 +47,5 @@ function gc() {
 alias start-hyprland='hyprland'
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-  exec start-hyprland
+  exec start-hyperland
 fi
