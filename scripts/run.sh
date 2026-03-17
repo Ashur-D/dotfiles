@@ -68,9 +68,9 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 #chmod +x "$SCRIPT_DIR/nvidia.sh"
 #"$SCRIPT_DIR/nvidia.sh"
 
-==========================
-move configs
-==========================
+# ==========================
+# move configs
+# ==========================
 
 chmod +x "$SCRIPT_DIR/config.sh"
 "$SCRIPT_DIR/config.sh"
