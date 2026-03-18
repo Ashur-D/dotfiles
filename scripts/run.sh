@@ -65,7 +65,7 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 # Optional: Install Nvidia packages
 # ==========================
 
-#chmod +x "$SCRIPT_DIR/nvidia.sh"
+# chmod +x "$SCRIPT_DIR/nvidia.sh"
 #"$SCRIPT_DIR/nvidia.sh"
 
 # ==========================
