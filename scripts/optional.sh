@@ -13,6 +13,7 @@ packages=(
     vesktop-bin
     obsidian
     localsend
+    spotatui # spotify tui theres also ncspot
 
     # ======== Gaming ========
     steam
