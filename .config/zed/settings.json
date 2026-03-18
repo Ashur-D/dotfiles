@@ -7,95 +7,85 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "colorize_brackets": true,
-  "cursor_shape": "bar",
-  "format_on_save": "off",
-  "prettier": {
-
-  },
-  "ensure_final_newline_on_save": true,
-  "remove_trailing_whitespace_on_save": true,
-  "preferred_line_length": 80,
+  // --- Core Editor Settings ---
   "soft_wrap": "editor_width",
+  "buffer_line_height": "comfortable",
+  "colorize_brackets": true,
   "indent_guides": {
     "background_coloring": "indent_aware",
-    "coloring": "indent_aware"
+    "coloring": "indent_aware",
   },
-  "notification_panel": {
-    "button": false
+
+  // --- Theming & Appearance ---
+  "theme": {
+    "mode": "system",
+    "light": "One Dark",
+    "dark": "Catppuccin Macchiato (Blur) [Light]",
   },
-  "scrollbar": {
-    "show": "never"
-  },
-  "toolbar": {
-    "code_actions": false,
-    "agent_review": false,
-    "selections_menu": false,
-    "quick_actions": false,
-    "breadcrumbs": false
-  },
-  "redact_private_values": false,
-  "agent": {
-    "button": false,
-    "model_parameters": []
-  },
-  "collaboration_panel": {
-    "button": false
-  },
-  "outline_panel": {
-    "button": false
-  },
-  "tabs": {
-    "git_status": false
+  "icon_theme": "Catppuccin Macchiato",
+
+  // --- General UI Elements ---
+  "title_bar": {
+    "show_menus": false,
+    "show_user_menu": true,
+    "show_branch_icon": false,
+    "show_sign_in": false,
+    "show_user_picture": true,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
   },
   "tab_bar": {
     "show_nav_history_buttons": false,
-    "show": true
-  },
-  "title_bar": {
-    "show_branch_icon": false,
-    "show_sign_in": false,
-    "show_user_picture": false,
-    "show_onboarding_banner": false,
-    "show_project_items": false,
-    "show_branch_name": false
-  },
-  "debugger": {
-    "button": false
-  },
-  "search": {
-    "button": false
-  },
-  "diagnostics": {
-    "button": false
-  },
-  "terminal": {
-    "scrollbar": {
-      "show": "never"
-    },
-    "toolbar": {},
-    "working_directory": "current_project_directory",
-    "button": true
   },
   "status_bar": {
     "cursor_position_button": false,
-    "active_language_button": false
+    "active_language_button": false,
   },
+  "toolbar": {
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+
+  // --- Side Panels & Views ---
   "project_panel": {
-    "scrollbar": {},
-    "git_status": true,
-    "folder_icons": true,
-    "file_icons": true,
     "entry_spacing": "standard",
-    "button": true
   },
-  "buffer_line_height": "comfortable",
+  "outline_panel": {
+    "button": false,
+  },
+  "notification_panel": {
+    "button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+
+  // --- Tools & Features ---
+  "prettier": {
+    "allowed": true,
+  },
+  "search": {
+    "button": false,
+  },
+  "debugger": {
+    "button": false,
+  },
+  "diagnostics": {
+    "button": false,
+  },
+
+  // --- AI & Agent Settings ---
   "disable_ai": true,
-  "icon_theme": "Catppuccin Macchiato",
+
+  // --- Privacy & Telemetry ---
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
-  "theme": "Catppuccin Mocha (Blur) [Light]",
-
 }
