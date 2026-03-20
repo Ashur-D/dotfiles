@@ -37,18 +37,10 @@ window#waybar {
 }
 
 tooltip {
-    background: transparent;
-    background: alpha(@primary, 0.67);
-    color: @outline;
-    text-shadow: 0px 0px 1.5px alpha(@shadow, 0.1);
+    border-radius: 10px;
+    background: alpha(@background, 0.6);
+    box-shadow: 0px 0px 2px alpha(@shadow, 0.6);
 }
-
-/*or use this
-background: transparent;
-background: alpha(@primary, 0.87);
-color: @outline;
-text-shadow: 0px 0px 1.5px alpha(@shadow, 0.1);
-*/
 
 /* -----------------------------------------------------
  * Workspaces
@@ -80,9 +72,9 @@ text-shadow: 0px 0px 1.5px alpha(@shadow, 0.1);
 }
 
 #workspaces button.empty {
-    color: @primary;
+    color: alpha(@primary, 0.3);
     border: none;
-    text-shadow: 0px 0px 1.5px alpha(@shadow, 0.2);
+    text-shadow: 0px 0px 1.5px alpha(@shadow, 0.5);
 }
 
 #workspaces button.empty:hover {

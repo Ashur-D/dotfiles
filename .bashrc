@@ -12,7 +12,7 @@ export SUDO_EDITOR="$EDITOR"
 export BAT_THEME=ansi
 
 ###------------------- starship -----------------------###
-#eval "$(starship init bash)"
+eval "$(starship init bash)"
 
 ###------------------- prompt -----------------------###
 #PS1="\[\e[1;31m\]\$(parse_git_branch)\[\033[34m\]\$(parse_git_dirty)\n\[\033[1;33m\] \[\e[1;37m\] \w \[\e[1;33m\]󰅂\[\e[0;37m\] "
