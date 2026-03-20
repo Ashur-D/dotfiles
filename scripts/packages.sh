@@ -1,13 +1,11 @@
 #!/bin/bash
 
-# ==========================
-# Install needed packages
-# ==========================
+# ====================================================
+#                  needed packages
+# ====================================================
 
-# List of packages to install
 packages=(
-    # ======== Desktop UI Components ========
-    zen-browser-bin
+    # ------------ Desktop UI Components ------------
     waybar # topbar
     mako # notifications
     rofi # app launcher
@@ -15,32 +13,32 @@ packages=(
     # wlogout # logout menu
     awww # wallpaper
 
-    # ======== Core Wayland & System ========
+    # ------------ Core Wayland & System ------------
     qt5-wayland # APIs for Wayland
     qt6-wayland # APIs for Wayland
     power-profiles-daemon # power profiles
 
-    # ======== Terminal & Editors ========
+    # ------------ Terminal & Editors ------------
     kitty # terminal
     neovim # editor
 
-    # ======== Theming & Fonts ========
+    # ------------ Theming & Fonts ------------
     matugen # color generator
     catppuccin-cursors-mocha # cursor
     ttf-cascadia-mono-nerd # font
 
-    # ======== Screenshot & Clipboard ========
+    # ------------ Screenshot & Clipboard ------------
     wl-clipboard # clipboard
     cliphist
     wl-clip-persist
     hyprshot # screenshots
     satty # screenshot + annotater
 
-    # ======== Media Viewers ========
+    # ------------ Media Viewers ------------
     mpv # media player
     imv # image viewer
 
-    # ======== audio ========
+    # ------------ audio ------------
     playerctl #  media player
     wireplumber # audio
     pipewire # audio
@@ -49,20 +47,73 @@ packages=(
     pipewire-alsa # audio
     wiremix # audio tui
 
-    # ======== wifi ========
+    # ------------ wifi ------------
     impala # wifi tui
     iwd # wifi
 
-    # # ======== bluetooth ========
+    # # ------------ bluetooth ------------
     # bluez #bluetooth
     # bluez-utils #bluetooth
     # bluetui #bluetooth
 
-    # ======== terminal/file explorer ========
+    # ------------ terminal/file explorer ------------
     fastfetch # system info tool
     yazi # tui file explorer
     nautilus # gui file explorer
+    starship # terminal prompt
+
+# ====================================================
+#                optional packages
+# ====================================================
+
+    # ------------ main ------------
+    # zen-browser-bin
+    # vesktop-bin
+    # obsidian
+    # localsend
+    # spotatui # spotify tui theres also ncspot
+
+    # ------------ Gaming ------------
+    # steam
+    # gamescope
+
+    # ------------ dev ------------
+    # git
+    # lazygit
+    # zed
+    # openssh
+
+    # ------------ System Monitoring/utility ------------
+    # btop
+    # bottom
+    # systemctl-tui
+    # stacer-bin
+    # netsonar-bin
+    # gdu
+    # ncdu
+    # auto-cpufreq
+    # efibootmgr
+
+    # ------------ terminal rice ------------
+    # astroterm
+    # asciinema
+    # cbonsai
+    # catnap-git
+    # stormy-bin
+    # terminaltexteffects
+
+    # ------------ terminal ------------
+    # gum # shell scripts
+    # eza # ls replacment
+    # fd # alternative to find
+    # zoxide # smarter cd
+    # fzf # fuzzy finder
+
 )
+
+# ====================================================
+#                    script
+# ====================================================
 
 # Check for yay
 if ! command -v yay &>/dev/null; then
@@ -89,13 +140,13 @@ done
 
 # Report on failed installations
 if [ ${#failed_packages[@]} -ne 0 ]; then
-  echo "==============================================="
+  echo "------------------------------------------------------------"
   echo "WARNING: The following needed packages failed to install:"
   for failed in "${failed_packages[@]}"; do
     echo "  - $failed"
   done
   echo "Please check the logs or try installing them manually."
-  echo "==============================================="
+  echo "------------------------------------------------------------"
 else
   echo "All needed packages installed successfully!"
 fi

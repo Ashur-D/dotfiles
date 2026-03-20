@@ -51,8 +51,8 @@ chmod +x "$SCRIPT_DIR/yay.sh"
 # Install core packages
 # ==========================
 
-chmod +x "$SCRIPT_DIR/core.sh"
-"$SCRIPT_DIR/core.sh"
+chmod +x "$SCRIPT_DIR/packages.sh"
+"$SCRIPT_DIR/packages.sh"
 
 # ==========================
 # installs hypr packages
