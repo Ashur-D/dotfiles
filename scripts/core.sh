@@ -12,7 +12,8 @@ packages=(
     mako # notifications
     rofi # app launcher
     swayosd # on screen display
-    wlogout # logout menu
+    # wlogout # logout menu
+    awww # wallpaper
 
     # ======== Core Wayland & System ========
     qt5-wayland # APIs for Wayland

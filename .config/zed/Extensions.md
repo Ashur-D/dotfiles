@@ -7,6 +7,7 @@
 - Lua
 - ini
 - Rainbow CSV
+- xml
 
 ## themes & icons 
 - catppucin icons

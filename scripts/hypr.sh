@@ -7,8 +7,6 @@
 # List of packages to install
 packages=(
     hyprland
-    #hyprlauncher # launcher
-    hyprpaper # wallpaper
     hyprcursor # cursor
     hyprlock # lock screen
     hyprsunset # warm light
