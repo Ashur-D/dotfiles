@@ -1,8 +1,3 @@
-
-
-might need -  libnotify /
-no display manager, later might add > lemurs/ly/lidm or SDDM/greet
-
 # get started recommended arch install 
 
 - Mirrors and repositories >	Select your region
