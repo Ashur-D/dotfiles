@@ -1,0 +1,62 @@
+/* Import Matugen colors */
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+}
+
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+}
+
+window {
+    width: 1136px; 
+    transparency: "real";
+    background-color: var(surface);
+    border: 2px solid;
+    border-color: var(primary);
+    border-radius: 35px;
+}
+
+mainbox {
+    padding: 20px;
+    children: [ listview ];
+}
+
+listview {
+    columns: 4;
+    lines: 2;
+    spacing: 20px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    flow: horizontal;
+    border: 0px;
+}
+
+element {
+    padding: 0px;
+    border-radius: 35px;
+    border: 4px solid; 
+    border-color: transparent;
+    cursor: pointer;
+    children: [ element-icon ];
+}
+
+element normal.normal,
+element alternate.normal,
+element selected.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    border-color: var(primary);
+}
+
+element-icon {
+    size: 250px; 
+    horizontal-align: 0.5;
+    cursor: inherit;
+}
+
