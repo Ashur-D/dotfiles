@@ -15,6 +15,7 @@ no display manager, later might add > lemurs/ly/lidm or SDDM/greet
 
 # post arch install
 
-- once in the TTY please `git clone https://github.com/Ashur-D/dotfiles`
-- Next cd into dotfiles/scripts and give run.sh exec perms and run it
--
+- once in the TTY please `git clone https://github.com/Ashur-D/dotfiles` then follow the rest
+- `cd dotfiles/scripts` 
+- `chmod +x run.sh`
+- `./run.sh`
