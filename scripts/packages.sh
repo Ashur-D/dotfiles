@@ -8,9 +8,8 @@ packages=(
     # ------------ Desktop UI Components ------------
     waybar # topbar
     mako # notifications
-    rofi # app launcher
-    swayosd # on screen display
-    # wlogout # logout menu
+    rofi # app launcher, this will control wallpapers,power profiles and restart/shutdown
+    swayosd # on screen display, uses gtk themes
     awww # wallpaper
 
     # ------------ Core Wayland & System ------------
@@ -27,19 +26,20 @@ packages=(
     catppuccin-cursors-mocha # cursor
     ttf-cascadia-mono-nerd # font
 
-    # ------------ Screenshot & Clipboard ------------
-    wl-clipboard # clipboard
-    cliphist
-    wl-clip-persist
+    # ------------ Screenshot/Clipboard/Screen Record ------------
+    wl-clipboard # Command-line copy/paste
+    cliphist # clipboard manager
+    wl-clip-persist #  	Keep Wayland clipboard even after programs close
     hyprshot # screenshots
     satty # screenshot + annotater
+    gpu-screen-recorder-git # screen recorder
 
     # ------------ Media Viewers ------------
     mpv # media player
     imv # image viewer
 
     # ------------ audio ------------
-    playerctl #  media player
+    playerctl #  media player keybinds
     wireplumber # audio
     pipewire # audio
     pipewire-pulse # audio
