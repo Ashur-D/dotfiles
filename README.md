@@ -13,10 +13,6 @@ no display manager, later might add > lemurs/ly/lidm or SDDM/greet
 - Applications > none
 - additional packages > git
 
-# pre script install
-
-- There are optional packages you may uncomment in 
-
 # post arch install  
 
 - once in the TTY please follow the commands below
