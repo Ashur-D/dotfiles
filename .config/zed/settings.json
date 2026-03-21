@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- Core Editor Settings ---
+  "lsp_document_colors": "background",
   "soft_wrap": "editor_width",
   "buffer_line_height": "comfortable",
   "colorize_brackets": true,

@@ -17,6 +17,7 @@
 - Basher
 - LiveServer
 - discord presence
+- color highlight
 
 ## snippets
 - HTML Snippets
