@@ -46,6 +46,6 @@ function gc() {
 ###------------------- hyprland -----------------------###
 alias hyprland='start-hyprland'
 
-# if [ "$(tty)" = "/dev/tty1" ]; then
-#   exec start-hyperland
-# fi
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec start-hyperland
+fi
