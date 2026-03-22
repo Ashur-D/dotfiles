@@ -32,6 +32,7 @@ alias f="fastfetch"
 alias ga='git add .'
 alias gp='git push'
 alias apps="~/.config/scripts/uninstall.sh"
+alias zed="zeditor"
 #alias gc='git commit -m'
 
 function gc() {
