@@ -36,4 +36,4 @@ if [ -n "$SELECTED" ]; then
     matugen image -m dark --source-color-index 0 "$FULL_PATH"
 fi
 
-echo "\$CURRENT_WALL = $FULL_PATH" > "$HOME/.cache/hyprlock_wall.conf"
+sed -i "s|path = .*|path = $FULL_PATH|" $HOME/.config/hypr/hyprlock.conf

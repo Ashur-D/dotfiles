@@ -1,114 +1,117 @@
 #!/bin/bash
 
 # ====================================================
-#                  needed packages
+#                     packages
 # ====================================================
 
 packages=(
+# ====================================================
+#                  CORE / NEEDED PACKAGES
+# ====================================================
+
+    # ------------ Core Wayland & Display ------------
+    qt5-wayland                 # APIs for Wayland
+    qt6-wayland                 # APIs for Wayland
+
     # ------------ Desktop UI Components ------------
-    waybar # topbar
-    mako # notifications
-    rofi # app launcher, this will control wallpapers,power profiles and restart/shutdown
-    swayosd # on screen display, uses gtk themes
-    awww # wallpaper
-
-    # ------------ Core Wayland & System ------------
-    qt5-wayland # APIs for Wayland
-    qt6-wayland # APIs for Wayland
-    power-profiles-daemon # power profiles
-
-    # ------------ Terminal & Editors ------------
-    kitty # terminal
-    neovim # editor
+    waybar                      # topbar
+    mako                        # notifications
+    rofi                        # app launcher, controls wallpapers/power/session
+    swayosd                     # on-screen display, uses gtk themes
+    awww                        # wallpaper daemon
 
     # ------------ Theming & Fonts ------------
-    matugen # color generator
-    catppuccin-cursors-mocha # cursor
-    ttf-cascadia-mono-nerd # font
+    matugen                     # color generator
+    catppuccin-cursors-mocha    # cursor theme
+    ttf-cascadia-mono-nerd      # system font
 
-    # ------------ Screenshot/Clipboard/Screen Record ------------
-    wl-clipboard # Command-line copy/paste
-    cliphist # clipboard manager
-    wl-clip-persist #  	Keep Wayland clipboard even after programs close
-    hyprshot # screenshots
-    satty # screenshot + annotater
-    gpu-screen-recorder-git # screen recorder
+    # ------------ Terminal & Shell ------------
+    kitty                       # terminal emulator
+    starship                    # terminal prompt
+    gum                         # shell scripts (menus, prompts)
+    fastfetch                   # system info tool
 
-    # ------------ Media Viewers ------------
-    mpv # media player
-    imv # image viewer
+    # ------------ CLI Utilities & File Management ------------
+    eza                         # ls replacement
+    yazi                        # tui file explorer
+    nautilus                    # gui file explorer
+    wl-clipboard                # command-line copy/paste
+    cliphist                    # clipboard manager
+    wl-clip-persist             # keep Wayland clipboard after programs close
 
-    # ------------ audio ------------
-    playerctl #  media player keybinds
-    wireplumber # audio
-    pipewire # audio
-    pipewire-pulse # audio
-    pipewire-audio # audio
-    pipewire-alsa # audio
-    wiremix # audio tui
+    # ------------ Editors ------------
+    neovim                      # terminal text editor
 
-    # ------------ wifi ------------
-    impala # wifi tui
-    iwd # wifi
+    # ------------ Audio & Media ------------
+    pipewire                    # audio core
+    pipewire-pulse              # audio compatibility
+    pipewire-audio              # audio support
+    pipewire-alsa               # audio compatibility
+    wireplumber                 # audio session manager
+    wiremix                     # audio tui
+    playerctl                   # media player keybinds
+    mpv                         # video media player
+    imv                         # image viewer
 
-    # # ------------ bluetooth ------------
-    # bluez #bluetooth
-    # bluez-utils #bluetooth
-    # bluetui #bluetooth
+    # ------------ Screenshots & Screen Recording ------------
+    hyprshot                    # screenshot tool
+    satty                       # screenshot annotator
+    gpu-screen-recorder-git     # screen recorder (cli) for ui use gpu-screen-recorder-ui
 
-    # ------------ terminal/file explorer ------------
-    fastfetch # system info tool
-    yazi # tui file explorer
-    nautilus # gui file explorer
-    starship # terminal prompt
+    # ------------ Network & Bluetooth ------------
+    iwd                         # wifi daemon
+    impala                      # wifi tui
+    bluez                       # bluetooth daemon
+    bluez-utils                 # bluetooth utilities
+    bluetui                     # bluetooth tui
+
+    # ------------ System & Hardware Management ------------
+    power-profiles-daemon       # power profiles or use auto-cpufreq, never both.
+    btop                        # system resource monitor
+
 
 # ====================================================
-#                optional packages
+#                  OPTIONAL PACKAGES
 # ====================================================
 
-    # ------------ main ------------
-    # zen-browser-bin
-    # vesktop-bin
-    # obsidian
-    # localsend
-    # spotatui # spotify tui theres also ncspot
+    # ------------ Daily Apps ------------
+    # zen-browser-bin           # web browser
+    # vesktop-bin               # discord client
+    # obsidian                  # note taking
+    # localsend                 # local file sharing
+    # spotatui                  # spotify tui (alternative: ncspot)
 
     # ------------ Gaming ------------
-    # steam
-    # gamescope
+    # steam                     # game launcher
+    # gamescope                 # micro-compositor for gaming
+    # proton-cachyos            # optimized proton compatibility tool
 
-    # ------------ dev ------------
-    # git
-    # lazygit
-    # zed
-    # openssh
+    # ------------ Development ------------
+    # git                       # version control
+    # lazygit                   # git tui
+    # zed                       # gui code editor
 
-    # ------------ System Monitoring/utility ------------
-    # btop
-    # bottom
-    # systemctl-tui
-    # stacer-bin
-    # netsonar-bin
-    # gdu
-    # ncdu
-    # auto-cpufreq
-    # efibootmgr
+    # ------------ Advanced Terminal Utilities ------------
+    # fd                        # faster alternative to 'find'
+    # zoxide                    # smarter 'cd' directory jumping
+    # fzf                       # fuzzy finder
 
-    # ------------ terminal rice ------------
-    # astroterm
-    # asciinema
-    # cbonsai
-    # catnap-git
-    # stormy-bin
-    # terminaltexteffects
+    # ------------ Advanced System Utilities ------------
+    # bottom                    # alternative system monitor
+    # systemctl-tui             # manage systemd services
+    # stacer-bin                # system optimizer & GUI monitor
+    # netsonar-bin              # network monitoring
+    # gdu                       # disk usage analyzer
+    # ncdu                      # disk usage analyzer (alternative)
+    # efibootmgr                # modify UEFI boot entries
 
-    # ------------ terminal ------------
-    # gum # shell scripts
-    # eza # ls replacment
-    # fd # alternative to find
-    # zoxide # smarter cd
-    # fzf # fuzzy finder
-
+    # ------------ Terminal Rice (Visuals & Fun) ------------
+    # astroterm                 # terminal planetarium
+    # asciinema                 # terminal session recorder
+    # cbonsai                   # bonsai tree generator
+    # catnap-git                # system fetch tool
+    # stormy-bin                # weather fetch
+    # terminaltexteffects       # text animations
 )
 
 # ====================================================
