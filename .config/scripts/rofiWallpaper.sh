@@ -10,8 +10,8 @@ MENU_OPTIONS=""
 # Loop through images
 for pic in "$WALLDIR"/*.{jpg,jpeg,png,gif}; do
     # Skip if no matches found
-    [ -e "$pic" ] || continue 
-    
+    [ -e "$pic" ] || continue
+
     filename=$(basename "$pic")
     thumb="$CACHE_DIR/$filename"
 
@@ -30,8 +30,10 @@ SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -i -theme ~/.config/rofi/wallp
 
 if [ -n "$SELECTED" ]; then
     FULL_PATH="$WALLDIR/$SELECTED"
-    
+
     # -m dark sets the mode (fixes GTK hooks)
     # --source-color-index 0 forces Matugen to skip the prompt and pick the first color
     matugen image -m dark --source-color-index 0 "$FULL_PATH"
 fi
+
+echo "\$CURRENT_WALL = $FULL_PATH" > "$HOME/.cache/hyprlock_wall.conf"
