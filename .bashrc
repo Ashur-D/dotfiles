@@ -9,7 +9,6 @@ export TERM=xterm-256color
 ###------------------- Editor used by CLI -----------------------###
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
-export BAT_THEME=ansi
 
 ###------------------- starship -----------------------###
 eval "$(starship init bash)"
@@ -32,6 +31,7 @@ function y() {
 alias f="fastfetch"
 alias ga='git add .'
 alias gp='git push'
+alias apps="~/.config/scripts/uninstall.sh"
 #alias gc='git commit -m'
 
 function gc() {
