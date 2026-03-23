@@ -11,7 +11,7 @@
   // -----------------------------------------------------
   // Module Layout
   // -----------------------------------------------------
-  "modules-left": ["clock"],
+  "modules-left": ["clock","custom/screenrecording-indicator"],
   "modules-center": ["hyprland/workspaces", "custom/update"],
   "modules-right": [
     "group/tray-expander",
@@ -109,4 +109,10 @@
     "icon-size": 15,
     "spacing": 10,
   },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$HOME/.config/scripts/waybar-indicator.sh",
+    "signal": 8,
+    "return-type": "json"
+  }
 }
