@@ -4,7 +4,6 @@
 ###------------------- Technicolor -----------------------###
 force_color_prompt=yes
 color_prompt=yes
-export TERM=xterm-256color
 
 ###------------------- Editor used by CLI -----------------------###
 export EDITOR="nvim"
@@ -48,7 +47,7 @@ function gc() {
 alias hyprland='start-hyprland'
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-  exec start-hyperland
+  exec start-hyprland
 fi
 
 ###------------------- power profile set -----------------------###
