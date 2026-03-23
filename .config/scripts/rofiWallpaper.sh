@@ -30,10 +30,8 @@ SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -i -theme ~/.config/rofi/wallp
 
 if [ -n "$SELECTED" ]; then
     FULL_PATH="$WALLDIR/$SELECTED"
-
     # -m dark sets the mode (fixes GTK hooks)
     # --source-color-index 0 forces Matugen to skip the prompt and pick the first color
     matugen image -m dark --source-color-index 0 "$FULL_PATH"
+    sed -i "s|path = .*|path = $FULL_PATH|" $HOME/.config/hypr/hyprlock.conf
 fi
-
-sed -i "s|path = .*|path = $FULL_PATH|" $HOME/.config/hypr/hyprlock.conf
