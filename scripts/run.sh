@@ -74,10 +74,3 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 
 chmod +x "$SCRIPT_DIR/config.sh"
 "$SCRIPT_DIR/config.sh"
-
-# ==========================
-# Install optional/prefrence packages
-# ==========================
-
-#chmod +x "$SCRIPT_DIR/optional.sh"
-#"$SCRIPT_DIR/optional.sh"
