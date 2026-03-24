@@ -32,7 +32,6 @@ packages=(
     fastfetch                   # system info tool
 
     # ------------ CLI Utilities & File Management ------------
-    eza                         # ls replacement
     yazi                        # tui file explorer
     nautilus                    # gui file explorer
     wl-clipboard                # command-line copy/paste
@@ -92,6 +91,7 @@ packages=(
     # zed                       # gui code editor
 
     # ------------ Advanced Terminal Utilities ------------
+    # eza                       # ls replacement
     # fd                        # faster alternative to 'find'
     # zoxide                    # smarter 'cd' directory jumping
     # fzf                       # fuzzy finder

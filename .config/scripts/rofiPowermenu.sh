@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # Define the menu options
-shutdown="⏻ "
-reboot=" "
 lock=" "
+reboot=" "
+shutdown="⏻ "
+
 
 # Combine them into a single string separated by newlines
-options="$shutdown\n$reboot\n$lock"
+options="$lock\n$shutdown\n$reboot"
 
 # Feed the options into Rofi
 chosen="$(echo -e "$options" | rofi -dmenu -i -theme ~/.config/rofi/powermenu.rasi)"
