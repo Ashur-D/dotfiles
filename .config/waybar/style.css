@@ -127,7 +127,6 @@ tooltip {
 #network:hover,
 #cpu:hover,
 #pulseaudio:hover,
-#custom-power:hover,
 #clock:hover {
     transition: all 0.3s ease;
     color: shade(@primary, 0.94);
