@@ -3,7 +3,7 @@ window {
   border-radius: 0;
   opacity: 0.97;
   border: 2px solid @accent_color;
-  background-color: @surface;
+  background-color: @accent_fg_color;
 }
 
 label {
@@ -17,7 +17,7 @@ image {
 }
 
 progressbar {
-  border-radius: 0;
+  border-radius: 5;
 }
 
 progress {

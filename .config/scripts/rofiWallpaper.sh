@@ -17,7 +17,7 @@ for pic in "$WALLDIR"/*.{jpg,jpeg,png,gif}; do
 
     # If thumbnail doesn't exist, create a fast, low-res version
     if [ ! -f "$thumb" ]; then
-        magick "$pic" -thumbnail 250x250^ -gravity center -extent 250x250 "$thumb"
+        magick "$pic" -thumbnail 250x250^ -gravity center -extent 100x100 "$thumb"
     fi
 
     # Feed the THUMBNAIL to Rofi's icon parameter, not the full image
