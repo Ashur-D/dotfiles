@@ -10,7 +10,7 @@ packages=(
     hyprcursor # cursor
     hyprlock # lock screen
     hyprsunset # warm light
-    #hypridle # idler
+    hypridle # idler
     hyprpolkitagent # authentication
     xdg-desktop-portal-hyprland #  xdg-desktop-portal backend for hyprland
     hyprtoolkit #  GUI toolkit
