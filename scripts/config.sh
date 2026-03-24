@@ -16,9 +16,10 @@ fi
 # Create destination if it doesn't exist
 mkdir -p "$DEST_DIR"
 
-# Copy all contents from source to destination
+# Copy all contents from source to destination and give exec perms to scripts
 cp -a "$SOURCE_DIR/"* "$DEST_DIR/"
 cp -a "$HOME/dotfiles/.bashrc" "$HOME"
+find "$DEST_DIR/scripts" -type f -name "*.sh" -exec chmod +x {} +
 
 #lazyvim install
 git clone https://github.com/LazyVim/starter ~/.config/nvim
