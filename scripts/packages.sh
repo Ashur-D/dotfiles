@@ -17,7 +17,7 @@ packages=(
     waybar                      # topbar
     mako                        # notifications
     rofi                        # app launcher, controls wallpapers/power/session
-    swayosd                     # on-screen display, uses gtk themes
+    swayosd                     # on-screen display
     awww                        # wallpaper daemon
 
     # ------------ Theming & Fonts ------------
@@ -55,7 +55,7 @@ packages=(
     # ------------ Screenshots & Screen Recording ------------
     hyprshot                    # screenshot tool
     satty                       # screenshot annotator
-    gpu-screen-recorder-git     # screen recorder (cli) for ui use gpu-screen-recorder-ui
+    gpu-screen-recorder-ui      # screen recorder ui
 
     # ------------ Network & Bluetooth ------------
     iwd                         # wifi daemon
