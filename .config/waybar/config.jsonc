@@ -110,9 +110,10 @@
     "spacing": 10,
   },
   "custom/screenrecording-indicator": {
-    "on-click": "omarchy-cmd-screenrecord",
     "exec": "$HOME/.config/scripts/waybar-indicator.sh",
-    "signal": 8,
-    "return-type": "json"
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "bash -c 'pkill -SIGINT -f \"gpu-screen-recorder.*-w\" && notify-send \"  Recording Stopped\" \"Video saved successfully!\" -t 3000 &'",
+    "tooltip": true
   }
 }
