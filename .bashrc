@@ -32,7 +32,7 @@ alias ga='git add .'
 alias gp='git push'
 alias apps="~/.config/scripts/uninstall.sh"
 alias zed="zeditor"
-#alias gc='git commit -m'
+alias gcm='git commit -m "updated"'
 
 function gc() {
     MESSAGE=$(gum input --placeholder "Enter commit message..." --width 50)
