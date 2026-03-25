@@ -1,6 +1,6 @@
 @import "colors.css";
 window {
-  border-radius: 0;
+  border-radius: 2;
   opacity: 0.97;
   border: 2px solid @accent_color;
   background-color: @accent_fg_color;
