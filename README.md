@@ -1,6 +1,5 @@
 # todo
 - get gtk/qt working with matugen
-- mako theme with matugen
 - get cliphist working with rofi
 
 # get started recommended arch install 
