@@ -9,10 +9,6 @@ packages=(
 #                  CORE / NEEDED PACKAGES
 # ====================================================
 
-    # ------------ Core Wayland & Display ------------
-    qt5-wayland                 # APIs for Wayland
-    qt6-wayland                 # APIs for Wayland
-
     # ------------ Desktop UI Components ------------
     waybar                      # topbar
     mako                        # notifications
@@ -67,6 +63,10 @@ packages=(
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power profiles or use auto-cpufreq, never both.
     btop                        # system resource monitor
+
+    # ------------ Core Wayland & Display ------------
+    #qt5-wayland                 # APIs for Wayland
+    #qt6-wayland                 # APIs for Wayland
 
 
 # ====================================================

@@ -1,0 +1,17 @@
+# Pull in Matugen colors and mode overrides
+include=~/.config/mako/mako-colors
+
+font=JetBrainsMono Nerd Font 12
+width=350
+height=150
+margin=10
+padding=15
+border-size=2
+border-radius=16
+icons=1
+max-icon-size=48
+default-timeout=5000
+ignore-timeout=1
+format=<b>%s</b>\n%b
+layer=overlay
+anchor=top-righ
