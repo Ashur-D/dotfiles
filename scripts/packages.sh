@@ -20,6 +20,7 @@ packages=(
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
     ttf-cascadia-mono-nerd      # system font
+    adw-gtk-theme
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal emulator
