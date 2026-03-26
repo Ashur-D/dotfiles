@@ -17,15 +17,6 @@ eval "$(starship init bash)"
 #PS1=$'\uf0a9 '
 #PS1="\[\e]0;\w\a\]$PS1"
 
-###------------------- yazi shell wrapper -----------------------###
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd <"$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-  rm -f -- "$tmp"
-}
-
 ###------------------- aliases -----------------------###
 alias f="fastfetch"
 alias ga='git add .'
@@ -114,4 +105,13 @@ function apps() {
     else
         gum style --foreground 212 "Operation cancelled. Nothing was uninstalled."
     fi
+}
+
+###------------------- yazi shell wrapper -----------------------###
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd <"$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }

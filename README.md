@@ -1,6 +1,7 @@
 # todo
 - get gtk/qt working with matugen
 - get cliphist working with rofi
+- get neovim working with matugen
 
 # get started recommended arch install 
 
