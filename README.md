@@ -17,7 +17,12 @@
 - `./run.sh`
 - then restart after the installer is done.
 
+# themes
+- some themes may need to be manually turned on
+- for ex: vesktop,btop,kitty,etc will need to go into their themes section, and select a matugen version.
+- for vesktop this is called "midnight"
+
 # todo
 - get gtk/qt working with matugen
-- get cliphist working with rofi
 - get neovim working with matugen
+- get starship colors working
