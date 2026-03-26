@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLDIR="$HOME/github/wallpapers/wallpapers/"
+WALLDIR="$HOME/.config/wallpapers/"
 CACHE_DIR="$HOME/.cache/wallpaper_thumbnails"
 
 mkdir -p "$CACHE_DIR"
