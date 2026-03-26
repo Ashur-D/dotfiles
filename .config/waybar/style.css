@@ -54,40 +54,35 @@ tooltip {
     border: none;
     box-shadow: none;
     padding: 0px 3px;
-    color: alpha(@primary, 0.4);
+    color: alpha(@primary, 0.6);
     transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
     color: alpha(@primary, 0.3);
     border: none;
-    text-shadow: 0px 0px 1.5px alpha(@shadow, 0.5);
     transition: all 1s ease;
 }
 
 #workspaces button.active {
     color: @primary;
     border: none;
-    text-shadow: 0px 0px 2px alpha(@shadow, 0.5);
 }
 
 #workspaces button.empty {
-    color: alpha(@primary, 0.3);
+    color: alpha(@primary, 0.35);
     border: none;
-    text-shadow: 0px 0px 1.5px alpha(@shadow, 0.5);
 }
 
 #workspaces button.empty:hover {
     color: alpha(@primary, 0.3);
     border: none;
-    text-shadow: 0px 0px 1.5px alpha(@shadow, 0.5);
     transition: all 1s ease;
 }
 
 #workspaces button.empty.active {
     color: @primary;
     border: none;
-    text-shadow: 0px 0px 2px alpha(@shadow, 0.5);
 }
 
 /* -----------------------------------------------------
