@@ -1,11 +1,5 @@
-# todo
-- get gtk/qt working with matugen
-- get cliphist working with rofi
-- get neovim working with matugen
+# recommended arch install options
 
-# get started recommended arch install 
-
-- Mirrors and repositories >	Select your region
 - Disk Configuration > default structure: yes + use compression
 - Bootloader > grub
 - kernal > zen-kernal
@@ -22,3 +16,8 @@
 - `chmod +x run.sh`
 - `./run.sh`
 - then restart after the installer is done.
+
+# todo
+- get gtk/qt working with matugen
+- get cliphist working with rofi
+- get neovim working with matugen
