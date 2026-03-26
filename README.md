@@ -23,6 +23,6 @@
 - for vesktop this is called "midnight"
 
 # todo
-- get gtk/qt working with matugen
-- get neovim working with matugen
+- get gtk/qt working with matugen ( already kinda works?)
+- get neovim working with matugen (nvm this is too much work)
 - get starship colors working
