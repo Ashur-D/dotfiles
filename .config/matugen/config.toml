@@ -57,3 +57,7 @@ post_hook = "killall swayosd-server; hyprctl dispatch exec swayosd-server"
 [templates.starship]
 input_path = '~/.config/matugen/templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/vesktop.css'
+output_path = '~/.config/vesktop/themes/midnight-discord.css'
