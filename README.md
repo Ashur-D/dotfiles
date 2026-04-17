@@ -28,4 +28,3 @@
 - get neovim working with matugen (nvm this is too much work)
 - get starship colors working
 - multilib
-- 
