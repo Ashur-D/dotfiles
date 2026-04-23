@@ -8,81 +8,95 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- Core Editor Settings ---
-  "lsp_document_colors": "background",
-  "soft_wrap": "editor_width",
   "buffer_line_height": "comfortable",
-  "colorize_brackets": true,
   "indent_guides": {
     "background_coloring": "indent_aware",
     "coloring": "indent_aware",
   },
+  "soft_wrap": "editor_width",
 
-  // --- Theming & Appearance ---
+  // --- Appearance & Theming ---
+  "icon_theme": "Catppuccin Macchiato",
   "theme": {
     "mode": "system",
     "light": "One Dark",
     "dark": "Catppuccin Macchiato (Blur) [Light]",
   },
-  "icon_theme": "Catppuccin Macchiato",
 
-  // --- General UI Elements ---
-  "title_bar": {
-    "show_menus": false,
-    "show_user_menu": true,
-    "show_branch_icon": false,
-    "show_sign_in": false,
-    "show_user_picture": true,
-    "show_onboarding_banner": false,
-    "show_project_items": false,
-    "show_branch_name": false,
+  // --- UI Elements ---
+  "scrollbar": {
+    "show": "never",
+  },
+  "status_bar": {
+    "active_language_button": false,
+    "cursor_position_button": false,
   },
   "tab_bar": {
     "show_nav_history_buttons": false,
   },
-  "status_bar": {
-    "cursor_position_button": false,
-    "active_language_button": false,
+  "title_bar": {
+    "show_branch_name": false,
+    "show_menus": false,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_sign_in": false,
+    "show_user_menu": true,
+    "show_user_picture": true,
   },
   "toolbar": {
     "agent_review": false,
-    "selections_menu": false,
-    "quick_actions": false,
     "breadcrumbs": false,
-  },
-  "scrollbar": {
-    "show": "never",
+    "quick_actions": false,
+    "selections_menu": false,
   },
 
-  // --- Side Panels & Views ---
-  "project_panel": {
-    "entry_spacing": "standard",
-  },
-  "outline_panel": {
-    "button": false,
-  },
-  "notification_panel": {
-    "button": false,
-  },
+  // --- Panels & Docks ---
   "collaboration_panel": {
-    "button": false,
-  },
-
-  // --- Tools & Features ---
-  "prettier": {
-    "allowed": true,
-  },
-  "search": {
-    "button": false,
-  },
-  "debugger": {
     "button": false,
   },
   "diagnostics": {
     "button": false,
   },
+  "git_panel": {
+    "button": false,
+  },
+  "outline_panel": {
+    "button": false,
+    "file_icons": true,
+  },
+  "project_panel": {
+    "button": false,
+    "dock": "left",
+    "git_status": true,
+  },
+  "search": {
+    "button": false,
+  },
+  "terminal": {
+    "button": false,
+  },
 
-  // --- AI & Agent Settings ---
+  // --- AI & Agent ---
+  "agent": {
+    "dock": "right",
+    "enable_feedback": false,
+    "favorite_models": [],
+    "model_parameters": [],
+    "sidebar_side": "right",
+  },
   "disable_ai": true,
+  "show_edit_predictions": true,
+
+  // --- Tools & Version Control ---
+  "debugger": {
+    "button": false,
+  },
+  "git": {
+    "disable_git": true,
+  },
+  "prettier": {
+    "allowed": true,
+  },
 
   // --- Privacy & Telemetry ---
   "telemetry": {
