@@ -8,7 +8,6 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- Core Editor Settings ---
-  "buffer_line_height": "comfortable",
   "indent_guides": {
     "background_coloring": "indent_aware",
     "coloring": "indent_aware",
@@ -40,8 +39,6 @@
     "show_onboarding_banner": false,
     "show_project_items": false,
     "show_sign_in": false,
-    "show_user_menu": true,
-    "show_user_picture": true,
   },
   "toolbar": {
     "agent_review": false,
@@ -62,12 +59,10 @@
   },
   "outline_panel": {
     "button": false,
-    "file_icons": true,
   },
   "project_panel": {
     "button": false,
     "dock": "left",
-    "git_status": true,
   },
   "search": {
     "button": false,
@@ -85,7 +80,6 @@
     "sidebar_side": "right",
   },
   "disable_ai": true,
-  "show_edit_predictions": true,
 
   // --- Tools & Version Control ---
   "debugger": {
@@ -93,9 +87,6 @@
   },
   "git": {
     "disable_git": true,
-  },
-  "prettier": {
-    "allowed": true,
   },
 
   // --- Privacy & Telemetry ---
