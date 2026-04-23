@@ -105,6 +105,7 @@ packages=(
     # gdu                       # disk usage analyzer
     # ncdu                      # disk usage analyzer (alternative)
     # efibootmgr                # modify UEFI boot entries
+    # pachub                    # Front End for Pacman/AUR 
 
     # ------------ Terminal Rice (Visuals & Fun) ------------
     # astroterm                 # terminal planetarium
