@@ -28,4 +28,4 @@
 - get neovim working with matugen (nvm this is too much work)
 - get starship colors working
 - multilib
-- look into more hyprland animations: https://github.com/HyDE-Project/HyDE/blob/master/Configs/.config/hypr/animations/me-1.conf
+- look into more hyprland animations: https://github.com/HyDE-Project/HyDE/tree/master/Configs/.config/hypr/animations
