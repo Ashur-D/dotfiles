@@ -10,13 +10,13 @@
 # post arch install  
 
 - once in the TTY please follow the commands below
-- `git clone https://github.com/Ashur-D/dotfiles`
-- before running the script there are optional packages you may uncomment packages in `dotfiles/scripts/packages.sh` 
-- if you need nvidia packages go to `dotfiles/scripts/run.sh` and uncomment out the nvidia script. 
-- `cd dotfiles/scripts` 
-- `chmod +x run.sh`
-- `./run.sh`
-- then restart after the installer is done.
+1. `git clone https://github.com/Ashur-D/dotfiles`
+- (optional) before running the script there are optional packages you may uncomment packages in `dotfiles/scripts/packages.sh` 
+- (optional) if you need nvidia packages go to `dotfiles/scripts/run.sh` and uncomment out the nvidia script. 
+2. `cd dotfiles/scripts` 
+3. `chmod +x run.sh`
+4. `./run.sh`
+5. then restart after the installer is done.
 
 # themes
 - some themes may need to be manually turned on
