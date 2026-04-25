@@ -3,8 +3,8 @@ $directory$git_branch$git_status$python$rust$nodejs
 $character"""
 
 [directory]
-format = "[](fg:{{colors.surface_container.default.hex}})[󰉋 ](bg:{{colors.surface_container.default.hex}} fg:{{colors.primary.default.hex}})[ $path ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[](fg:{{colors.surface_container.default.hex}}) "
-truncation_length = 2
+format = "[](fg:{{colors.primary.default.hex}})[󰉋 ](bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.primary.default.hex}})[ $path ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
+truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -16,30 +16,30 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-format = "[](fg:{{colors.primary.default.hex}})[ $symbol ](bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}})[ $branch ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[](fg:{{colors.surface_container.default.hex}}) "
+format = "[](fg:{{colors.secondary.default.hex}})[ $symbol ](bg:{{colors.secondary.default.hex}} fg:{{colors.on_secondary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.secondary.default.hex}})[ $branch ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
 
 [git_status]
-format = "[](fg:{{colors.error_container.default.hex}})[ $all_status$ahead_behind ](bg:{{colors.error_container.default.hex}} fg:{{colors.on_error_container.default.hex}})[](fg:{{colors.error_container.default.hex}}) "
+format = "[](fg:{{colors.error.default.hex}})[ $all_status$ahead_behind ](bg:{{colors.error.default.hex}} fg:{{colors.on_error.default.hex}})[ ](fg:{{colors.error.default.hex}})"
 
 [python]
 symbol = ""
-format = "[](fg:{{colors.secondary.default.hex}})[ $symbol ](bg:{{colors.secondary.default.hex}} fg:{{colors.on_secondary.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[](fg:{{colors.surface_container.default.hex}}) "
+format = "[](fg:{{colors.tertiary.default.hex}})[ $symbol ](bg:{{colors.tertiary.default.hex}} fg:{{colors.on_tertiary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.tertiary.default.hex}})[ ${version} ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
 disabled = false
 
 [rust]
 symbol = "󱘗"
-format = "[](fg:{{colors.tertiary.default.hex}})[ $symbol ](bg:{{colors.tertiary.default.hex}} fg:{{colors.on_tertiary.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[](fg:{{colors.surface_container.default.hex}}) "
+format = "[](fg:{{colors.secondary.default.hex}})[ $symbol ](bg:{{colors.secondary.default.hex}} fg:{{colors.on_secondary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.secondary.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
 disabled = false
 
 [nodejs]
 symbol = ""
-format = "[](fg:{{colors.secondary_container.default.hex}})[ $symbol ](bg:{{colors.secondary_container.default.hex}} fg:{{colors.on_secondary_container.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[](fg:{{colors.surface_container.default.hex}}) "
+format = "[](fg:{{colors.primary.default.hex}})[ $symbol ](bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.primary.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
 disabled = false
 
 [character]
-success_symbol = "[❯](bold fg:{{colors.primary.default.hex}})"
-error_symbol = "[❯](bold fg:{{colors.error.default.hex}})"
-vimcmd_symbol = "[❮](bold fg:{{colors.tertiary.default.hex}})"
+success_symbol = "[ ❯](bold fg:{{colors.primary.default.hex}})"
+error_symbol = "[ ❯](bold fg:{{colors.error.default.hex}})"
+vimcmd_symbol = "[ ❮](bold fg:{{colors.tertiary.default.hex}})"
 disabled = false
 
 [cmd_duration]
