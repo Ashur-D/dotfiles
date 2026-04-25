@@ -1,41 +1,36 @@
 format = """
-\
 [](fg:blue)\
 $os\
-[](bg:blue fg:red)\
 $username\
-[](bg:red fg:green)\
+[](fg:blue bg:green)\
 $directory\
-[ ](fg:green)\
+[](fg:green bg:black)\
 $git_branch\
 $git_status\
-$all\
+[](fg:black)\
+$line_break\
 $character"""
-
-[username]
-show_always = true
-format = '[$user ](bg:red fg:black)'
-disabled = false
 
 [os]
 disabled = false
-style = 'bg:blue fg:black'
+style = "bg:blue fg:black"
+format = "[$symbol]($style)"
+
 [os.symbols]
-Arch = " "
+Arch = "  "
 
-
-[cmd_duration]
-format = "[$duration](fg:red)"
+[username]
+show_always = true
+style_user = "bg:blue fg:black"
+style_root = "bg:red fg:black"
+format = "[$user ]($style)"
+disabled = false
 
 [directory]
-format = "[$path](bg:green fg:black)"
+style = "bg:green fg:black"
+format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
-
-[character]
-success_symbol = "[](bold blue)"
-error_symbol = "[✗](bold red)"
-disabled = false
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -44,170 +39,38 @@ disabled = false
 "Pictures" = " "
 "Scripts" = "󰲋 "
 
-[fossil_branch]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
 [git_branch]
-symbol = "  "
-format = '[$symbol($branch) ($version)]($style)'
+symbol = ""
+style = "bg:black fg:blue"
+format = "[ $symbol $branch ]($style)"
 
-[git_commit]
-tag_symbol = '  '
-format = '[$symbol($version)]($style)'
+[git_status]
+style = "bg:black fg:red"
+format = "[$all_status$ahead_behind ]($style)"
 
-[aws]
-symbol = "   "
-format = '[$symbol($version)]($style)'
+[character]
+success_symbol = "[❯](bold blue)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+disabled = false
 
-[buf]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[c]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[cmake]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[conda]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[crystal]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[dart]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[docker_context]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[elixir]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[elm]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[fennel]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[golang]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[guix_shell]
-symbol = "   "
-format = '[$symbol($version)]($style)'
-
-[haskell]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[haxe]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[hg_branch]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[hostname]
-ssh_symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[java]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[julia]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[kotlin]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[lua]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[memory_usage]
-symbol = " 󰍛 "
-format = '[$symbol($version)]($style)'
-
-[meson]
-symbol = " 󰔷 "
-format = '[$symbol($version)]($style)'
-
-[nim]
-symbol = " 󰆥 "
-format = '[$symbol($version)]($style)'
-
-[nix_shell]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[nodejs]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[ocaml]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[package]
-symbol = " 󰏗 "
-format = '[$symbol($version)]($style)'
-
-[perl]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[php]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[pijul_channel]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[cmd_duration]
+disabled = true
 
 [python]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+disabled = true
 
-[rlang]
-symbol = " 󰟔 "
-format = '[$symbol($version)]($style)'
+[nodejs]
+disabled = true
 
-[ruby]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[package]
+disabled = true
 
 [rust]
-symbol = " 󱘗 "
-format = '[$symbol($version)]($style)'
+disabled = true
 
-[scala]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[lua]
+disabled = true
 
-[swift]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[zig]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[gradle]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[golang]
+disabled = true
