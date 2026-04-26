@@ -1,64 +1,33 @@
-format = """
-$directory$git_branch$git_status$python$rust$nodejs
-$character"""
-
-[directory]
-format = "[](fg:{{colors.primary.default.hex}})[󰉋 ](bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.primary.default.hex}})[ $path ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
-truncation_length = 3
-truncation_symbol = "…/"
-
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Scripts" = "󰲋 "
-
-[git_branch]
-symbol = ""
-format = "[](fg:{{colors.secondary.default.hex}})[ $symbol ](bg:{{colors.secondary.default.hex}} fg:{{colors.on_secondary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.secondary.default.hex}})[ $branch ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
-
-[git_status]
-format = "[](fg:{{colors.error.default.hex}})[ $all_status$ahead_behind ](bg:{{colors.error.default.hex}} fg:{{colors.on_error.default.hex}})[ ](fg:{{colors.error.default.hex}})"
-
-[python]
-symbol = ""
-format = "[](fg:{{colors.tertiary.default.hex}})[ $symbol ](bg:{{colors.tertiary.default.hex}} fg:{{colors.on_tertiary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.tertiary.default.hex}})[ ${version} ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
-disabled = false
-
-[rust]
-symbol = "󱘗"
-format = "[](fg:{{colors.secondary.default.hex}})[ $symbol ](bg:{{colors.secondary.default.hex}} fg:{{colors.on_secondary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.secondary.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
-disabled = false
-
-[nodejs]
-symbol = ""
-format = "[](fg:{{colors.primary.default.hex}})[ $symbol ](bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}})[](bg:{{colors.surface_container.default.hex}} fg:{{colors.primary.default.hex}})[ $version ](bg:{{colors.surface_container.default.hex}} fg:{{colors.on_surface.default.hex}})[ ](fg:{{colors.surface_container.default.hex}})"
-disabled = false
+add_newline = true
+command_timeout = 200
+format = "$directory$git_branch$git_status$character"
 
 [character]
-success_symbol = "[ ❯](bold fg:{{colors.primary.default.hex}})"
-error_symbol = "[ ❯](bold fg:{{colors.error.default.hex}})"
-vimcmd_symbol = "[ ❮](bold fg:{{colors.tertiary.default.hex}})"
-disabled = false
+error_symbol = "[✗](bold {{colors.error.default.hex}})"
+success_symbol = "[❯](bold {{colors.primary.default.hex}})"
 
-[cmd_duration]
-disabled = true
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+style = "bold {{colors.primary.default.hex}}"
+repo_root_style = "bold {{colors.primary.default.hex}}"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
-[package]
-disabled = true
+[git_branch]
+format = "[$branch]($style) "
+style = "italic {{colors.secondary.default.hex}}"
 
-[lua]
-disabled = true
-
-[golang]
-disabled = true
-
-[java]
-disabled = true
-
-[php]
-disabled = true
-
-[docker_context]
-disabled = true
+[git_status]
+format     = "[$all_status]($style)"
+style      = "{{colors.tertiary.default.hex}}"
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""
