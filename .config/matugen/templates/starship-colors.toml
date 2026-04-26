@@ -1,6 +1,8 @@
 add_newline = true
 command_timeout = 200
-format = "[$directory$git_branch$git_status]($style)$character"
+
+# The layout: Just Directory, Branch, Status, and the prompt character
+format = "$directory$git_branch$git_status$character"
 
 # 1. Define the dynamic Matugen palette here
 palette = "matugen"
@@ -11,33 +13,35 @@ secondary = "{{colors.secondary.default.hex}}"
 tertiary = "{{colors.tertiary.default.hex}}"
 error = "{{colors.error.default.hex}}"
 
-# 2. Map the colors to your modules
-[character]
-error_symbol = "[✗](bold error)"
-success_symbol = "[❯](bold primary)"
-
+# 2. Minimal modules
 [directory]
-truncation_length = 2
-truncation_symbol = "…/"
+format = "[$path]($style) "
 style = "bold primary"
-repo_root_style = "bold primary"
-repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncation_symbol = "…/"
 
 [git_branch]
 format = "[$branch]($style) "
-style = "italic secondary"
+style = "bold secondary"
+symbol = "" # Removes the git icon to match the screenshot exactly
 
 [git_status]
-format     = "[$all_status]($style)"
-style      = "tertiary"
-ahead      = "⇡${count} "
-diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
-behind     = "⇣${count} "
-conflicted = " "
-up_to_date = " "
-untracked  = "? "
-modified   = " "
-stashed    = ""
-staged     = ""
-renamed    = ""
-deleted    = ""
+format = "[$all_status]($style) "
+style = "bold tertiary"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = "!"
+up_to_date = ""
+untracked = "?"
+modified = "*"
+stashed = ""
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[character]
+# Matches the minimal chevron seen in the screenshot
+success_symbol = "[>](bold primary)"
+error_symbol = "[>](bold error)"
+vimcmd_symbol = "[<](bold secondary)"
