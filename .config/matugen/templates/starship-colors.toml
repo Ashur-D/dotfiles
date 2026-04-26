@@ -1,47 +1,78 @@
 add_newline = true
 command_timeout = 200
 
-# The layout: Just Directory, Branch, Status, and the prompt character
-format = "$directory$git_branch$git_status$character"
-
-# 1. Define the dynamic Matugen palette here
+# 1. Define your dynamic Matugen palette
 palette = "matugen"
 
 [palettes.matugen]
 primary = "{{colors.primary.default.hex}}"
+on_primary = "{{colors.on_primary.default.hex}}"
 secondary = "{{colors.secondary.default.hex}}"
+on_secondary = "{{colors.on_secondary.default.hex}}"
 tertiary = "{{colors.tertiary.default.hex}}"
+on_tertiary = "{{colors.on_tertiary.default.hex}}"
+surface = "{{colors.surface_container_highest.default.hex}}"
+text = "{{colors.on_surface.default.hex}}"
 error = "{{colors.error.default.hex}}"
 
-# 2. Minimal modules
+# 2. The Typecraft Layout
+# This manually chains the sharp powerline triangles between each module block
+format = """
+[](surface)\
+$os\
+$username\
+[](bg:primary fg:surface)\
+$directory\
+[](bg:secondary fg:primary)\
+$git_branch\
+$git_status\
+[](bg:tertiary fg:secondary)\
+$time\
+[](fg:tertiary)\
+$line_break\
+$character"""
+
+# 3. Module Styling
+[os]
+disabled = false
+# Uses the Arch Linux icon matching the screenshot
+format = "[ ](bg:surface fg:text)"
+
+[username]
+show_always = true
+style_user = "bg:surface fg:text"
+format = "[$user ]($style_user)"
+
 [directory]
-format = "[$path]($style) "
-style = "bold primary"
+style = "bg:primary fg:on_primary"
+format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Scripts" = "󰲋 "
+
 [git_branch]
-format = "[$branch]($style) "
-style = "bold secondary"
-symbol = "" # Removes the git icon to match the screenshot exactly
+symbol = ""
+style = "bg:secondary fg:on_secondary"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
-format = "[$all_status]($style) "
-style = "bold tertiary"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-conflicted = "!"
-up_to_date = ""
-untracked = "?"
-modified = "*"
-stashed = ""
-staged = "+"
-renamed = "»"
-deleted = "✘"
+style = "bg:secondary fg:on_secondary"
+format = "[$all_status$ahead_behind ]($style)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:tertiary fg:on_tertiary"
+format = "[  $time ]($style)"
 
 [character]
-# Matches the minimal chevron seen in the screenshot
-success_symbol = "[>](bold primary)"
-error_symbol = "[>](bold error)"
-vimcmd_symbol = "[<](bold secondary)"
+# Uses the minimal text arrow from the screenshot
+success_symbol = "[->](bold primary)"
+error_symbol = "[->](bold error)"
+vimcmd_symbol = "[<-](bold secondary)"
