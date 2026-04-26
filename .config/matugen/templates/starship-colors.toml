@@ -1,50 +1,80 @@
-add_newline = true
-command_timeout = 200
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# 1. Define your dynamic Matugen palette
-palette = "matugen"
-
-[palettes.matugen]
-primary = "{{colors.primary.default.hex}}"
-on_primary = "{{colors.on_primary.default.hex}}"
-secondary = "{{colors.secondary.default.hex}}"
-on_secondary = "{{colors.on_secondary.default.hex}}"
-tertiary = "{{colors.tertiary.default.hex}}"
-on_tertiary = "{{colors.on_tertiary.default.hex}}"
-surface = "{{colors.surface_container_highest.default.hex}}"
-text = "{{colors.on_surface.default.hex}}"
-error = "{{colors.error.default.hex}}"
-
-# 2. The Typecraft Layout
-# This manually chains the sharp powerline triangles between each module block
 format = """
-[](surface)\
+[](color_surface0)\
 $os\
 $username\
-[](bg:primary fg:surface)\
+[](bg:color_peach fg:color_surface0)\
 $directory\
-[](bg:secondary fg:primary)\
+[](fg:color_peach bg:color_green)\
 $git_branch\
 $git_status\
-[](bg:tertiary fg:secondary)\
+[](fg:color_green bg:color_teal)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_teal bg:color_blue)\
+$docker_context\
+[](fg:color_blue bg:color_purple)\
 $time\
-[](fg:tertiary)\
-$line_break\
-$character"""
+[ ](fg:color_purple)\
+$line_break$character"""
 
-# 3. Module Styling
+# Call the dynamic Matugen palette
+palette = 'matugen'
+
+[palettes.matugen]
+color_surface0 = "{{colors.surface_container_high.default.hex}}"
+color_text = "{{colors.on_surface.default.hex}}"
+color_peach = "{{colors.primary.default.hex}}"
+color_mantle = "{{colors.on_primary.default.hex}}"
+color_green = "{{colors.secondary.default.hex}}"
+color_base = "{{colors.on_secondary.default.hex}}"
+color_teal = "{{colors.tertiary.default.hex}}"
+color_blue = "{{colors.primary_fixed_dim.default.hex}}"
+color_purple = "{{colors.secondary_fixed_dim.default.hex}}"
+color_red = "{{colors.error.default.hex}}"
+color_lavender = "{{colors.tertiary_fixed.default.hex}}"
+
 [os]
 disabled = false
-# Uses the Arch Linux icon matching the screenshot
-format = "[ ](bg:surface fg:text)"
+style = "bg:color_surface0 fg:color_text"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:surface fg:text"
-format = "[$user ]($style_user)"
+style_user = "bg:color_surface0 fg:color_text"
+style_root = "bg:color_surface0 fg:color_text"
+format = '[ $user ]($style)'
 
 [directory]
-style = "bg:primary fg:on_primary"
+style = "fg:color_mantle bg:color_peach"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -54,25 +84,81 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Scripts" = "󰲋 "
+"Developer" = "󰲋 "
 
 [git_branch]
 symbol = ""
-style = "bg:secondary fg:on_secondary"
-format = "[ $symbol $branch ]($style)"
+style = "bg:color_teal"
+format = '[[ $symbol $branch ](fg:color_base bg:color_green)]($style)'
 
 [git_status]
-style = "bg:secondary fg:on_secondary"
-format = "[$all_status$ahead_behind ]($style)"
+style = "bg:color_teal"
+format = '[[($all_status$ahead_behind )](fg:color_base bg:color_green)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[java]
+symbol = " "
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_teal"
+format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_mantle"
+format = '[[ $symbol( $context) ](fg:color_base bg:color_blue)]($style)'
 
 [time]
 disabled = false
-time_format = "%H:%M"
-style = "bg:tertiary fg:on_tertiary"
-format = "[  $time ]($style)"
+time_format = "%R"
+style = "bg:color_peach"
+format = '[[  $time ](fg:color_mantle bg:color_purple)]($style)'
+
+[line_break]
+disabled = false
 
 [character]
-# Uses the minimal text arrow from the screenshot
-success_symbol = "[->](bold primary)"
-error_symbol = "[->](bold error)"
-vimcmd_symbol = "[<-](bold secondary)"
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_lavender)'
