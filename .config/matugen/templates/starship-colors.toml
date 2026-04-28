@@ -145,6 +145,12 @@ symbol = ""
 style = "bg:color_mantle"
 format = '[[ $symbol( $context) ](fg:color_base bg:color_blue)]($style)'
 
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_peach"
+format = '[[  $time ](fg:color_mantle bg:color_purple)]($style)'
+
 [line_break]
 disabled = false
 
