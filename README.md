@@ -1,6 +1,5 @@
 # recommended arch install options
 
-- multilib (optional) 
 - Disk Configuration > default structure: yes + use compression
 - Bootloader > grub
 - kernal > zen-kernal
@@ -27,7 +26,7 @@
 # todo
 - get gtk/qt working with matugen ( already kinda works?)
 - ~~get neovim working with matugen (nvm this is too much work)~~
-- ~~get starship colors working~~ kinda wanna make it look better later on.
+- get starship colors working
 - multilib
 - look into more hyprland animations: https://github.com/HyDE-Project/HyDE/tree/master/Configs/.config/hypr/animations
 - install the cachyOS kernal
