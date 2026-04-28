@@ -5,8 +5,8 @@ set = true
 command = "awww img {{image}} --transition-type random --transition-fps 144"
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.lua'
-output_path = '~/.config/hypr/colors.lua'
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
 
 [templates.waybar]
 input_path = '~/.config/matugen/templates/colors.css'
