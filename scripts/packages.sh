@@ -105,8 +105,8 @@ packages=(
     # gdu                       # disk usage analyzer
     # ncdu                      # disk usage analyzer (alternative)
     # efibootmgr                # modify UEFI boot entries
-    # pachub                    # Front End for Pacman/AUR 
-    # dust git                  # A more intuitive version of du in rust
+    # pachub                    # Front End for Pacman/AUR
+    # dust-git                  # A more intuitive version of du in rust
 
     # ------------ Terminal Rice (Visuals & Fun) ------------
     # astroterm                 # terminal planetarium
@@ -115,7 +115,8 @@ packages=(
     # catnap-git                # system fetch tool
     # stormy-bin                # weather fetch
     # terminaltexteffects       # text animations
-    # scope tui                 #  	A simple oscilloscope/vectorscope/spectroscope for your terminal
+    # scope-tui                 # A simple oscilloscope/vectorscope/spectroscope for your terminal
+    # weathr
 )
 
 # ====================================================
