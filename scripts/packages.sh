@@ -64,6 +64,7 @@ packages=(
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power profiles or use auto-cpufreq, never both.
     btop                        # system resource monitor
+    brightnessctl               # controls screen and keyboard brightness
 
     # ------------ Core Wayland & Display ------------
     #qt5-wayland                 # APIs for Wayland
@@ -122,38 +123,17 @@ packages=(
 #                    script
 # ====================================================
 
-# Check for yay
-if ! command -v yay &>/dev/null; then
-  echo "Error: 'yay' AUR helper is not installed. Please install yay and rerun this script."
-  exit 1
-fi
+echo "Starting batch installation of core packages..."
 
-# Array to keep track of any packages that fail to install
-failed_packages=()
-
-for package in "${packages[@]}"; do
-  if pacman -Q "$package" &>/dev/null; then
-    echo "$package is already installed, skipping."
-  else
-    echo "Installing $package..."
-    if yay -S --noconfirm "$package"; then
-      echo "$package installed successfully."
-    else
-      echo "Failed to install $package."
-      failed_packages+=("$package")
-    fi
-  fi
-done
-
-# Report on failed installations
-if [ ${#failed_packages[@]} -ne 0 ]; then
-  echo "------------------------------------------------------------"
-  echo "WARNING: The following needed packages failed to install:"
-  for failed in "${failed_packages[@]}"; do
-    echo "  - $failed"
-  done
-  echo "Please check the logs or try installing them manually."
-  echo "------------------------------------------------------------"
+# Install EVERYTHING in one single, fast transaction.
+# --needed automatically skips already installed packages!
+if yay -S --needed --noconfirm "${packages[@]}"; then
+    echo "------------------------------------------------------------"
+    echo "✨ All packages installed successfully!"
+    echo "------------------------------------------------------------"
 else
-  echo "All needed packages installed successfully!"
+    echo "------------------------------------------------------------"
+    echo "❌ WARNING: Some packages failed to install."
+    echo "Please check the terminal output above."
+    echo "------------------------------------------------------------"
 fi

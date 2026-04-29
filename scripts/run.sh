@@ -1,41 +1,48 @@
 #!/bin/bash
 
 # ==========================
+# Root check
+# ==========================
+if [ "$EUID" -eq 0 ]; then
+  echo "❌ Error: Do not run this script as root! Run it as your normal user."
+  exit 1
+fi
+
+# ==========================
 # Authenticate upfront and keep sudo alive
 # ==========================
-
-# Print directly to the terminal to avoid being delayed by the 'tee' pipe
 echo "Please enter your password for the installation process." > /dev/tty
-
-# Invalidate the user's cached credentials to force a prompt
 sudo -k
-
-# Ask for the password and validate it
 sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Dynamically find script and repo paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
 
 # ==========================
-# logs the entire script and saves to downloads
+# logs the entire script and saves to the repo directory
 # ==========================
-
-LOGFILE=~/Downloads/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log
+LOGFILE="$REPO_DIR/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log"
 exec > >(tee -a "$LOGFILE") 2>&1
-echo "Log saving to: $LOGFILE "
+echo "Log saving to: $LOGFILE"
 
 # ==========================
-# clears before starting, quits if an error occurs and updates the system
+# clears before starting, quits if an error occurs
 # ==========================
-
 clear
 set -e
 
+# ==========================
+# System Update
+# ==========================
 read -p "Would you like to update your system? (y/n): " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
-  sudo pacman -Syu
+  echo "Updating system..."
+  if ! sudo pacman -Syu --noconfirm; then
+      echo "❌ System update failed! Please fix your pacman mirrors/keys and try again."
+      exit 1
+  fi
 else
   echo "Skipping system update."
 fi
