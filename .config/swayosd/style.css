@@ -1,25 +1,25 @@
 @import "colors.css";
 window {
-  border-radius: 2;
-  opacity: 0.97;
-  border: 2px solid @accent_color;
-  background-color: @accent_fg_color;
+    border-radius: 2;
+    opacity: 0.97;
+    border: 6px solid @accent_color;
+    background-color: @accent_fg_color;
 }
 
 label {
-  font-family: 'JetBrainsMono Nerd Font';
-  font-size: 11pt;
-  color: @accent_color;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11pt;
+    color: @accent_color;
 }
 
 image {
-  color: @accent_color;
+    color: @accent_color;
 }
 
 progressbar {
-  border-radius: 5;
+    border-radius: 5;
 }
 
 progress {
-  background-color: @accent_color;
+    background-color: @accent_color;
 }
