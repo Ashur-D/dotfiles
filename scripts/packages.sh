@@ -30,7 +30,6 @@ packages=(
 
     # ------------ CLI Utilities & File Management ------------
     yazi                        # tui file explorer
-    nautilus                    # gui file explorer
     wl-clipboard                # command-line copy/paste
     cliphist                    # clipboard manager
     wl-clip-persist             # keep Wayland clipboard after programs close
@@ -41,7 +40,7 @@ packages=(
     # ------------ Audio & Media ------------
     pipewire                    # audio core
     pipewire-pulse              # audio compatibility
-    pipewire-audio              # audio support
+    # pipewire-audio              # audio support
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
     wiremix                     # audio tui
