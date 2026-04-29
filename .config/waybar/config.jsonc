@@ -11,7 +11,7 @@
   // -----------------------------------------------------
   // Module Layout
   // -----------------------------------------------------
-  "modules-left": ["clock", "privacy"],
+  "modules-left": ["clock"],
   "modules-center": ["hyprland/workspaces", "custom/update"],
   "modules-right": [
     "group/tray-expander",
@@ -108,18 +108,5 @@
   "tray": {
     "icon-size": 15,
     "spacing": 10,
-  },
-  "privacy": {
-    "icon-spacing": 4,
-    "icon-size": 15,
-    "transition-duration": 250,
-    "modules": [
-      {
-        "type": "screenshare",
-        "tooltip": true,
-        "tooltip-icon-size": 24,
-      },
-    ],
-    "on-click": "bash -c 'pkill -SIGINT -f \"gpu-screen-recorder.*-w\" && notify-send \"  Recording Stopped\" \"Video saved successfully!\" -t 3000 &'",
   },
 }

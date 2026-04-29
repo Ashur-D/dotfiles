@@ -11,46 +11,39 @@ configuration {
 }
 
 window {
-    width: 60%;
-    height: 30%;
+    width: 40%;
     transparency: "real";
     background-color: var(surface);
     border: 2px solid;
     border-color: var(primary);
-    border-radius: 16px;
+    border-radius: 20px;
+    padding: 25px;
     location: center;
     anchor: center;
 }
 
 mainbox {
-    padding: 20px;
     children: [ listview ];
 }
 
 listview {
     columns: 3;
-    lines: 1;
+    lines: 2;
     spacing: 15px;
     cycle: true;
     dynamic: true;
     scrollbar: false;
-    flow: horizontal;
-    border: 0px;
-    fixed-height: false;
+    layout: vertical;
 }
 
 element {
-    padding: 50px 0px;
-    border-radius: 12px;
-    cursor: pointer;
-    children: [ element-text ];
-}
-
-
-element normal.normal,
-element alternate.normal {
-    background-color: var(on-secondary-fixed);
+    /* Top/Bottom padding of 42px perfectly balances the 36px font
+       to create a true square matching the column width */
+    padding: 42px 0px;
+    border-radius: 14px;
+    background-color: var(surface-container-highest);
     text-color: var(on-surface);
+    cursor: pointer;
 }
 
 element selected.normal {
@@ -59,10 +52,10 @@ element selected.normal {
 }
 
 element-text {
+    font: "JetBrainsMono Nerd Font 36";
     background-color: transparent;
     text-color: inherit;
     horizontal-align: 0.5;
     vertical-align: 0.5;
-    font: "JetBrainMono 30";
     cursor: inherit;
 }

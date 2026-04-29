@@ -127,19 +127,6 @@ tooltip {
     color: shade(@primary, 0.94);
 }
 
-#privacy {
-    min-width: 12px;
-    margin-left: 5px;
-    margin-right: 0;
-    padding-bottom: 1px;
-    color: @primary;
-    transition: all 0.3s ease;
-}
-
-#privacy:hover {
-    color: shade(@primary, 0.94);
-}
-
 /* -----------------------------------------------------
  * Expand
  * ----------------------------------------------------- */
