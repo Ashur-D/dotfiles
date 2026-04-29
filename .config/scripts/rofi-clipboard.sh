@@ -2,6 +2,7 @@
 
 CACHE_DIR="$HOME/.cache/cliphist_thumbs"
 mkdir -p "$CACHE_DIR"
+find "$CACHE_DIR" -type f -mtime +1 -exec rm {} \;
 
 MENU_OPTIONS=""
 
