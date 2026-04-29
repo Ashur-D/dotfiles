@@ -1,40 +1,39 @@
 #!/bin/bash
 
-WALLDIR="$HOME/.config/wallpapers/"
-CACHE_DIR="$HOME/.cache/wallpaper_thumbnails"
-
-mkdir -p "$CACHE_DIR"
-
+WALLDIR="$HOME/.config/wallpapers"
 MENU_OPTIONS=""
 
-# Loop through images
-for pic in "$WALLDIR"/*.{jpg,jpeg,png,gif}; do
-    # Skip if no matches found
-    [ -e "$pic" ] || continue
-
-    filename=$(basename "$pic")
-    thumb="$CACHE_DIR/$filename"
-
-    # If thumbnail doesn't exist, create a fast, low-res version
-    if [ ! -f "$thumb" ]; then
-        magick "$pic" -thumbnail 250x250^ -gravity center -extent 100x100 "$thumb"
+# 1. Kill any existing instances of this script to prevent "overlap"
+curr_pid=$$
+pids=$(pgrep -f $(basename "$0"))
+for pid in $pids; do
+    if [ "$pid" != "$curr_pid" ]; then
+        kill -9 "$pid" 2>/dev/null
     fi
-
-    # Feed the THUMBNAIL to Rofi's icon parameter, not the full image
-    MENU_OPTIONS+="${filename}\0icon\x1f${thumb}\n"
 done
 
-# Launch Rofi
-SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -i -theme ~/.config/rofi/wallpaper.rasi)
+# 2. Build the menu
+for pic in "$WALLDIR"/*.{jpg,jpeg,png,gif}; do
+    [ -e "$pic" ] || continue
+    filename=$(basename "$pic")
+    MENU_OPTIONS+="${filename}\0icon\x1f${pic}\n"
+done
 
+SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -i -theme ~/.config/rofi/wallpaper.rasi)
 
 if [ -n "$SELECTED" ]; then
      FULL_PATH="$WALLDIR/$SELECTED"
 
-     # Generate a random index between 0 and 4
+     # 4. Generate colors in the background
      RANDOM_INDEX=$((RANDOM % 5))
+     TYPES=("scheme-expressive" "scheme-fidelity" "scheme-fruit-salad" "scheme-rainbow" "scheme-tonal-spot" "scheme-vibrant")
+     RANDOM_TYPE=${TYPES[$RANDOM % ${#TYPES[@]}]}
 
-     # Pass the random index to matugen
-     matugen image -m dark --source-color-index $RANDOM_INDEX "$FULL_PATH"
+     # Apply matugen
+     matugen image -m dark -t "$RANDOM_TYPE" --source-color-index "$RANDOM_INDEX" "$FULL_PATH"
 
- fi
+     # Sync lockscreen
+     sed -i "s|path = .*|path = $FULL_PATH|" "$HOME/.config/hypr/hyprlock.conf"
+
+     notify-send -i "$FULL_PATH" "Theme Updated" "Mode: ${RANDOM_TYPE#scheme-} | Index: $RANDOM_INDEX"
+fi

@@ -13,7 +13,6 @@ packages=(
     hypridle # idler
     hyprpolkitagent # authentication
     xdg-desktop-portal-hyprland #  xdg-desktop-portal backend for hyprland
-    hyprtoolkit #  GUI toolkit
     hyprshutdown # shutdown and restart tool, will be used with rofi
 )
 
