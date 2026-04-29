@@ -20,7 +20,7 @@ packages=(
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
     ttf-cascadia-mono-nerd      # system font
-    adw-gtk-theme
+    adw-gtk-theme               #
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal emulator
@@ -105,7 +105,7 @@ packages=(
     # gdu                       # disk usage analyzer
     # ncdu                      # disk usage analyzer (alternative)
     # efibootmgr                # modify UEFI boot entries
-    # pachub                    # Front End for Pacman/AUR 
+    # pachub                    # Front End for Pacman/AUR
     # dust git                  # A more intuitive version of du in rust
 
     # ------------ Terminal Rice (Visuals & Fun) ------------
