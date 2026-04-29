@@ -37,5 +37,4 @@ if [ -n "$SELECTED" ]; then
      # Pass the random index to matugen
      matugen image -m dark --source-color-index $RANDOM_INDEX "$FULL_PATH"
 
-     sed -i "s|path = .*|path = $FULL_PATH|" $HOME/.config/hypr/hyprlock.conf
  fi

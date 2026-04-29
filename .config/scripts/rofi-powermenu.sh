@@ -1,24 +1,35 @@
 #!/bin/bash
 
-# Define the menu options
-lock=" "
-reboot=" "
-shutdown="⏻ "
+# Define exactly 6 icons for a 3x2 grid
+lock=""
+logout="󰍃"
+reboot=""
+suspend=""
+hibernate="󰏤"
+shutdown="⏻"
 
+# Combine them into a single string
+options="$lock\n$logout\n$reboot\n$suspend\n$hibernate\n$shutdown"
 
-# Combine them into a single string separated by newlines
-options="$lock\n$shutdown\n$reboot"
-
-# Feed the options into Rofi
+# Launch Rofi
 chosen="$(echo -e "$options" | rofi -dmenu -i -theme ~/.config/rofi/powermenu.rasi)"
 
-# Execute the corresponding command
+# Execute commands
 case $chosen in
     $shutdown)
         hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
         ;;
     $reboot)
         hyprshutdown -t 'Restarting...' --post-cmd 'reboot'
+        ;;
+    $hibernate)
+        systemctl hibernate
+        ;;
+    $suspend)
+        systemctl suspend
+        ;;
+    $logout)
+        hyprctl dispatch exit
         ;;
     $lock)
         hyprlock
