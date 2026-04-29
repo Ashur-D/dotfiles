@@ -2,17 +2,17 @@
 
 - Disk Configuration > default structure: yes + use compression
 - Bootloader > grub
-- kernal > zen-kernal
+- kernel > zen-kernel
 - profile > minimal
 - Applications > none
 - additional packages > git
 
 # post arch install  
 
-- once in the TTY please follow the commands below
+- once in the TTY please follow the commands below in your HOME dir.
 1. `git clone https://github.com/Ashur-D/dotfiles`
 - (optional) before running the script there are optional packages you may uncomment packages in `dotfiles/scripts/packages.sh` 
-- (optional) if you need nvidia packages go to `dotfiles/scripts/run.sh` and uncomment out the nvidia script. 
+- (optional) if you need nvidia packages go to `dotfiles/scripts/hypr.sh` and uncomment out the nvidia script. 
 2. `cd dotfiles/scripts` 
 3. `chmod +x run.sh`
 4. `./run.sh`
@@ -29,4 +29,4 @@
 - get starship colors working
 - multilib
 - look into more hyprland animations: https://github.com/HyDE-Project/HyDE/tree/master/Configs/.config/hypr/animations
-- install the cachyOS kernal
+- install the cachyOS kernel
