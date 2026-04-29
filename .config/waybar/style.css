@@ -127,16 +127,17 @@ tooltip {
     color: shade(@primary, 0.94);
 }
 
-#custom-screenrecording-indicator.active {
-    color: alpha(@primary, 1);
-}
-
-#custom-screenrecording-indicator {
+#privacy {
     min-width: 12px;
     margin-left: 5px;
     margin-right: 0;
-    font-size: 17px;
     padding-bottom: 1px;
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#privacy:hover {
+    color: shade(@primary, 0.94);
 }
 
 /* -----------------------------------------------------

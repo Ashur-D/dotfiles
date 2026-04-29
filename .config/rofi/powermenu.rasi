@@ -11,8 +11,8 @@ configuration {
 }
 
 window {
-    width: 1000px; 
-    height: 350px; 
+    width: 60%;
+    height: 30%;
     transparency: "real";
     background-color: var(surface);
     border: 2px solid;
@@ -36,11 +36,11 @@ listview {
     scrollbar: false;
     flow: horizontal;
     border: 0px;
-    fixed-height: false; 
+    fixed-height: false;
 }
 
 element {
-    padding: 130px; 
+    padding: 50px 0px;
     border-radius: 12px;
     cursor: pointer;
     children: [ element-text ];

@@ -29,4 +29,4 @@
 - get starship colors working
 - multilib
 - look into more hyprland animations: https://github.com/HyDE-Project/HyDE/tree/master/Configs/.config/hypr/animations
-- install the cachyOS kernel
+- ~~install the cachyOS kernel (leave this up to the user, zen is good enough)~~
