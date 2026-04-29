@@ -11,8 +11,8 @@
 
 - once in the TTY please follow the commands below in your HOME dir.
 1. `git clone https://github.com/Ashur-D/dotfiles`
-- (optional) before running the script there are optional packages you may uncomment packages in `dotfiles/scripts/packages.sh` 
-- (optional) if you need nvidia packages go to `dotfiles/scripts/hypr.sh` and uncomment out the nvidia script. 
+    - (optional) before running the script there are optional packages you may uncomment packages in `dotfiles/scripts/packages.sh` 
+    - (optional) if you need nvidia packages go to `dotfiles/scripts/hypr.sh` and uncomment out the nvidia script. 
 2. `cd dotfiles/scripts` 
 3. `chmod +x run.sh`
 4. `./run.sh`
