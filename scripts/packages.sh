@@ -19,7 +19,7 @@ packages=(
     # ------------ Theming & Fonts ------------
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
-    ttf-cascadia-mono-nerd      # system font
+    ttf-jetbrains-mono-nerd      # system font, might switch to ttf-cascadia-mono-nerd
     adw-gtk-theme               #
 
     # ------------ Terminal & Shell ------------
