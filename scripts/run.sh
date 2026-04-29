@@ -69,13 +69,6 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 "$SCRIPT_DIR/hypr.sh"
 
 # ==========================
-# Optional: Install Nvidia packages
-# ==========================
-
-# chmod +x "$SCRIPT_DIR/nvidia.sh"
-#"$SCRIPT_DIR/nvidia.sh"
-
-# ==========================
 # move configs
 # ==========================
 
@@ -88,3 +81,10 @@ chmod +x "$SCRIPT_DIR/config.sh"
 
 chmod +x "$SCRIPT_DIR/services.sh"
 "$SCRIPT_DIR/services.sh"
+
+# ==========================
+# Optional: Install Nvidia packages
+# ==========================
+
+# chmod +x "$SCRIPT_DIR/nvidia.sh"
+#"$SCRIPT_DIR/nvidia.sh"
