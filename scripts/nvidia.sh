@@ -15,21 +15,17 @@ packages=(
     nvidia-utils
 )
 
-# Check for yay
-if ! command -v yay &>/dev/null; then
-  echo "Error: 'yay' AUR helper is not installed. Please install yay and rerun this script."
-  exit 1
-fi
+echo "Starting batch installation of nvidia packages..."
 
-for package in "${packages[@]}"; do
-  if pacman -Q "$package" &>/dev/null; then
-    echo "$package is already installed, skipping."
-  else
-    echo "Installing $package..."
-    if yay -S --noconfirm "$package"; then
-      echo "$package installed successfully."
-    else
-      echo "Failed to install $package."
-    fi
-  fi
-done
+# Install EVERYTHING in one single, fast transaction.
+# --needed automatically skips already installed packages!
+if yay -S --needed --noconfirm "${packages[@]}"; then
+    echo "------------------------------------------------------------"
+    echo "✨ All nvidia packages installed successfully!"
+    echo "------------------------------------------------------------"
+else
+    echo "------------------------------------------------------------"
+    echo "❌ WARNING: Some nvidia packages failed to install."
+    echo "Please check the terminal output above."
+    echo "------------------------------------------------------------"
+fi

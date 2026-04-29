@@ -1,31 +1,34 @@
 #!/bin/bash
 
-# ==========================
-# Move config files
-# ==========================
+# Dynamically find the repo root no matter where the script is run from
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
+DEST_DIR="$HOME/.config"
 
-SOURCE_DIR="$HOME/dotfiles/.config"
-DEST_DIR="$HOME/.config/"
-
-# Check if source exists
-if [ ! -d "$SOURCE_DIR" ]; then
-  echo "Source directory does not exist: $SOURCE_DIR"
+# Check if source exists in the cloned repo
+if [ ! -d "$REPO_DIR/.config" ]; then
+  echo "Error: Source directory does not exist: $REPO_DIR/.config"
   exit 1
 fi
 
-# Create destination if it doesn't exist
+echo "Copying configurations..."
 mkdir -p "$DEST_DIR"
 
-# Copy all contents from source to destination and give exec perms to scripts
-cp -a "$SOURCE_DIR/"* "$DEST_DIR/"
-cp -a "$HOME/dotfiles/.bashrc" "$HOME"
+# Using '/.' ensures we copy all hidden files inside the directory
+cp -a "$REPO_DIR/.config/." "$DEST_DIR/"
+cp -a "$REPO_DIR/.bashrc" "$HOME/.bashrc"
+
+# Give execute permissions to scripts
 find "$DEST_DIR/scripts" -type f -name "*.sh" -exec chmod +x {} +
 
-#lazyvim install
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
+# LazyVim install (only if it doesn't already exist)
+if [ ! -d "$DEST_DIR/nvim" ]; then
+    echo "Installing LazyVim..."
+    git clone https://github.com/LazyVim/starter "$DEST_DIR/nvim"
+    rm -rf "$DEST_DIR/nvim/.git"
+fi
 
-# source bash
-source ~/.bashrc
+# Source bash
+source "$HOME/.bashrc"
 
 echo "Configs copied successfully."
