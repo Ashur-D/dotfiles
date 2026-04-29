@@ -128,15 +128,15 @@ tooltip {
 }
 
 #custom-screenrecording-indicator.active {
-  color: alpha(@primary, 1);
+    color: alpha(@primary, 1);
 }
 
-#custom-screenrecording-indicator{
-  min-width: 12px;
-  margin-left: 5px;
-  margin-right: 0;
-  font-size: 17px;
-  padding-bottom: 1px;
+#custom-screenrecording-indicator {
+    min-width: 12px;
+    margin-left: 5px;
+    margin-right: 0;
+    font-size: 17px;
+    padding-bottom: 1px;
 }
 
 /* -----------------------------------------------------

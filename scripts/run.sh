@@ -74,3 +74,10 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 
 chmod +x "$SCRIPT_DIR/config.sh"
 "$SCRIPT_DIR/config.sh"
+
+# ==========================
+# Enable services
+# ==========================
+
+chmod +x "$SCRIPT_DIR/services.sh"
+"$SCRIPT_DIR/services.sh"
