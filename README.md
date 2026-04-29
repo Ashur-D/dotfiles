@@ -30,3 +30,5 @@
 - multilib
 - look into more hyprland animations: https://github.com/HyDE-Project/HyDE/tree/master/Configs/.config/hypr/animations
 - ~~install the cachyOS kernel (leave this up to the user, zen is good enough)~~
+- get fastfetch colors working with wallpaper/matugen
+-
