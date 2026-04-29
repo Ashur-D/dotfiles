@@ -12,7 +12,7 @@
   // Module Layout
   // -----------------------------------------------------
   "modules-left": ["clock"],
-  "modules-center": ["hyprland/workspaces", "custom/update"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "group/tray-expander",
     "bluetooth",
