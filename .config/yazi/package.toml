@@ -1,9 +1,17 @@
-[plugin]
-deps = [
-    "yazi-rs/plugins:full-border",
-    "yazi-rs/plugins:toggle-pane",
-    "yazi-rs/plugins:mount",
-    "yazi-rs/plugins:chmod",
-    "yazi-rs/plugins:smart-paste",
-    "yazi-rs/plugins:no-status",
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-paste"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:no-status"
