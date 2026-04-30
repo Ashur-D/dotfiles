@@ -47,7 +47,7 @@ disabled = false
 style = "bg:color_surface0 fg:color_text"
 
 [os.symbols]
-Arch = "󰣇"
+arch = "󰣇"
 
 [username]
 show_always = true
