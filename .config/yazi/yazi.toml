@@ -9,7 +9,7 @@ use = [ "set-wallpaper", "open", "reveal" ]
 
 [opener]
 set-wallpaper = [
-  { run = '/home/hyprash/.config/scripts/wallpaper.sh "$@"', orphan = true, for = "unix", desc = "Set as wallpaper" }
+  { run = '$HOME/.config/scripts/wallpaper.sh "$@"', orphan = true, for = "unix", desc = "Set as wallpaper" }
 ]
 edit = [
   { run = "nvim \"$@\"", block = true, for = "unix" },
