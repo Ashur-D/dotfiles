@@ -366,3 +366,29 @@ keymap = [
 	# Filtering
 	{ on = "f", run = "filter", desc = "Filter help items" },
 ]
+
+[[mgr.prepend_keymap]]
+
+# mount
+on  = "M"
+run = "plugin mount"
+
+# chmod
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
+# smart paste
+on   = "p"
+run  = "plugin smart-paste"
+desc = "Paste into the hovered directory or CWD"
+
+# Hide/Show preview and Maximize/Restore preview
+
+# on   = "T"
+# run  = "plugin toggle-pane min-preview"
+# desc = "Show or hide the preview pane"
+
+# on   = "T"
+# run  = "plugin toggle-pane max-preview"
+# esc = "Maximize or restore the preview pane"

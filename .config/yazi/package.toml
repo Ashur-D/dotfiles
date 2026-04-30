@@ -1,0 +1,9 @@
+[plugin]
+deps = [
+    "yazi-rs/plugins:full-border",
+    "yazi-rs/plugins:toggle-pane",
+    "yazi-rs/plugins:mount",
+    "yazi-rs/plugins:chmod",
+    "yazi-rs/plugins:smart-paste",
+    "yazi-rs/plugins:no-status",
+]
