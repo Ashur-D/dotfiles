@@ -28,8 +28,6 @@
 - ~~get neovim working with matugen (nvm this is too much work)~~
 - get starship colors working
 - ~~install the cachyOS kernel (leave this up to the user, zen kernel is good enough)~~
-- get fastfetch colors working with wallpaper/matugen
--
 
 # look into
 - https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
