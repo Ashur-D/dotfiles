@@ -46,7 +46,7 @@ $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
-"""
+\n$character"""
 
 
 
@@ -71,24 +71,14 @@ disabled = true # Disabled by default
 [os.symbols]
 Windows = ""
 Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = "󰀵"
 Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
 Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-AOSC = ""
 Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
 Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+
 
 [directory]
 style = "bg:#DA627D"
@@ -190,8 +180,8 @@ symbol = " "
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
-format = '[ ♥ $time ]($style)'
+# [time]
+# disabled = false
+# time_format = "%R" # Hour:Minute Format
+# style = "bg:#33658A"
+# format = '[ ♥ $time ]($style)'
