@@ -1,31 +1,3 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
-format = """
-[](color_surface0)\
-$os\
-$username\
-[](bg:color_peach fg:color_surface0)\
-$directory\
-[](fg:color_peach bg:color_green)\
-$git_branch\
-$git_status\
-[](fg:color_green bg:color_teal)\
-$c\
-$rust\
-$golang\
-$nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
-$python\
-[](fg:color_teal bg:color_blue)\
-$docker_context\
-[](fg:color_blue bg:color_purple)\
-$time\
-[ ](fg:color_purple)\
-$line_break$character"""
-
 # Call the dynamic Matugen palette
 palette = 'matugen'
 
@@ -42,99 +14,184 @@ color_purple = "{{colors.secondary_fixed_dim.default.hex}}"
 color_red = "{{colors.error.default.hex}}"
 color_lavender = "{{colors.tertiary_fixed.default.hex}}"
 
-[os]
-disabled = false
-style = "bg:color_surface0 fg:color_text"
 
-[os.symbols]
-arch = "󰣇"
+"$schema" = 'https://starship.rs/config-schema.json'
 
+format = """
+[](#9A348E)\
+$os\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$maven\
+$nodejs\
+$bun\
+$nim\
+$rust\
+$scala\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+"""
+
+
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
 [username]
 show_always = true
-style_user = "bg:color_surface0 fg:color_text"
-style_root = "bg:color_surface0 fg:color_text"
-format = '[ $user ]($style)'
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+disabled = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:#9A348E"
+disabled = true # Disabled by default
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [directory]
-style = "fg:color_mantle bg:color_peach"
+style = "bg:#DA627D"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+# Here is how you can shorten some long paths by text replacement:
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Music" = "󰝚 "
+"Music" = " "
 "Pictures" = " "
-"Developer" = "󰲋 "
-
-[git_branch]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol $branch ](fg:color_base bg:color_green)]($style)'
-
-[git_status]
-style = "bg:color_teal"
-format = '[[($all_status$ahead_behind )](fg:color_base bg:color_green)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
 
 [c]
 symbol = " "
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[rust]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+[cpp]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#FCA17D"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#FCA17D"
+format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[php]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+[gradle]
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[kotlin]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[haskell]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+[maven]
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[python]
-symbol = ""
-style = "bg:color_teal"
-format = '[[ $symbol( $version) ](fg:color_base bg:color_teal)]($style)'
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[docker_context]
-symbol = ""
-style = "bg:color_mantle"
-format = '[[ $symbol( $context) ](fg:color_base bg:color_blue)]($style)'
+[bun]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
-[line_break]
+[nim]
+symbol = "󰆥 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
 disabled = false
-
-[character]
-disabled = false
-success_symbol = '[](bold fg:color_green)'
-error_symbol = '[](bold fg:color_red)'
-vimcmd_symbol = '[](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-vimcmd_replace_symbol = '[](bold fg:color_purple)'
-vimcmd_visual_symbol = '[](bold fg:color_lavender)'
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
