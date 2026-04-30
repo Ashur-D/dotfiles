@@ -3,28 +3,20 @@
 show_hidden = true
 # ratio = [ 0, 2, 5 ]
 
-[preview]
-# This makes the images render in high quality
-image_filter = "lanczos3"
-image_quality = 90
-
-[[opener.set-wallpaper]]
-run    = '/home/hyprash/.config/scripts/wallpaper.sh "$1"'
-for    = "linux"
-desc   = "Set as wallpaper"
-orphan = true
-
 [[open.prepend_rules]]
-url = "/home/hyprash/.config/wallpapers/*"
+url = "$HOME/.config/wallpapers/*"
 use = [ "set-wallpaper", "open", "reveal" ]
 
 [opener]
+set-wallpaper = [
+  { run = '/home/hyprash/.config/scripts/wallpaper.sh "$@"', orphan = true, for = "unix", desc = "Set as wallpaper" }
+]
 edit = [
   { run = "nvim \"$@\"", block = true, for = "unix" },
 ]
 image = [
-  { run = 'feh "$@"', orphan = true, desc = "Open Image", for = "linux" },
+  { run = 'feh "$@"', orphan = true, desc = "Open Image", for = "unix" },
 ]
 video = [
-  { run = 'mpv "$@"', orphan = true, desc = "Play Video", for = "linux" },
+  { run = 'mpv "$@"', orphan = true, desc = "Play Video", for = "unix" },
 ]

@@ -25,6 +25,6 @@ find "$DEST_DIR/scripts" -type f -name "*.sh" -exec chmod +x {} +
 source "$HOME/.bashrc"
 
 # install yazi plugins
-ya pack -i
+ya pkg install
 
 echo "Configs copied successfully."
