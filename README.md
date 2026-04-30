@@ -24,7 +24,7 @@
 - for vesktop this is called "midnight"
 
 # todo
-- get gtk/qt working with matugen ( already kinda works?)
+- ~~get gtk working with matugen ( done )~~
 - ~~get neovim working with matugen (nvm this is too much work)~~
 - get starship colors working
 - ~~install the cachyOS kernel (leave this up to the user, zen kernel is good enough)~~
