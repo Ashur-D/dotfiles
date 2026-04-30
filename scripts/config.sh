@@ -21,13 +21,6 @@ cp -a "$REPO_DIR/.bashrc" "$HOME/.bashrc"
 # Give execute permissions to scripts
 find "$DEST_DIR/scripts" -type f -name "*.sh" -exec chmod +x {} +
 
-# LazyVim install (only if it doesn't already exist)
-if [ ! -d "$DEST_DIR/nvim" ]; then
-    echo "Installing LazyVim..."
-    git clone https://github.com/LazyVim/starter "$DEST_DIR/nvim"
-    rm -rf "$DEST_DIR/nvim/.git"
-fi
-
 # Source bash
 source "$HOME/.bashrc"
 

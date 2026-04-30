@@ -19,7 +19,7 @@ packages=(
     # ------------ Theming & Fonts ------------
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
-    ttf-jetbrains-mono-nerd      # system font, might switch to ttf-cascadia-mono-nerd
+    ttf-jetbrains-mono-nerd     # system font, might switch to ttf-cascadia-mono-nerd
     adw-gtk-theme               #
 
     # ------------ Terminal & Shell ------------
@@ -31,8 +31,7 @@ packages=(
     # ------------ CLI Utilities & File Management ------------
     yazi                        # tui file explorer
     wl-clipboard                # command-line copy/paste
-    # cliphist                    # clipboard manager
-    # wl-clip-persist             # keep Wayland clipboard after programs close
+    clipse                      # tui clipboard manager
 
     # ------------ Editors ------------
     neovim                      # terminal text editor
@@ -40,7 +39,6 @@ packages=(
     # ------------ Audio & Media ------------
     pipewire                    # audio core
     pipewire-pulse              # audio compatibility
-    # pipewire-audio              # audio support
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
     wiremix                     # audio tui
@@ -115,7 +113,8 @@ packages=(
     # catnap-git                # system fetch tool
     # stormy-bin                # weather fetch
     # terminaltexteffects       # text animations
-    # scope tui                 #  	A simple oscilloscope/vectorscope/spectroscope for your terminal
+    # scope tui                 # A simple oscilloscope/vectorscope/spectroscope for your terminal
+    # weathr                    # a terminal weather app with ascii animation
 )
 
 # ====================================================
