@@ -31,8 +31,8 @@ packages=(
     # ------------ CLI Utilities & File Management ------------
     yazi                        # tui file explorer
     wl-clipboard                # command-line copy/paste
-    cliphist                    # clipboard manager
-    wl-clip-persist             # keep Wayland clipboard after programs close
+    # cliphist                    # clipboard manager
+    # wl-clip-persist             # keep Wayland clipboard after programs close
 
     # ------------ Editors ------------
     neovim                      # terminal text editor
