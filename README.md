@@ -27,7 +27,6 @@
 - get gtk/qt working with matugen ( already kinda works?)
 - ~~get neovim working with matugen (nvm this is too much work)~~
 - get starship colors working
-- look into more hyprland animations: https://github.com/HyDE-Project/HyDE/tree/master/Configs/.config/hypr/animations
 - ~~install the cachyOS kernel (leave this up to the user, zen kernel is good enough)~~
 - get fastfetch colors working with wallpaper/matugen
 -
