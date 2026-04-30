@@ -1,7 +1,11 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-###------------------- Technicolor -----------------------###
+###------------------- test -----------------------###
+export GTK_THEME=adw-gtk3
+export ADW_DISABLE_PORTAL=1
+
+###------------------- always open in home -----------------------###
 cd ~
 
 ###------------------- Technicolor -----------------------###
