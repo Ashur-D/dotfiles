@@ -64,8 +64,7 @@ packages=(
     brightnessctl               # controls screen and keyboard brightness
 
     # ------------ Core Wayland & Display ------------
-    #qt5-wayland                 # APIs for Wayland
-    #qt6-wayland                 # APIs for Wayland
+
 
 
 # ====================================================
