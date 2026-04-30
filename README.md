@@ -30,3 +30,11 @@
 - ~~install the cachyOS kernel (leave this up to the user, zen kernel is good enough)~~
 - get fastfetch colors working with wallpaper/matugen
 -
+
+# look into
+- https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
+- https://github.com/wayle-rs/wayle
+- hyprland settings:
+  - https://github.com/BlueManCZ/hyprmod
+  - https://github.com/acropolis914/hyprsettings
+  - https://github.com/timasoft/hyprviz
