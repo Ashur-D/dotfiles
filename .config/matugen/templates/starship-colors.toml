@@ -18,15 +18,15 @@ color_lavender = "{{colors.tertiary_fixed.default.hex}}"
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](#9A348E)\
+[](color_purple)\
 $os\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:color_red fg:color_purple)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:color_red bg:color_peach)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:color_peach bg:color_blue)\
 $c\
 $elixir\
 $elm\
@@ -41,11 +41,11 @@ $bun\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:color_blue bg:color_teal)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:color_teal bg:color_green)\
 $time\
-[ ](fg:#33658A)\
+[ ](fg:color_green)\
 \n$character"""
 
 
@@ -57,15 +57,15 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
+style_user = "bg:color_purple fg:color_text"
+style_root = "bg:color_purple fg:color_text"
 format = '[$user ]($style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#9A348E"
+style = "bg:color_purple fg:color_text"
 disabled = true # Disabled by default
 
 [os.symbols]
@@ -81,7 +81,7 @@ Debian = "󰣚"
 
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:color_red fg:color_text"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -95,93 +95,93 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [cpp]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#06969A"
+style = "bg:color_teal fg:color_base"
 format = '[ $symbol $context ]($style)'
 
 [elixir]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
+style = "bg:color_peach fg:color_mantle"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "bg:color_peach fg:color_mantle"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [maven]
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [bun]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:color_blue fg:color_base"
 format = '[ $symbol ($version) ]($style)'
 
 # [time]
 # disabled = false
 # time_format = "%R" # Hour:Minute Format
-# style = "bg:#33658A"
+# style = "bg:color_green fg:color_text"
 # format = '[ ♥ $time ]($style)'
