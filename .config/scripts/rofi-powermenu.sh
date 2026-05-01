@@ -12,7 +12,7 @@ shutdown="⏻"
 options="$lock\n$logout\n$reboot\n$suspend\n$hibernate\n$shutdown"
 
 # Launch Rofi
-chosen="$(echo -e "$options" | rofi -dmenu -i -theme ~/.config/rofi/powermenu.rasi)"
+chosen="$(echo -e "$options" | rofi -dmenu -i -theme ~/.config/rofi/power.rasi)"
 
 # Execute commands
 case $chosen in
