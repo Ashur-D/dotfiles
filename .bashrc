@@ -46,37 +46,6 @@ if [ "$(tty)" = "/dev/tty1" ]; then
   exec start-hyprland
 fi
 
-###------------------- power profile set -----------------------###
-function power() {
-    # Fetch the current profile
-    CURRENT_PROFILE=$(powerprofilesctl get)
-
-    # Print it nicely using gum
-    echo "Current Profile: $CURRENT_PROFILE"
-
-    # Present the options
-    CHOICE=$(gum choose "Performance 󰓅" "Balanced 󰾆" "Power-Saver 󰌪")
-
-    # Set the new profile
-    case "$CHOICE" in
-        "Performance 󰓅")
-            powerprofilesctl set performance
-            gum style --foreground 212 "⚡ Switched to Performance"
-            ;;
-        "Balanced 󰾆")
-            powerprofilesctl set balanced
-            gum style --foreground 212 "⚖️ Switched to Balanced"
-            ;;
-        "Power-Saver 󰌪")
-            powerprofilesctl set power-saver
-            gum style --foreground 212 "🌱 Switched to Power-Saver"
-            ;;
-        *)
-            echo "Operation cancelled."
-            ;;
-    esac
-}
-
 ###------------------- uninstall apps -----------------------###
 function apps() {
     clear
