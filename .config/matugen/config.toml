@@ -22,6 +22,10 @@ post_hook = "kitty +kitten themes --reload-in=all Matugen"
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
 
+[templates.nvim]
+input_path = "~/.config/matugen/templates/nvim.lua"
+output_path = "~/.config/nvim/lua/matugen_theme.lua"
+
 [templates.mako]
 input_path = '~/.config/matugen/templates/mako-colors'
 output_path = '~/.config/mako/mako-colors'
