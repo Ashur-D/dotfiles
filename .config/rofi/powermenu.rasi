@@ -14,7 +14,7 @@ window {
     width: 40%;
     transparency: "real";
     background-color: var(surface);
-    border: 2px solid;
+    border: 6px solid;
     border-color: var(primary);
     border-radius: 20px;
     padding: 25px;
@@ -41,7 +41,7 @@ element {
        to create a true square matching the column width */
     padding: 42px 0px;
     border-radius: 14px;
-    background-color: var(surface-container-highest);
+    background-color: var(primary-surface-dim);
     text-color: var(on-surface);
     cursor: pointer;
 }

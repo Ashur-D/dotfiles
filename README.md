@@ -26,13 +26,8 @@
 # todo
 - get starship colors working with matugen
 - get gtk working with matugen
-- ~~get neovim working with matugen (nvm this is too much work)~~
-- ~~install the cachyOS kernel (leave this up to the user, zen kernel is good enough)~~
+
 
 # look into
 - https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
-- https://github.com/wayle-rs/wayle
-- hyprland settings:
-  - https://github.com/BlueManCZ/hyprmod
-  - https://github.com/acropolis914/hyprsettings
-  - https://github.com/timasoft/hyprviz
+- installing the cachyOS kernel
