@@ -18,4 +18,4 @@ matugen image -m dark -t "$RANDOM_TYPE" --source-color-index "$RANDOM_INDEX" "$F
 sed -i "s|path = .*|path = $FULL_PATH|" "$HOME/.config/hypr/hyprlock.conf"
 
 # Send notification
-notify-send -i "$FULL_PATH" "Theme Updated" "Mode: ${RANDOM_TYPE#scheme-} | Index: $RANDOM_INDEX"
+notify-send -i "$FULL_PATH" "Theme Updated" "Mode: ${RANDOM_TYPE#scheme-} \nIndex: $RANDOM_INDEX"
