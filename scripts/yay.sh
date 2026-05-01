@@ -21,3 +21,7 @@ if ! command -v yay &>/dev/null; then
 else
   echo "yay is already installed."
 fi
+
+echo "------------------------------------------------------------"
+echo "✨ yay installed successfully!"
+echo "------------------------------------------------------------"

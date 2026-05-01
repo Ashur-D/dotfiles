@@ -27,4 +27,6 @@ source "$HOME/.bashrc"
 # install yazi plugins
 ya pkg install
 
-echo "Configs copied successfully."
+echo "------------------------------------------------------------"
+echo "✨ All configs moved successfully!"
+echo "------------------------------------------------------------"

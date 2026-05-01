@@ -16,4 +16,7 @@ echo "Enabling and starting system services..."
 # it doesn't crash the entire installation script.
 sudo systemctl enable --now "${services[@]}" || true
 
-echo "Service setup complete."
+
+echo "------------------------------------------------------------"
+echo "✨ All services enabled and started!"
+echo "------------------------------------------------------------"
