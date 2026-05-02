@@ -40,8 +40,8 @@ done
 echo "Installing Yazi plugins..."
 ya pack -i
 
-echo "Reloading shell..."
-exec bash
+echo "Sourcing shell..."
+source ~/.bashrc
 
 echo "------------------------------------------------------------"
 echo "✨ dotfiles symlinked successfully!"

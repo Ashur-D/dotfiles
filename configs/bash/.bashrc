@@ -46,6 +46,15 @@ if [ "$(tty)" = "/dev/tty1" ]; then
   exec start-hyprland
 fi
 
+###------------------- shell wrapper -----------------------###
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd <"$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
+}
+
 ###------------------- uninstall apps -----------------------###
 function apps() {
     clear
@@ -79,13 +88,4 @@ function apps() {
     else
         gum style --foreground 212 "Operation cancelled. Nothing was uninstalled."
     fi
-}
-
-###------------------- shell wrapper -----------------------###
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd <"$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-  rm -f -- "$tmp"
 }
