@@ -30,4 +30,5 @@
 
 # look into
 - https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
+- https://github.com/wayle-rs/wayle
 - installing the cachyOS kernel
