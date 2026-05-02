@@ -47,4 +47,10 @@ find "$DOTFILES_REPO_DIR" -maxdepth 1 -mindepth 1 -type d \
     echo ""
 done
 
+# Source bash
+source "$HOME/.bashrc"
+
+# install yazi plugins
+ya pkg install
+
 echo "Dotfiles stow setup complete."
