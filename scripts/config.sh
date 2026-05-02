@@ -1,32 +1,60 @@
 #!/bin/bash
+set -euo pipefail
 
-# Dynamically find the repo root no matter where the script is run from
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_DIR="$(dirname "$SCRIPT_DIR")"
-DEST_DIR="$HOME/.config"
+# Define the absolute path to your dotfiles repository
+# IMPORTANT: Adjust this path if your dotfiles are cloned to a different location
+DOTFILES_REPO_DIR="$HOME"
 
-# Check if source exists in the cloned repo
-if [ ! -d "$REPO_DIR/.config" ]; then
-  echo "Error: Source directory does not exist: $REPO_DIR/.config"
-  exit 1
+echo "Starting dotfiles setup with stow..."
+echo "----------------------------------------------------------------------"
+echo "WARNING: stow will NOT overwrite existing files or directories."
+echo "If a target file or directory already exists in your home directory"
+echo "(e.g., ~/.zshrc or ~/.config/nvim), stow will skip it and report a conflict."
+echo "You may need to manually move or delete existing files if you want the"
+echo "symlink created by stow to take effect."
+echo "----------------------------------------------------------------------"
+echo ""
+
+# Navigate to the dotfiles repository directory, which is stow's "stow directory"
+if [ ! -d "$DOTFILES_REPO_DIR" ]; then
+    echo "Error: Dotfiles repository directory not found at $DOTFILES_REPO_DIR."
+    echo "Please ensure you have cloned your dotfiles and updated DOTFILES_REPO_DIR in this script."
+    exit 1
 fi
 
-echo "Copying configurations..."
-mkdir -p "$DEST_DIR"
+cd "$DOTFILES_REPO_DIR" || { echo "Error: Could not navigate to $DOTFILES_REPO_DIR"; exit 1; }
 
-# Using '/.' ensures we copy all hidden files inside the directory
-cp -a "$REPO_DIR/.config/." "$DEST_DIR/"
-cp -a "$REPO_DIR/.bashrc" "$HOME/.bashrc"
+# Ensure ~/.config directory exists as a parent for many configs
+mkdir -p "$HOME/.config"
 
-# Give execute permissions to scripts
-find "$DEST_DIR/scripts" -type f -name "*.sh" -exec chmod +x {} +
+echo "Attempting to stow packages:"
 
-# Source bash
-source "$HOME/.bashrc"
+# List of directories (packages) to stow.
+# This assumes each top-level directory in your dotfiles repo (excluding 'scripts' and '.git')
+# is a stow package. Adjust this list to match your actual dotfile packages.
+# For example, if you have 'zsh', 'nvim', 'git', 'kitty', 'kde', 'gtk', 'hypr' directories
+# directly under '~/github/dotfiles', they will be listed here.
 
-# install yazi plugins
-ya pkg install
+# Find all top-level directories in DOTFILES_REPO_DIR that are not 'scripts' or '.git'
+# and try to stow them.
+find . -maxdepth 1 -mindepth 1 -type d \
+    -not -name 'scripts' \
+    -not -name '.git' \
+    -not -name '.github' \
+    -not -name 'README.md' \
+    -print0 | while IFS= read -r -d $'\0' package_path; do
+    package_name=$(basename "$package_path")
+    echo "Stowing '$package_name'..."
+    if stow "$package_name"; then
+        echo "  - Successfully stowed '$package_name'."
+    else
+        echo "  - WARNING: Failed to stow '$package_name'. This usually means target files already exist or there was another conflict. Please check the output above."
+    fi
+    echo "" # Add a blank line for readability
+done
 
-echo "------------------------------------------------------------"
-echo "✨ All configs moved successfully!"
-echo "------------------------------------------------------------"
+echo "Dotfiles stow setup complete. Review any warnings above."
+
+# You might still have other installation steps here, like:
+# ./scripts/packages.sh # Assuming this installs necessary packages
+# ./scripts/hypr.sh     # Assuming this handles Hyprland specific setup
