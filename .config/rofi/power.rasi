@@ -41,8 +41,8 @@ element {
        to create a true square matching the column width */
     padding: 42px 0px;
     border-radius: 14px;
-    background-color: var(primary-surface-dim);
-    text-color: var(on-surface);
+    background-color: var(surface-container-low);
+    text-color: var(on-surface-variant);
     cursor: pointer;
 }
 
