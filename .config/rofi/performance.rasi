@@ -19,14 +19,13 @@ configuration {
 window {
     width: 18%;
     background-color: var(surface);
-    border-color: var(primary); /* Using separate border properties */
+    border-color: var(primary);
     border-width: 2px;
     border-radius: 16px;
+    border: 0px solid;
     padding: 25px;
     location: center;
     anchor: center;
-    border:6px solid;
-    border-color: var(primary);
 }
 
 /* Main container for elements within the window */
