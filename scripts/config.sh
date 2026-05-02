@@ -40,9 +40,9 @@ done
 echo "Installing Yazi plugins..."
 ya pack -i
 
+echo "Reloading shell..."
+exec bash
+
 echo "------------------------------------------------------------"
 echo "✨ dotfiles symlinked successfully!"
 echo "------------------------------------------------------------"
-
-echo "Installation complete! Reloading shell..."
-exec bash
