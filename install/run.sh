@@ -88,3 +88,7 @@ chmod +x "$SCRIPT_DIR/services.sh"
 
 # chmod +x "$SCRIPT_DIR/nvidia.sh"
 #"$SCRIPT_DIR/nvidia.sh"
+
+echo "------------------------------------------------------------"
+echo "✨ All packages installed successfully and configs linked, please reboot or log out and log back in!"
+echo "------------------------------------------------------------"
