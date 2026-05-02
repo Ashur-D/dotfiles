@@ -5,7 +5,7 @@
 - kernel > zen-kernel
 - profile > minimal
 - Applications > none
-- additional packages > git
+- additional packages > git & multilib
 
 # post arch install  
 
