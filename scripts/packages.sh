@@ -112,7 +112,7 @@ packages=(
     # catnap-git                # system fetch tool
     # stormy-bin                # weather fetch
     # terminaltexteffects       # text animations
-    # scope tui                 # A simple oscilloscope/vectorscope/spectroscope for your terminal
+    # scope-tui                 # A simple oscilloscope/vectorscope/spectroscope for your terminal
     # weathr                    # a terminal weather app with ascii animation
 )
 

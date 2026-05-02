@@ -14,7 +14,7 @@ window {
     width: 40%;
     transparency: "real";
     background-color: var(surface);
-    border: 6px solid;
+    border: 0px solid;
     border-color: var(primary);
     border-radius: 20px;
     padding: 25px;
