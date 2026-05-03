@@ -10,7 +10,7 @@
   // --- Core Editor Settings ---
   "indent_guides": {
     "background_coloring": "indent_aware",
-    "coloring": "indent_aware",
+    "coloring": "indent_aware"
   },
   "soft_wrap": "editor_width",
 
@@ -19,56 +19,56 @@
   "theme": {
     "mode": "system",
     "light": "One Dark",
-    "dark": "Catppuccin Macchiato (Blur) [Light]",
+    "dark": "Catppuccin Macchiato (Blur) [Light]"
   },
 
   // --- UI Elements ---
   "scrollbar": {
-    "show": "never",
+    "show": "never"
   },
   "status_bar": {
     "active_language_button": false,
-    "cursor_position_button": false,
+    "cursor_position_button": false
   },
   "tab_bar": {
-    "show_nav_history_buttons": false,
+    "show_nav_history_buttons": false
   },
   "title_bar": {
     "show_branch_name": false,
     "show_menus": false,
     "show_onboarding_banner": false,
     "show_project_items": false,
-    "show_sign_in": false,
+    "show_sign_in": false
   },
   "toolbar": {
     "agent_review": false,
     "breadcrumbs": false,
     "quick_actions": false,
-    "selections_menu": false,
+    "selections_menu": false
   },
 
   // --- Panels & Docks ---
   "collaboration_panel": {
-    "button": false,
+    "button": false
   },
   "diagnostics": {
-    "button": false,
+    "button": false
   },
   "git_panel": {
-    "button": false,
+    "button": false
   },
   "outline_panel": {
-    "button": false,
+    "button": false
   },
   "project_panel": {
     "button": false,
-    "dock": "left",
+    "dock": "left"
   },
   "search": {
-    "button": false,
+    "button": false
   },
   "terminal": {
-    "button": false,
+    "button": false
   },
 
   // --- AI & Agent ---
@@ -77,21 +77,18 @@
     "enable_feedback": false,
     "favorite_models": [],
     "model_parameters": [],
-    "sidebar_side": "right",
+    "sidebar_side": "right"
   },
   "disable_ai": true,
 
   // --- Tools & Version Control ---
   "debugger": {
-    "button": false,
-  },
-  "git": {
-    "disable_git": true,
+    "button": false
   },
 
   // --- Privacy & Telemetry ---
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
-  },
+    "metrics": false
+  }
 }
