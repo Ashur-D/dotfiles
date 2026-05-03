@@ -24,7 +24,7 @@
 
 # todo
 - get starship colors working with matugen
-- get gtk working with matugen
+- get gtk working with matugen (I think it works?)
 
 
 # look into
