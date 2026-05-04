@@ -1,6 +1,4 @@
-Here is the cleaned-up, nicely formatted Markdown. You can copy the entire block below and paste it directly into your `README.md` file:
 
-```markdown
 # 🛠️ Recommended Arch Install Options
 
 - **Disk Configuration:** default structure: yes + use compression
@@ -46,13 +44,9 @@ git clone [https://github.com/Ashur-D/dotfiles](https://github.com/Ashur-D/dotfi
 - [Windows 11 Clipboard History For Linux](https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux)
 - [wayle](https://github.com/wayle-rs/wayle)
 - Installing the cachyOS kernel.
-```
-
----
 
 
-<details>
-<summary><b>⌨️ Keybindings (Click to expand)</b></summary>
+# ⌨️ Keybindings
 
 ### System & Applications
 | Keybind | Action |
