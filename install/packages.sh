@@ -78,7 +78,7 @@ packages=(
     # vesktop-bin               # discord client
     # obsidian                  # note taking
     # localsend                 # local file sharing
-    # spotatui                  # spotify tui (alternative: ncspot)
+    # spotatui-bin              # spotify tui (alternative: ncspot)
 
     # ------------ Gaming ------------
     # steam                     # game launcher
