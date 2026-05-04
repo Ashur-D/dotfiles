@@ -30,8 +30,12 @@ packages=(
 
     # ------------ CLI Utilities & File Management ------------
     yazi                        # tui file explorer
+    thunar                      # gtk gui file manager
     wl-clipboard                # command-line copy/paste
     clipse                      # tui clipboard manager - `win11-clipboard-history-bin` is also great
+    unzip                       # the universal standard for zip files
+    7zip                        # the powerhouse engine Yazi uses for everything else
+
 
     # ------------ Editors ------------
     neovim                      # terminal text editor
@@ -62,8 +66,8 @@ packages=(
     power-profiles-daemon       # power profiles or use auto-cpufreq, never both.
     btop                        # system resource monitor
     brightnessctl               # controls screen and keyboard brightness
-    thunar                      # gtk gui file manager
     stow                        # symlinks
+    xdg-desktop-portal-gtk
 
     # ------------ Core Wayland & Display ------------
 
