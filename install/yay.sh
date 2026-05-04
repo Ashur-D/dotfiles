@@ -23,5 +23,5 @@ else
 fi
 
 echo "------------------------------------------------------------"
-echo "✨ yay installed successfully!"
+echo "✨ yay installed successfully ✨"
 echo "------------------------------------------------------------"

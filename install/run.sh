@@ -75,9 +75,6 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 chmod +x "$SCRIPT_DIR/stow.sh"
 "$SCRIPT_DIR/stow.sh"
 
-echo "Installing Yazi plugins..."
-ya pkg install
-
 # ==========================
 # Enable services
 # ==========================
@@ -93,15 +90,16 @@ chmod +x "$SCRIPT_DIR/services.sh"
 #"$SCRIPT_DIR/nvidia.sh"
 
 # ------------------------------------------------------
-# Generate initial Matugen colors for first boot
+# misc
 # ------------------------------------------------------
+echo "Installing Yazi plugins..."
+ya pkg install
+echo "✨ Yazi plugins installed ✨"
+
 echo "🎨 Generating initial system colors..."
-
-# Run Matugen silently in the background
-matugen image /.config/wallpapers/wallpaper13.png > /dev/null 2>&1
-
-echo "✅ Colors generated!"
+matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1
+echo "✨ Colors generated ✨"
 
 echo "-----------------------------------------------------------------------------------------------------"
-echo "✨ All packages installed successfully and configs linked, please reboot or log out and log back in!"
+echo "✨ All packages installed successfully and configs linked, please reboot or log out and log back in ✨"
 echo "-----------------------------------------------------------------------------------------------------"
