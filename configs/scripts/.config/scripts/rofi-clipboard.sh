@@ -1,39 +1,52 @@
-#!/bin/bash
-
+# Configuration
 CACHE_DIR="$HOME/.cache/cliphist_thumbs"
 mkdir -p "$CACHE_DIR"
 
 MENU_OPTIONS=""
 
-# Build the clipboard list
+# 1. Build the clipboard list from cliphist
 while IFS=$'\t' read -r id content; do
-    # Clean up the content string to prevent Rofi markup breaking
+    # Escape HTML special characters for Rofi markup
     clean_content=$(printf "%s" "$content" | sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g')
 
     if [[ "$content" == *"[[ binary data"* ]]; then
         THUMB="$CACHE_DIR/${id}.png"
-
-        # If thumbnail doesn't exist or is 0 bytes, generate it
+        # Generate thumbnail if it doesn't exist
         if [ ! -s "$THUMB" ]; then
             printf "%s\t%s\n" "$id" "$content" | cliphist decode > "$THUMB"
         fi
-
-        # Pass data safely to Rofi with the image icon
+        # Add to menu with icon
         MENU_OPTIONS+="${id}\t${content}\x00icon\x1f${THUMB}\x1fdisplay\x1f${clean_content}\n"
     else
-        # Pass text data safely to Rofi
+        # Add to menu as text
         MENU_OPTIONS+="${id}\t${content}\x00display\x1f${clean_content}\n"
     fi
 done < <(cliphist list)
 
-# Launch Rofi
-SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -show-icons -markup-rows -p "Clipboard" -theme "$HOME/.config/rofi/clipboard.rasi")
+# 2. Launch Rofi
+# Alt+Delete is mapped to Exit Code 10
+SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -show-icons -markup-rows \
+    -p "Clipboard" \
+    -kb-custom-1 "Alt+Delete" \
+    -theme "$HOME/.config/rofi/clipboard.rasi")
 
-# If they selected something, decode it and copy it
+ROFI_EXIT=$?
+
+# 3. Handle the outcome
 if [ -n "$SELECTED" ]; then
-    # Extract the ID safely (everything before the first tab)
-    ID=$(printf "%s" "$SELECTED" | cut -f1)
+    # Extract ID (everything before the first tab)
+    ID=$(printf "%s\n" "$SELECTED" | cut -f1)
 
-    # Fetch the exact raw line from cliphist using the ID, decode, and copy
-    cliphist list | awk -F'\t' -v id="$ID" '$1 == id {print $0}' | cliphist decode | wl-copy
+    if [ $ROFI_EXIT -eq 0 ]; then
+        # Selection made (Enter): Decode and Copy
+        cliphist list | awk -F'\t' -v id="$ID" '$1 == id {print $0}' | cliphist decode | wl-copy
+
+    elif [ $ROFI_EXIT -eq 10 ]; then
+        # Selection made (Alt+Delete): Delete from database and cache
+        cliphist list | awk -F'\t' -v id="$ID" '$1 == id {print $0}' | cliphist delete
+        rm -f "$CACHE_DIR/${ID}.png"
+
+        # Relaunch the script immediately to refresh the menu
+        exec /bin/bash "$BASH_SOURCE"
+    fi
 fi
