@@ -15,7 +15,7 @@
 Once in the TTY, please run the following command:
 
 ```bash
-git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh
+git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ```
 
 - **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
