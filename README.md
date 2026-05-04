@@ -12,14 +12,14 @@
 
 # 🚀 Post Arch Install  
 
-Once in the TTY, please run the following command in your `HOME` directory:
+Once in the TTY, please run the following command:
 
 ```bash
 git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh
 ```
 
 - **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
-- **(Optional):** If you need NVIDIA packages, go to `install/hypr.sh` and uncomment the NVIDIA script.
+- **(Optional):** If you need NVIDIA packages, go to `install/run.sh` and uncomment the NVIDIA script.
 - **Restart your system** after the installer completes.
 
 ---
@@ -38,13 +38,6 @@ git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install
 - [ ] Get GTK working with Matugen *(I think it works?)*.
 
 ---
-
-# 🔍 Look Into
-
-- [Windows 11 Clipboard History For Linux](https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux)
-- [wayle](https://github.com/wayle-rs/wayle)
-- Installing the cachyOS kernel.
-
 
 # ⌨️ Keybindings
 
