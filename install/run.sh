@@ -69,11 +69,14 @@ chmod +x "$SCRIPT_DIR/hypr.sh"
 "$SCRIPT_DIR/hypr.sh"
 
 # ==========================
-# move configs
+# symlink configs
 # ==========================
 
-chmod +x "$SCRIPT_DIR/config.sh"
-"$SCRIPT_DIR/config.sh"
+chmod +x "$SCRIPT_DIR/stow.sh"
+"$SCRIPT_DIR/stow.sh"
+
+echo "Installing Yazi plugins..."
+ya pkg install
 
 # ==========================
 # Enable services

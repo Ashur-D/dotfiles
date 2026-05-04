@@ -37,12 +37,6 @@ find "$STOW_DIR" -maxdepth 1 -mindepth 1 -type d -print0 | while IFS= read -r -d
     echo ""
 done
 
-echo "Installing Yazi plugins..."
-ya pkg install
-
-echo "Sourcing shell..."
-source ~/.bashrc
-
 echo "------------------------------------------------------------"
 echo "✨ dotfiles symlinked successfully!"
 echo "------------------------------------------------------------"
