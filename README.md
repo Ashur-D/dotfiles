@@ -11,9 +11,9 @@
 
 - once in the TTY please follow the commands below in your HOME dir.
 
-`git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x scripts/run.sh && ./scripts/run.sh`
-- (Optional) Before running `./install.sh`, review and uncomment desired packages in `scripts/packages.sh`.
-- (Optional) If you need NVIDIA packages, go to `scripts/hypr.sh` and uncomment the NVIDIA script.
+`git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh`
+- (Optional) Before running `./install.sh`, review and uncomment desired packages in `install/packages.sh`.
+- (Optional) If you need NVIDIA packages, go to `install/hypr.sh` and uncomment the NVIDIA script.
 - Restart your system after the installer completes.
 
 

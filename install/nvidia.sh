@@ -7,7 +7,8 @@
 
 # List of packages to install
 packages=(
-    linux-headers
+    #linux-headers
+    linux-zen-headers
     egl-wayland
     libva-nvidia-driver
     lib32-nvidia-utils

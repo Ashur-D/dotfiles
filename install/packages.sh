@@ -62,7 +62,8 @@ packages=(
     power-profiles-daemon       # power profiles or use auto-cpufreq, never both.
     btop                        # system resource monitor
     brightnessctl               # controls screen and keyboard brightness
-    thunar-git                  # gtk gui file manager
+    thunar                      # gtk gui file manager
+    stow                        # symlinks
 
     # ------------ Core Wayland & Display ------------
 
