@@ -1,36 +1,52 @@
-# recommended arch install options
+Here is the cleaned-up, nicely formatted Markdown. You can copy the entire block below and paste it directly into your `README.md` file:
 
-- Disk Configuration > default structure: yes + use compression
-- Bootloader > grub
-- Kernel > zen-kernel
-- Profile > minimal
-- Applications > none
-- Additional packages > git & multilib
+```markdown
+# 🛠️ Recommended Arch Install Options
 
-# post arch install  
+- **Disk Configuration:** default structure: yes + use compression
+- **Bootloader:** grub
+- **Kernel:** zen-kernel
+- **Profile:** minimal
+- **Applications:** none
+- **Additional packages:** git & multilib
 
-- Once in the TTY please follow the commands below in your HOME dir.
+---
 
-`git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh`
-- (Optional) Before running `./install.sh`, review and uncomment desired packages in `install/packages.sh`.
-- (Optional) If you need NVIDIA packages, go to `install/hypr.sh` and uncomment the NVIDIA script.
-- Restart your system after the installer completes.
+# 🚀 Post Arch Install  
 
+Once in the TTY, please run the following command in your `HOME` directory:
 
-# themes
-- Some themes may need to be manually turned on
-- For ex: vesktop,btop,kitty,etc will need to go into their themes section, and select a matugen version.
-- For vesktop this is called "midnight"
+```bash
+git clone [https://github.com/Ashur-D/dotfiles](https://github.com/Ashur-D/dotfiles) && cd dotfiles && chmod +x install/run.sh && ./install/run.sh
+```
 
-# todo
-- Get starship colors working with matugen(mostly done just get dir and system icon better colors)
-- Get gtk working with matugen (I think it works?)
+- **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
+- **(Optional):** If you need NVIDIA packages, go to `install/hypr.sh` and uncomment the NVIDIA script.
+- **Restart your system** after the installer completes.
 
+---
 
-# look into
-- https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
-- https://github.com/wayle-rs/wayle
-- installing the cachyOS kernel
+# 🎨 Themes
+
+- Some themes may need to be manually turned on.
+- *For example:* `vesktop`, `btop`, `kitty`, etc., will need you to go into their respective theme sections and select the Matugen version.
+- For `vesktop`, this theme is called **"midnight"**.
+
+---
+
+# 📝 To-Do
+
+- [ ] Get `starship` colors working with Matugen *(mostly done, just need better colors for the dir and system icons)*.
+- [ ] Get GTK working with Matugen *(I think it works?)*.
+
+---
+
+# 🔍 Look Into
+
+- [Windows 11 Clipboard History For Linux](https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux)
+- [wayle](https://github.com/wayle-rs/wayle)
+- Installing the cachyOS kernel.
+```
 
 ---
 
