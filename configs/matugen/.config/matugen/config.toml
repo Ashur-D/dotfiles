@@ -36,6 +36,10 @@ input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 post_hook = 'pkill -USR2 btop || true'
 
+[templates.clipse]
+input_path = './templates/clipse-colors.json'
+output_path = '~/.config/clipse/custom_theme.json'
+
 [templates.zed]
 input_path = '~/.config/matugen/templates/zed-colors.json'
 output_path = '~/.config/zed/themes/matugen.json'
