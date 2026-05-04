@@ -2,14 +2,14 @@
 
 - Disk Configuration > default structure: yes + use compression
 - Bootloader > grub
-- kernel > zen-kernel
-- profile > minimal
+- Kernel > zen-kernel
+- Profile > minimal
 - Applications > none
-- additional packages > git & multilib
+- Additional packages > git & multilib
 
 # post arch install  
 
-- once in the TTY please follow the commands below in your HOME dir.
+- Once in the TTY please follow the commands below in your HOME dir.
 
 `git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh`
 - (Optional) Before running `./install.sh`, review and uncomment desired packages in `install/packages.sh`.
@@ -18,13 +18,13 @@
 
 
 # themes
-- some themes may need to be manually turned on
-- for ex: vesktop,btop,kitty,etc will need to go into their themes section, and select a matugen version.
-- for vesktop this is called "midnight"
+- Some themes may need to be manually turned on
+- For ex: vesktop,btop,kitty,etc will need to go into their themes section, and select a matugen version.
+- For vesktop this is called "midnight"
 
 # todo
-- get starship colors working with matugen(mostly done just get dir and system icon better colors)
-- get gtk working with matugen (I think it works?)
+- Get starship colors working with matugen(mostly done just get dir and system icon better colors)
+- Get gtk working with matugen (I think it works?)
 
 
 # look into
