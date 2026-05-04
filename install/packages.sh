@@ -32,7 +32,8 @@ packages=(
     yazi                        # tui file explorer
     thunar                      # gtk gui file manager
     wl-clipboard                # command-line copy/paste
-    clipse                      # tui clipboard manager - `win11-clipboard-history-bin` is also great
+    cliphist                    # tui clipboard manager - `win11-clipboard-history-bin` and `clipse` are also great
+    wl-clip-persist             # clipboard stays persist after closing app
     unzip                       # the universal standard for zip files
     7zip                        # the powerhouse engine Yazi uses for everything else
 
