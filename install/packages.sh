@@ -10,7 +10,7 @@ packages=(
 # ====================================================
 
     # ------------ Desktop UI Components ------------
-    waybar                      # topbar
+    waybar                      # topbar > look into https://github.com/wayle-rs/wayle
     mako                        # notifications
     rofi                        # app launcher, controls wallpapers/power/session
     swayosd                     # on-screen display
@@ -31,7 +31,7 @@ packages=(
     # ------------ CLI Utilities & File Management ------------
     yazi                        # tui file explorer
     wl-clipboard                # command-line copy/paste
-    clipse                      # tui clipboard manager
+    clipse                      # tui clipboard manager - `win11-clipboard-history-bin` is also great
 
     # ------------ Editors ------------
     neovim                      # terminal text editor
