@@ -97,11 +97,8 @@ chmod +x "$SCRIPT_DIR/services.sh"
 # ------------------------------------------------------
 echo "🎨 Generating initial system colors..."
 
-# We use wallpaper13.png as the default since we know it exists in your repo
-DEFAULT_WALL="$HOME/.config/wallpapers/wallpaper13.png"
-
 # Run Matugen silently in the background
-matugen image -m dark -t scheme-tonal-spot "$DEFAULT_WALL" > /dev/null 2>&1
+matugen image /.config/wallpapers/wallpaper13.png > /dev/null 2>&1
 
 echo "✅ Colors generated!"
 
