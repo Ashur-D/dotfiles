@@ -4,6 +4,10 @@
 ###------------------- always open in home -----------------------###
 cd ~
 
+export TERM=xterm-256color
+# OR specifically for Kitty:
+# export TERM=xterm-kitty
+
 ###------------------- Technicolor -----------------------###
 force_color_prompt=yes
 color_prompt=yes
