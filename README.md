@@ -101,7 +101,7 @@ git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install
 | Keybind | Action |
 | :--- | :--- |
 | `Print Screen` | Regional screenshot (copies to clipboard) |
-| `SHIFT` + `Print Screen` | Fullscreen screenshot of DP-2 |
+| `SHIFT` + `Print Screen` | Fullscreen screenshot |
 | Media Keys | Play/Pause/Next/Previous track |
 
 </details>
