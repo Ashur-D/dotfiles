@@ -50,7 +50,7 @@ git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install
 | `SUPER` + `Escape` | Launch Powermenu |
 | `SUPER` + `SHIFT` + `Escape` | Launch Performance Menu |
 | `SUPER` + `ALT` + `Space` | Launch Wallpaper Menu |
-| `SUPER` + `V` | Open Clipboard Manager (Clipse) |
+| `SUPER` + `V` | Open Clipboard Manager (with rofi) |
 | `SUPER` + `CTRL` + `N` | Toggle Nightlight |
 | `SUPER` + `SHIFT` + `Space` | Toggle Top Bar (Waybar) |
 
