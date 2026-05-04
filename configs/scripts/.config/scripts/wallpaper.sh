@@ -19,3 +19,6 @@ sed -i "s|path = .*|path = $FULL_PATH|" "$HOME/.config/hypr/hyprlock.conf"
 
 # Send notification
 notify-send -i "$FULL_PATH" "Theme Updated" "Mode: ${RANDOM_TYPE#scheme-} \nIndex: $RANDOM_INDEX"
+
+# open this with "zed" using the "color highlight" lsp.
+matugen image "$1" --verbose --show-colors | sed 's/\x1b\[[0-9;]*m//g' > "$HOME/.config/colors.py" 2>/dev/null &
