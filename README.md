@@ -23,7 +23,7 @@
 - for vesktop this is called "midnight"
 
 # todo
-- get starship colors working with matugen
+- get starship colors working with matugen(mostly done just get dir and system icon better colors)
 - get gtk working with matugen (I think it works?)
 
 
