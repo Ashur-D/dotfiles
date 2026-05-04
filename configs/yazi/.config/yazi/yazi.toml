@@ -2,14 +2,14 @@
 show_hidden = true
 # ratio = [ 0, 2, 5 ]
 
-[[open.prepend_rules]]
-url = "**/.config/wallpapers/*"
-use = [ "set-wallpaper", "open", "reveal" ]
+# [[open.prepend_rules]]
+# url = "**/.config/wallpapers/*"
+# use = [ "set-wallpaper", "open", "reveal" ]
 
 [opener]
-set-wallpaper = [
-  { run = '~/.config/scripts/wallpaper.sh "$@"', orphan = true, for = "unix", desc = "Set as wallpaper" }
-]
+# set-wallpaper = [
+#   { run = '~/.config/scripts/wallpaper.sh "$@"', orphan = true, for = "unix", desc = "Set as wallpaper" }
+# ]
 edit = [
   { run = "nvim \"$@\"", block = true, for = "unix" },
 ]
