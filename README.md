@@ -15,7 +15,7 @@
 Once in the TTY, please run the following command in your `HOME` directory:
 
 ```bash
-git clone [https://github.com/Ashur-D/dotfiles](https://github.com/Ashur-D/dotfiles) && cd dotfiles && chmod +x install/run.sh && ./install/run.sh
+git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh
 ```
 
 - **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
@@ -89,5 +89,26 @@ git clone [https://github.com/Ashur-D/dotfiles](https://github.com/Ashur-D/dotfi
 ### Scratchpads (Special Workspaces)
 | Keybind | Action |
 | :--- | :--- |
-| `SUPER` + `A` | Toggle *Anything* scratchpad |
-| `SUPER
+| `SUPER` + `A` | Toggle scratchpad A |
+| `SUPER` + `S` | Toggle scratchpad S |
+| `SUPER` + `D` | Toggle scratchpad D |
+| `SUPER` + `ALT` + `A` | Move window silently to scratchpad A |
+| `SUPER` + `ALT` + `S` | Move window silently to scratchpad S |
+| `SUPER` + `ALT` + `D` | Move window silently to scratchpad D |
+
+### Groups / Tabs
+| Keybind | Action |
+| :--- | :--- |
+| `SUPER` + `G` | Toggle window grouping |
+| `SUPER` + `ALT` + `G` | Move active window out of group |
+| `SUPER` + `SHIFT` + `A` | Move grouped window focus left |
+| `SUPER` + `SHIFT` + `D` | Move grouped window focus right |
+
+### Media & Screenshots
+| Keybind | Action |
+| :--- | :--- |
+| `Print Screen` | Regional screenshot (copies to clipboard) |
+| `SHIFT` + `Print Screen` | Fullscreen screenshot of DP-2 |
+| Media Keys | Play/Pause/Next/Previous track |
+
+</details>
