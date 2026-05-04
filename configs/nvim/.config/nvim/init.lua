@@ -1,6 +1,23 @@
 -- ~/.config/nvim/init.lua
 
 -- =====================================================================
+-- 1. Essential Settings
+-- =====================================================================
+vim.opt.number = true
+vim.opt.relativenumber = false
+-- vim.opt.laststatus = 0
+vim.opt.ruler = false
+-- vim.opt.cmdheight = 0
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.wrap = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.termguicolors = true
+vim.opt.statusline = " %F %m %= %l:%c "
+
+-- =====================================================================
 -- 1. Bootstrap Lazy.nvim (The Plugin Manager)
 -- =====================================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -23,7 +40,17 @@ require("lazy").setup({
     {
         "NvChad/nvim-colorizer.lua",
         config = function()
-            require("colorizer").setup()
+            require("colorizer").setup({
+                user_default_options = {
+                    names = true,        -- Highlight color names like "Blue"
+                    RGB = true,          -- #RGB hex codes
+                    RRGGBB = true,       -- #RRGGBB hex codes
+                    RRGGBBAA = true,     -- #RRGGBBAA hex codes
+                    mode = "background", -- Set the display mode
+                },
+                -- This tells the plugin to stay active on all file types
+                filetypes = { "*" },
+            })
         end
     },
 
@@ -46,24 +73,7 @@ require("lazy").setup({
 })
 
 -- =====================================================================
--- 3. Essential Settings
--- =====================================================================
-vim.opt.number = true
-vim.opt.relativenumber = false
--- vim.opt.laststatus = 0
-vim.opt.ruler = false
--- vim.opt.cmdheight = 0
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.wrap = false
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.termguicolors = true
-vim.opt.statusline = " %F %m %= %l:%c "
-
--- =====================================================================
--- 4. Cool Built-in Tweaks
+-- 3. Cool Built-in Tweaks
 -- =====================================================================
 -- Flash text briefly when you copy (yank) it
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -74,7 +84,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- =====================================================================
--- 5. The Matugen & Transparency Engine
+-- 4. The Matugen & Transparency Engine
 -- =====================================================================
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
@@ -102,7 +112,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 vim.cmd("colorscheme default")
 
 -- =====================================================================
--- 6. Live Theme Reloading (The Bulletproof File Watcher)
+-- 5. Live Theme Reloading (The Bulletproof File Watcher)
 -- =====================================================================
 -- Create the manual command just in case
 vim.api.nvim_create_user_command("Theme", function()
