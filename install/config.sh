@@ -38,7 +38,7 @@ find "$STOW_DIR" -maxdepth 1 -mindepth 1 -type d -print0 | while IFS= read -r -d
 done
 
 echo "Installing Yazi plugins..."
-ya pack -i
+ya pkg install
 
 echo "Sourcing shell..."
 source ~/.bashrc
