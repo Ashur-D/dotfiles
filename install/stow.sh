@@ -38,5 +38,5 @@ find "$STOW_DIR" -maxdepth 1 -mindepth 1 -type d -print0 | while IFS= read -r -d
 done
 
 echo "------------------------------------------------------------"
-echo "✨ dotfiles symlinked successfully!"
+echo "✨ dotfiles symlinked successfully ✨"
 echo "------------------------------------------------------------"

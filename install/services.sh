@@ -18,5 +18,5 @@ sudo systemctl enable --now "${services[@]}" || true
 
 
 echo "------------------------------------------------------------"
-echo "✨ All services enabled and started!"
+echo "✨ All services enabled and started ✨"
 echo "------------------------------------------------------------"
