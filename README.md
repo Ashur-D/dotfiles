@@ -1,37 +1,3 @@
-# recommended arch install options
-
-- Disk Configuration > default structure: yes + use compression
-- Bootloader > grub
-- Kernel > zen-kernel
-- Profile > minimal
-- Applications > none
-- Additional packages > git & multilib
-
-# post arch install  
-
-- Once in the TTY please follow the commands below in your HOME dir.
-
-`git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh`
-- (Optional) Before running `./install.sh`, review and uncomment desired packages in `install/packages.sh`.
-- (Optional) If you need NVIDIA packages, go to `install/hypr.sh` and uncomment the NVIDIA script.
-- Restart your system after the installer completes.
-
-
-# themes
-- Some themes may need to be manually turned on
-- For ex: vesktop,btop,kitty,etc will need to go into their themes section, and select a matugen version.
-- For vesktop this is called "midnight"
-
-# todo
-- Get starship colors working with matugen(mostly done just get dir and system icon better colors)
-- Get gtk working with matugen (I think it works?)
-
-
-# look into
-- https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
-- https://github.com/wayle-rs/wayle
-- installing the cachyOS kernel
-
 ### ⌨️ Keybindings
 
 **System & Applications**
@@ -75,12 +41,12 @@
 **Scratchpads (Special Workspaces)**
 | Keybind | Action |
 | :--- | :--- |
-| `SUPER` + `A` | Toggle *Anything* scratchpad |
-| `SUPER` + `S` | Toggle *Spotify* scratchpad |
-| `SUPER` + `D` | Toggle *Discord* scratchpad |
-| `SUPER` + `ALT` + `A` | Move window silently to *Anything* scratchpad |
-| `SUPER` + `ALT` + `S` | Move window silently to *Spotify* scratchpad |
-| `SUPER` + `ALT` + `D` | Move window silently to *Discord* scratchpad |
+| `SUPER` + `A` | Toggle scratchpad A |
+| `SUPER` + `S` | Toggle scratchpad S |
+| `SUPER` + `D` | Toggle scratchpad D |
+| `SUPER` + `ALT` + `A` | Move window silently to scratchpad A |
+| `SUPER` + `ALT` + `S` | Move window silently to scratchpad S |
+| `SUPER` + `ALT` + `D` | Move window silently to scratchpad D |
 
 **Groups / Tabs**
 | Keybind | Action |
@@ -96,3 +62,38 @@
 | `Print Screen` | Regional screenshot (copies to clipboard) |
 | `SHIFT` + `Print Screen` | Fullscreen screenshot of DP-2 |
 | Media Keys | Play/Pause/Next/Previous track |
+
+
+# recommended arch install options
+
+- Disk Configuration > default structure: yes + use compression
+- Bootloader > grub
+- Kernel > zen-kernel
+- Profile > minimal
+- Applications > none
+- Additional packages > git & multilib
+
+# post arch install  
+
+- Once in the TTY please follow the commands below in your HOME dir.
+
+`git clone https://github.com/Ashur-D/dotfiles && cd dotfiles && chmod +x install/run.sh && ./install/run.sh`
+- (Optional) Before running `./install.sh`, review and uncomment desired packages in `install/packages.sh`.
+- (Optional) If you need NVIDIA packages, go to `install/hypr.sh` and uncomment the NVIDIA script.
+- Restart your system after the installer completes.
+
+
+# themes
+- Some themes may need to be manually turned on
+- For ex: vesktop,btop,kitty,etc will need to go into their themes section, and select a matugen version.
+- For vesktop this is called "midnight"
+
+# todo
+- Get starship colors working with matugen(mostly done just get dir and system icon better colors)
+- Get gtk working with matugen (I think it works?)
+
+
+# look into
+- https://github.com/gustavosett/Windows-11-Clipboard-History-For-Linux
+- https://github.com/wayle-rs/wayle
+- installing the cachyOS kernel
