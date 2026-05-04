@@ -22,7 +22,7 @@ echo "Starting batch installation of nvidia packages..."
 # --needed automatically skips already installed packages!
 if yay -S --needed --noconfirm "${packages[@]}"; then
     echo "------------------------------------------------------------"
-    echo "✨ All nvidia packages installed successfully!"
+    echo "✨ All nvidia packages installed successfully ✨"
     echo "------------------------------------------------------------"
 else
     echo "------------------------------------------------------------"
