@@ -15,7 +15,7 @@ configuration {
 
 window {
     width: 65%; /* Slightly wider to fit the image grid */
-    height: 45%;
+    height: 40%;
     transparency: "real";
     background-color: var(surface);
     border: 0px solid;
