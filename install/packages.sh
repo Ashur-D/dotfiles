@@ -19,8 +19,9 @@ packages=(
     # ------------ Theming & Fonts ------------
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
-    ttf-jetbrains-mono-nerd     # system font, might switch to ttf-cascadia-mono-nerd or maplemono-ttf
-    adw-gtk-theme               #
+    ttf-jetbrains-mono-nerd     # system font, might switch to ttf-cascadia-mono-nerd
+    maplemono-ttf
+    adw-gtk-theme
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal emulator
