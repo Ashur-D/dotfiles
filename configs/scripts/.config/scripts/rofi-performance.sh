@@ -15,7 +15,6 @@ options=(
 # --- Launch Rofi ---
 # Use the new theme file and remove conflicting theme-str arguments
 chosen=$(printf "%s\n" "${options[@]}" | rofi -dmenu \
-    -p "Select Power Profile:" \
     -theme ~/.config/rofi/performance.rasi \
     -i -no-custom)
 

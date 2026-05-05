@@ -1,10 +1,6 @@
 /* Import Matugen colors */
 @import "colors.rasi"
 
-* {
-    font: "MapleMono 12";
-}
-
 configuration {
     modi: "drun";
     show-icons: true;
@@ -17,8 +13,11 @@ window {
     height: 450px;
     transparency: "real";
     background-color: var(surface);
+    border: 0px solid;
+    border-color: var(primary);
     border-radius: 16px;
-    border:0px;
+    location: center;
+    anchor: center;
 }
 
 mainbox {
@@ -31,23 +30,21 @@ inputbar {
     padding: 10px;
     background-color: var(surface-container-highest);
     border-radius: 16px;
-    children: [ entry ];
+    children: [ prompt, entry ];
 }
 
 prompt {
-    font: "JetBrainsMono Nerd Font 12";
     margin: 0px 10px 0px 0px;
     text-color: var(primary);
 }
 
 entry {
-    font: "MapleMono Bold Italic 12";
-    placeholder: " Search apps...";
-    text-color: var(on-surface-variant);
+    placeholder: "Search apps...";
+    text-color: var(on-surface);
 }
 
 listview {
-    columns: 1;
+    columns: 2;
     lines: 6;
     spacing: 10px;
     cycle: true;
@@ -76,9 +73,10 @@ element alternate.normal {
 
 element selected.normal {
     background-color: var(primary);
-    text-color: var(on-secondary-fixed);
+    text-color: var(on-primary);
 }
 
 element-text {
     vertical-align: 0.5;
+    text-color: inherit;
 }

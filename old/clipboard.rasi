@@ -3,15 +3,25 @@
 
 * {
     background-color: transparent;
-    font: "MapleMono 12";
+}
+
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+    placeholder: "Search...";
+
 }
 
 window {
     width: 600px;
     transparency: "real";
     background-color: var(surface);
+    border: 0px solid;
+    border-color: var(primary);
     border-radius: 16px;
     padding: 20px;
+    location: center;
+    anchor: center;
 }
 
 mainbox {
@@ -21,6 +31,8 @@ mainbox {
 
 inputbar {
     background-color: var(surface-container-low);
+    border: 1px solid;
+    border-color: var(outline-variant);
     border-radius: 16px;
     padding: 12px 16px;
     children: [ entry ];
@@ -31,15 +43,19 @@ prompt {
 }
 
 entry {
-    font: "MapleMono Bold Italic 12";
-    placeholder: " Search Clipboard...";
+    placeholder: "Search Clipboard...";
+    placeholder-color: var(on-surface-variant);
     text-color: var(on-surface-variant);
 }
 
 listview {
     columns: 1;
     lines: 7;
-    spacing: 7px;
+    spacing: 4px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    border: 0px;
 }
 
 element {
@@ -54,6 +70,7 @@ element {
 
 element-icon {
     size: 48px;
+    vertical-align: 0.5;
     background-color: transparent;
 }
 
