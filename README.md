@@ -1,5 +1,7 @@
 
 # 🛠️ Recommended Arch Install Options
+> [!NOTE]
+> You will need git to clone my repo
 
 - **Disk Configuration:** default structure: yes + use compression
 - **Bootloader:** grub
@@ -7,6 +9,7 @@
 - **Profile:** minimal
 - **Applications:** none
 - **Additional packages:** git & multilib
+
 
 ---
 
@@ -25,8 +28,8 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ---
 
 # 🎨 Themes
-
-- Some themes may need to be manually turned on.
+> [!NOTE]
+> Some themes may need to be manually turned on.
 - *For example:* `vesktop`, `btop`, `kitty`, etc., will need you to go into their respective theme sections and select the Matugen version.
 - For `vesktop`, this theme is called **"midnight"**.
 
@@ -38,6 +41,32 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 - [ ] Get GTK working with Matugen *(I think it works?)*.
 
 ---
+
+# 🖼️ Previews
+
+## Desktop 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d69b2db-53c5-4944-b423-f2749750e1d5" />
+
+## Rofi Power Menu
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/99bd5858-1c32-4129-be43-2653779952cf" />
+
+
+## Rofi App Launcher
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76cd9cd7-3af2-4c44-93d0-1d2cc7d1e2f4" />
+
+
+## Rofi Performance Menu
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ddfb8c2d-050a-46a2-9a37-668becbf647d" />
+
+## Rofi Wallpaper Selector
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/21f03328-7185-4898-bc59-53884a8580e5" />
+
+
+## Wifi & Audio TUI's
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b53bd8f-37ac-4417-b3ad-6772e6a48794" />
+
+
+
 
 # ⌨️ Keybindings
 
