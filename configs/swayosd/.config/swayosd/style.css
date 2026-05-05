@@ -1,6 +1,6 @@
 @import "colors.css";
 window {
-    border-radius: 12px;
+    border-radius: 16px;
     opacity: 0.97;
     border: 0px solid @accent_color;
     background-color: @accent_fg_color;
@@ -17,7 +17,7 @@ image {
 }
 
 progressbar {
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 progress {

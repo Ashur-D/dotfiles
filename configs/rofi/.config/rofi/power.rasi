@@ -16,7 +16,7 @@ window {
     background-color: var(surface);
     border: 0px solid;
     border-color: var(primary);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 25px;
     location: center;
     anchor: center;
@@ -40,7 +40,7 @@ element {
     /* Top/Bottom padding of 42px perfectly balances the 36px font
        to create a true square matching the column width */
     padding: 42px 0px;
-    border-radius: 14px;
+    border-radius: 16px;
     background-color: var(surface-container-low);
     text-color: var(on-surface-variant);
     cursor: pointer;

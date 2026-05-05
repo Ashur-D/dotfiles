@@ -19,7 +19,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ```
 
 - **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
-- **(Optional):** If you need NVIDIA packages, go to `install/run.sh` and uncomment the NVIDIA script.
+- **(Optional):** If you need NVIDIA packages, go to `install/run.sh` and uncomment the NVIDIA script as well as envs in `~/.config/hypr/hyprenvs.conf`
 - **Restart your system** after the installer completes.
 
 ---
@@ -45,7 +45,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 
 # 🖼️ Previews
 
-## Desktop 
+## Desktop Overview
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d69b2db-53c5-4944-b423-f2749750e1d5" />
 
 ## Rofi Power Menu
