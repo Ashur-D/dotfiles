@@ -1,6 +1,4 @@
-/* ~/.config/rofi/power_menu.rasi */
-
-/* Import colors */
+/* Import Matugen colors */
 @import "colors.rasi"
 
 * {
