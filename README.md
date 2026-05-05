@@ -67,7 +67,8 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b53bd8f-37ac-4417-b3ad-6772e6a48794" />
 
 ## Hypr Lockscreen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/916ded25-f253-4780-8d69-ac30da162e9e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5b034cf2-0c85-408b-a50d-3a8345766106" />
+
 
 
 
