@@ -36,9 +36,10 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 
 - [ ] Get `starship` colors working with Matugen *(mostly done, just need better colors for the dir and system icons)*.
 - [ ] Get GTK working with Matugen *(I think it works?)*.
-- [ ] [https://github.com/vyrx-dev/symphony](get this type of wallpaper menu)
-- [ ] [https://github.com/vyrx-dev/symphony](get this type of wallpaper menu)
-- [ ] 
+- [ ] [get this type of wallpaper menu](https://github.com/vyrx-dev/symphony)
+
+
+
 
 ---
 
@@ -66,6 +67,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b53bd8f-37ac-4417-b3ad-6772e6a48794" />
 
 ## Hypr Lockscreen
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/916ded25-f253-4780-8d69-ac30da162e9e" />
 
 
 
