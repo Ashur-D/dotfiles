@@ -20,7 +20,7 @@ window {
     width: 18%;
     background-color: var(surface);
     border-color: var(primary);
-    border-width: 2px;
+    border-width: 0px;
     border-radius: 16px;
     border: 0px solid;
     padding: 25px;
