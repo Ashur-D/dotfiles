@@ -30,7 +30,6 @@ fi
 # Launch Rofi with our new dedicated wallpaper theme
 selected=$(echo -en "$file_list" | rofi -dmenu \
     -i \
-    -p "  Select Wallpaper" \
     -theme ~/.config/rofi/wallpaper.rasi)
 
 # If a wallpaper was selected (i.e., you didn't press Esc), apply it!

@@ -38,7 +38,10 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 - [ ] Get GTK working with Matugen *(I think it works?)*.
 - [ ] [get this type of wallpaper menu](https://github.com/vyrx-dev/symphony)
 
-
+# Some ways to change your hypr config
+- [hyprsettings](https://github.com/acropolis914/hyprsettings)
+- [hyprmod](https://github.com/BlueManCZ/hyprmod)
+- [hyprviz](https://github.com/timasoft/hyprviz)
 
 
 ---
