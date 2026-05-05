@@ -1,8 +1,5 @@
 
 # 🛠️ Recommended Arch Install Options
-> [!NOTE]
-> You will need git to clone my repo
-
 - **Disk Configuration:** default structure: yes + use compression
 - **Bootloader:** grub
 - **Kernel:** zen-kernel
