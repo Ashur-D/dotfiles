@@ -50,7 +50,7 @@ element {
     padding: 15px 20px;
     background-color: var(surface-container-low);
     text-color: var(on-surface-variant);
-    border-radius: 10px;
+    border-radius: 16px;
     cursor: pointer;
     orientation: horizontal;
     vertical-align: 0.5;
