@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 1. Grab the image path passed by Yazi
+# 1. Grab the image
 FULL_PATH="$1"
 
 # 2. Actually set the wallpaper using awww!
@@ -11,14 +11,11 @@ RANDOM_INDEX=$((RANDOM % 5))
 TYPES=("scheme-expressive" "scheme-fidelity" "scheme-fruit-salad" "scheme-rainbow" "scheme-tonal-spot" "scheme-vibrant")
 RANDOM_TYPE=${TYPES[$RANDOM % ${#TYPES[@]}]}
 
-# Apply matugen
-matugen image -m dark -t "$RANDOM_TYPE" --source-color-index "$RANDOM_INDEX" "$FULL_PATH"
+# Apply matugen and create a file to view the current colors
+matugen image -m dark -t "$RANDOM_TYPE" --source-color-index "$RANDOM_INDEX" --verbose --show-colors "$FULL_PATH" 2>&1 | sed 's/\x1b[[0-9;]*m//g' > ~/.config/colors.txt
 
 # 4. Sync lockscreen
 sed -i "s|path = .*|path = $FULL_PATH|" "$HOME/.config/hypr/hyprlock.conf"
 
 # Send notification
 notify-send -i "$FULL_PATH" "Theme Updated" "Mode: ${RANDOM_TYPE#scheme-} \nIndex: $RANDOM_INDEX"
-
-# open this with "zed" using the "color highlight" lsp. Or just use my nvim config.
-matugen image "$1" --verbose --show-colors | sed 's/\x1b\[[0-9;]*m//g' > "$HOME/.config/colors.py" 2>/dev/null &

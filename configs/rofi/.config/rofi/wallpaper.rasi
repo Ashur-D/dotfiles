@@ -68,8 +68,8 @@ element {
 }
 
 element selected.normal {
-    background-color: var(primary);
-    text-color: var(on-primary);
+    background-color: var(primary-container);
+    text-color: var(on-surface);
 }
 
 element-icon {
