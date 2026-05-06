@@ -100,8 +100,6 @@ echo "🎨 Generating initial system colors..."
 matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
 echo "✨ Colors generated ✨"
 
-hyprctl reload
-
 echo "-----------------------------------------------------------------------------------------------------"
 echo "✨ All packages installed successfully and configs linked, please reboot or log out and log back in ✨"
 echo "-----------------------------------------------------------------------------------------------------"
