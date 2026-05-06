@@ -1,9 +1,17 @@
 # Material You colors
 
-background-color={{colors.on_primary.default.hex}}
-text-color={{colors.tertiary.default.hex}}
-border-color={{colors.tertiary_container.default.hex}}
+# background-color={{colors.on_primary.default.hex}}
+# text-color={{colors.tertiary.default.hex}}
+# border-color={{colors.tertiary_container.default.hex}}
 # Per-mode settings
+
+# background-color={{colors.surface_container.dark.hex}}CC
+# text-color={{colors.on_surface.dark.hex}}FF
+# border-color={{colors.primary.dark.hex}}CC
+
+background-color={{colors.surface.dark.hex}}FF
+text-color={{colors.on_surface.dark.hex}}FF
+border-color={{colors.primary.dark.hex}}FF
 
 [mode=do-not-disturb]
 invisible=1
