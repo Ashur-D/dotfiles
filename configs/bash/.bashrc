@@ -4,17 +4,9 @@
 ###------------------- always open in home -----------------------###
 cd ~
 
-export TERM=xterm-256color
-# OR specifically for Kitty:
-# export TERM=xterm-kitty
-
-###------------------- Technicolor -----------------------###
-force_color_prompt=yes
-color_prompt=yes
-
 ###------------------- Editor used by CLI -----------------------###
 export EDITOR="nvim"
-export SUDO_EDITOR="$EDITOR"
+export SUDO_EDITOR="nvim"
 
 ###------------------- starship -----------------------###
 eval "$(starship init bash)"
@@ -39,7 +31,7 @@ function gc() {
     fi
 }
 
-###------------------- hyprland -----------------------###
+###------------------- hyprland auto start -----------------------###
 alias hyprland='start-hyprland'
 
 if [ "$(tty)" = "/dev/tty1" ]; then
