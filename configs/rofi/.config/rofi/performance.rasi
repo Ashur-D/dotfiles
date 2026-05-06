@@ -1,4 +1,4 @@
-/* Import colors */
+/* Import Matugen colors */
 @import "colors.rasi"
 
 * {
