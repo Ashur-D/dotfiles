@@ -2,10 +2,11 @@
 -- Hyprland source files
 -- ==========================
 
-require("hyprenvs")
-require("hyprmonitor")
-require("hyprlooknfeel")
-require("hyprinput")
-require("hyprbindings")
-require("hyprwindows")
 require("hyprautostart")
+require("hyprbinds")
+require("hyprenvs")
+-- require("hypridle")
+require("hyprinput")
+require("hyprlooknfeel")
+require("hyprmonitor")
+require("hyprwindows")
