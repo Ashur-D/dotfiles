@@ -97,7 +97,7 @@ ya pkg install
 echo "✨ Yazi plugins installed ✨"
 
 echo "🎨 Generating initial system colors..."
-matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1
+matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
 echo "✨ Colors generated ✨"
 
 echo "-----------------------------------------------------------------------------------------------------"
