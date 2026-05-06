@@ -35,7 +35,6 @@ inputbar {
 }
 
 prompt {
-    font: "JetBrainsMono Nerd Font 12";
     margin: 0px 10px 0px 0px;
     text-color: var(primary);
 }

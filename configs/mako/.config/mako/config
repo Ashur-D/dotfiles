@@ -1,7 +1,7 @@
 # Pull in Matugen colors and mode overrides
 include=~/.config/mako/mako-colors
 
-font=JetBrainsMono Nerd Font 12
+font=MapleMono Bold 12
 width=350
 height=150
 margin=10

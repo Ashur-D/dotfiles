@@ -19,8 +19,7 @@ packages=(
     # ------------ Theming & Fonts ------------
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
-    ttf-jetbrains-mono-nerd     # system font, might switch to ttf-cascadia-mono-nerd
-    maplemono-ttf
+    maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
     adw-gtk-theme
 
     # ------------ Terminal & Shell ------------
@@ -29,51 +28,48 @@ packages=(
     gum                         # shell scripts (menus, prompts)
     fastfetch                   # system info tool
 
-    # ------------ CLI Utilities & File Management ------------
+    # ------------ File Management ------------
     yazi                        # tui file explorer
     thunar                      # gtk gui file manager
+    7zip                        # the powerhouse engine Yazi uses for everything else
+
+    # ------------ Clipboard ------------
     wl-clipboard                # command-line copy/paste
     cliphist                    # tui clipboard manager - `win11-clipboard-history-bin` and `clipse` are also great
     wl-clip-persist             # clipboard stays persist after closing app
-    unzip                       # the universal standard for zip files
-    7zip                        # the powerhouse engine Yazi uses for everything else
-
 
     # ------------ Editors ------------
     neovim                      # terminal text editor
 
-    # ------------ Audio & Media ------------
+    # ------------ image & video player/viewer ------------
+    mpv                         # video media player
+    imv                         # image viewer
+
+    # ------------ Audio,Wifi,Bluetooth ------------
     pipewire                    # audio core
     pipewire-pulse              # audio compatibility
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
     wiremix                     # audio tui
     playerctl                   # media player keybinds
-    mpv                         # video media player
-    imv                         # image viewer
+
+    iwd                         # wifi daemon
+    impala                      # wifi tui
+
+    bluez                       # bluetooth daemon
+    bluez-utils                 # bluetooth utilities
+    bluetui                     # bluetooth tui
 
     # ------------ Screenshots & Screen Recording ------------
     hyprshot                    # screenshot tool
     satty                       # screenshot annotator
     gpu-screen-recorder-ui      # screen recorder ui
 
-    # ------------ Network & Bluetooth ------------
-    iwd                         # wifi daemon
-    impala                      # wifi tui
-    bluez                       # bluetooth daemon
-    bluez-utils                 # bluetooth utilities
-    bluetui                     # bluetooth tui
-
     # ------------ System & Hardware Management ------------
-    power-profiles-daemon       # power profiles or use auto-cpufreq, never both.
+    power-profiles-daemon       # power profiles, or use auto-cpufreq, never both.
     btop                        # system resource monitor
     brightnessctl               # controls screen and keyboard brightness
     stow                        # symlinks
-    xdg-desktop-portal-gtk
-
-    # ------------ Core Wayland & Display ------------
-
-
 
 # ====================================================
 #                  OPTIONAL PACKAGES

@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 ###------------------- always open in home -----------------------###
-cd ~
+# cd ~
 
 ###------------------- Editor used by CLI -----------------------###
 export EDITOR="nvim"
@@ -20,6 +20,7 @@ eval "$(starship init bash)"
 alias f="fastfetch"
 alias ga='git add .'
 alias gp='git push'
+alias gpp= 'git pull'
 alias gcm='git commit -m "updated"'
 
 function gc() {

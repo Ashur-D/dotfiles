@@ -7,7 +7,7 @@ window {
 }
 
 label {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "MapleMono Bold";
     font-size: 11pt;
     color: @accent_color;
 }

@@ -27,7 +27,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 # 🎨 Themes
 > [!NOTE]
 > Some themes may need to be manually turned on.
-- *For example:* `vesktop`, `btop`, `kitty`, etc., will need you to go into their respective theme sections and select the Matugen version.
+- *For example:* `vesktop`, `btop`, `zed`, etc., will need you to go into their respective theme sections and select the Matugen version.
 - For `vesktop`, this theme is called **"midnight"**.
 
 ---
