@@ -54,23 +54,24 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ## Rofi Power Menu
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/99bd5858-1c32-4129-be43-2653779952cf" />
 
-
 ## Rofi App Launcher
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76cd9cd7-3af2-4c44-93d0-1d2cc7d1e2f4" />
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d8e4370-7d54-4366-9ffb-9b5cf9798470" />
 
 ## Rofi Performance Menu
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ddfb8c2d-050a-46a2-9a37-668becbf647d" />
 
 ## Rofi Wallpaper Selector
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/21f03328-7185-4898-bc59-53884a8580e5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08a543f1-9d84-4e78-8ef9-a8ed12dc574b" />
 
+## Rofi Clipbaord 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dd4c57d5-f834-4eb5-ba2d-84a5687180d2" />
 
 ## Wifi & Audio TUI's
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b53bd8f-37ac-4417-b3ad-6772e6a48794" />
 
 ## Hypr Lockscreen
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5b034cf2-0c85-408b-a50d-3a8345766106" />
+
 
 
 
