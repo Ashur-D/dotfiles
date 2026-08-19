@@ -77,6 +77,7 @@ packages=(
 
     # ------------ Daily Apps ------------
     # zen-browser-bin           # web browser
+    # helium-browser-bin        # web browser
     # vesktop-bin               # discord client
     # obsidian                  # note taking
     # localsend                 # local file sharing
