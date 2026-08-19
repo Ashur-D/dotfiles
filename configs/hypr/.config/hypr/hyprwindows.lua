@@ -1,4 +1,4 @@
-hl.windowrulev2({ "float", "class:^(Rofi)$" })
-hl.windowrulev2({ "float", "class:^(swayosd)$" })
-hl.windowrulev2({ "opacity 0.92 0.85", "class:^(kitty)$" })
-hl.windowrulev2({ "suppressevent maximize", "class:.*" })
+-- hl.windowrulev2({ "float", "class:^(Rofi)$" })
+-- hl.windowrulev2({ "float", "class:^(swayosd)$" })
+-- hl.windowrulev2({ "opacity 0.92 0.85", "class:^(kitty)$" })
+-- hl.windowrulev2({ "suppressevent maximize", "class:.*" })

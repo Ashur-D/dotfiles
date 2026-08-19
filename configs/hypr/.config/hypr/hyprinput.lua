@@ -9,4 +9,8 @@ hl.config({
       scroll_factor = 0.8,
     },
   },
+  gestures = {
+    workspace_swipe = true,
+    workspace_swipe_fingers = 3,
+  },
 })

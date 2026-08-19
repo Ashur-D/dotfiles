@@ -1,22 +1,10 @@
--- Safe load for matugen colors with fallbacks
-local ok, colors = pcall(require, "hypr.hyprland-colors")
-if not ok then
-  ok, colors = pcall(require, "hyprland-colors")
-end
-if not ok or type(colors) ~= "table" then
-  colors = {
-    primary = "0xffbb9af7",
-    surface = "0xff414868",
-  }
-end
-
 hl.config({
   general = {
     gaps_in = 4,
     gaps_out = 8,
     border_size = 2,
-    ["col.active_border"] = colors.primary or "0xffbb9af7",
-    ["col.inactive_border"] = colors.surface or "0xff414868",
+    ["col.active_border"] = "rgba(bb9af7ff) rgba(7aa2f7ff) 45deg",
+    ["col.inactive_border"] = "rgba(414868aa)",
     layout = "dwindle",
     resize_on_border = true,
   },
@@ -35,7 +23,7 @@ hl.config({
       enabled = true,
       range = 12,
       render_power = 3,
-      color = "0xee1a1a1a",
+      color = "rgba(1a1a1aee)",
     },
   },
   animations = {
@@ -58,6 +46,7 @@ hl.config({
     },
   },
   dwindle = {
+    pseudotile = true,
     preserve_split = true,
   },
   misc = {
