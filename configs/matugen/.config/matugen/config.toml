@@ -31,8 +31,8 @@ output_path = '~/.config/swayosd/colors.css'
 post_hook = "killall swayosd-server; hyprctl dispatch exec swayosd-server"
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.lua'
-output_path = '~/.config/hypr/colors.lua'
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
