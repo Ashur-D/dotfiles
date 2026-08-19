@@ -11,6 +11,5 @@ hl.config({
   },
   gestures = {
     workspace_swipe = true,
-    workspace_swipe_fingers = 3,
   },
 })

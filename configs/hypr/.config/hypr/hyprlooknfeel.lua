@@ -1,10 +1,12 @@
+local colors = require("hypr.hyprland-colors")
+
 hl.config({
   general = {
     gaps_in = 4,
     gaps_out = 8,
     border_size = 2,
-    ["col.active_border"] = "rgba(bb9af7ff) rgba(7aa2f7ff) 45deg",
-    ["col.inactive_border"] = "rgba(414868aa)",
+    ["col.active_border"] = colors.primary or "0xffbb9af7",
+    ["col.inactive_border"] = colors.surface or "0xff414868",
     layout = "dwindle",
     resize_on_border = true,
   },
@@ -23,7 +25,7 @@ hl.config({
       enabled = true,
       range = 12,
       render_power = 3,
-      color = "rgba(1a1a1aee)",
+      color = "0xee1a1a1a",
     },
   },
   animations = {
@@ -46,7 +48,6 @@ hl.config({
     },
   },
   dwindle = {
-    pseudotile = true,
     preserve_split = true,
   },
   misc = {
