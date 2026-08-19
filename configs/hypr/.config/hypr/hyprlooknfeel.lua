@@ -1,4 +1,14 @@
-local colors = require("hypr.hyprland-colors")
+-- Safe load for matugen colors with fallbacks
+local ok, colors = pcall(require, "hypr.hyprland-colors")
+if not ok then
+  ok, colors = pcall(require, "hyprland-colors")
+end
+if not ok or type(colors) ~= "table" then
+  colors = {
+    primary = "0xffbb9af7",
+    surface = "0xff414868",
+  }
+end
 
 hl.config({
   general = {
