@@ -1,15 +1,15 @@
 local mod = "SUPER"
 
 -- Core Apps & Utilities
-hl.bind(mod, "Return", hl.dsp.exec("kitty"))
-hl.bind(mod, "Q", hl.dsp.close())
-hl.bind(mod, "E", hl.dsp.exec("yazi"))
-hl.bind(mod, "V", hl.dsp.toggle_floating())
-hl.bind(mod, "Space", hl.dsp.exec("rofi -show drun"))
-hl.bind(mod, "P", hl.dsp.exec("~/.config/scripts/rofi-power.sh"))
-hl.bind(mod, "W", hl.dsp.exec("~/.config/scripts/rofi-wallpaper.sh"))
-hl.bind(mod, "C", hl.dsp.exec("~/.config/scripts/rofi-clipboard.sh"))
-hl.bind(mod .. " SHIFT", "S", hl.dsp.exec("swayosd-client --screenshot"))
+hl.bind(mod, "Return", function() hl.dispatch("exec", "kitty") end)
+hl.bind(mod, "Q", function() hl.dispatch("killactive", "") end)
+hl.bind(mod, "E", function() hl.dispatch("exec", "yazi") end)
+hl.bind(mod, "V", function() hl.dispatch("togglefloating", "") end)
+hl.bind(mod, "Space", function() hl.dispatch("exec", "rofi -show drun") end)
+hl.bind(mod, "P", function() hl.dispatch("exec", "~/.config/scripts/rofi-power.sh") end)
+hl.bind(mod, "W", function() hl.dispatch("exec", "~/.config/scripts/rofi-wallpaper.sh") end)
+hl.bind(mod, "C", function() hl.dispatch("exec", "~/.config/scripts/rofi-clipboard.sh") end)
+hl.bind(mod .. " SHIFT", "S", function() hl.dispatch("exec", "swayosd-client --screenshot") end)
 
 -- Directional Focus (Arrow Keys & Vim Motions)
 local directions = {
@@ -17,23 +17,23 @@ local directions = {
   h = "l", l = "r", k = "u", j = "d"
 }
 for key, dir in pairs(directions) do
-  hl.bind(mod, key, hl.dsp.focus.move(dir))
+  hl.bind(mod, key, function() hl.dispatch("movefocus", dir) end)
 end
 
 -- Workspaces Navigation & Moving
 for i = 1, 9 do
   local ws = tostring(i)
-  hl.bind(mod, ws, hl.dsp.workspace.switch(ws))
-  hl.bind(mod .. " SHIFT", ws, hl.dsp.workspace.move_to(ws))
+  hl.bind(mod, ws, function() hl.dispatch("workspace", ws) end)
+  hl.bind(mod .. " SHIFT", ws, function() hl.dispatch("movetoworkspace", ws) end)
 end
 
 -- Mouse Bindings
-hl.bindm(mod, "mouse:272", hl.dsp.mouse.move())
-hl.bindm(mod, "mouse:273", hl.dsp.mouse.resize())
+hl.bindm(mod, "mouse:272", "movewindow")
+hl.bindm(mod, "mouse:273", "resizewindow")
 
 -- SwayOSD Media & Brightness Controls
-hl.bindel("", "XF86AudioRaiseVolume", hl.dsp.exec("swayosd-client --output-volume raise"))
-hl.bindel("", "XF86AudioLowerVolume", hl.dsp.exec("swayosd-client --output-volume lower"))
-hl.bindel("", "XF86AudioMute", hl.dsp.exec("swayosd-client --output-volume mute-toggle"))
-hl.bindel("", "XF86MonBrightnessUp", hl.dsp.exec("swayosd-client --brightness raise"))
-hl.bindel("", "XF86MonBrightnessDown", hl.dsp.exec("swayosd-client --brightness lower"))
+hl.bindel("", "XF86AudioRaiseVolume", function() hl.dispatch("exec", "swayosd-client --output-volume raise") end)
+hl.bindel("", "XF86AudioLowerVolume", function() hl.dispatch("exec", "swayosd-client --output-volume lower") end)
+hl.bindel("", "XF86AudioMute", function() hl.dispatch("exec", "swayosd-client --output-volume mute-toggle") end)
+hl.bindel("", "XF86MonBrightnessUp", function() hl.dispatch("exec", "swayosd-client --brightness raise") end)
+hl.bindel("", "XF86MonBrightnessDown", function() hl.dispatch("exec", "swayosd-client --brightness lower") end)
