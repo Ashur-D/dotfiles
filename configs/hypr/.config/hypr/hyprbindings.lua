@@ -1,39 +1,47 @@
 local mod = "SUPER"
 
--- Core Apps & Utilities
-hl.bind(mod, "Return", function() hl.dispatch("exec", "kitty") end)
-hl.bind(mod, "Q", function() hl.dispatch("killactive", "") end)
-hl.bind(mod, "E", function() hl.dispatch("exec", "yazi") end)
-hl.bind(mod, "V", function() hl.dispatch("togglefloating", "") end)
-hl.bind(mod, "Space", function() hl.dispatch("exec", "rofi -show drun") end)
-hl.bind(mod, "P", function() hl.dispatch("exec", "~/.config/scripts/rofi-power.sh") end)
-hl.bind(mod, "W", function() hl.dispatch("exec", "~/.config/scripts/rofi-wallpaper.sh") end)
-hl.bind(mod, "C", function() hl.dispatch("exec", "~/.config/scripts/rofi-clipboard.sh") end)
-hl.bind(mod .. " SHIFT", "S", function() hl.dispatch("exec", "swayosd-client --screenshot") end)
+-- Core Binds Table
+local binds = {
+  -- Core Apps & Utilities
+  mod .. ", Return, exec, kitty",
+  mod .. ", Q, killactive,",
+  mod .. ", E, exec, yazi",
+  mod .. ", V, togglefloating,",
+  mod .. ", Space, exec, rofi -show drun",
+  mod .. ", P, exec, ~/.config/scripts/rofi-power.sh",
+  mod .. ", W, exec, ~/.config/scripts/rofi-wallpaper.sh",
+  mod .. ", C, exec, ~/.config/scripts/rofi-clipboard.sh",
+  mod .. " SHIFT, S, exec, swayosd-client --screenshot",
 
--- Directional Focus (Arrow Keys & Vim Motions)
-local directions = {
-  left = "l", right = "r", up = "u", down = "d",
-  h = "l", l = "r", k = "u", j = "d"
+  -- Directional Focus (Arrow Keys & Vim Motions)
+  mod .. ", left, movefocus, l",
+  mod .. ", right, movefocus, r",
+  mod .. ", up, movefocus, u",
+  mod .. ", down, movefocus, d",
+  mod .. ", h, movefocus, l",
+  mod .. ", l, movefocus, r",
+  mod .. ", k, movefocus, u",
+  mod .. ", j, movefocus, d",
 }
-for key, dir in pairs(directions) do
-  hl.bind(mod, key, function() hl.dispatch("movefocus", dir) end)
-end
 
--- Workspaces Navigation & Moving
+-- Workspace Navigation & Moving (1 to 9)
 for i = 1, 9 do
   local ws = tostring(i)
-  hl.bind(mod, ws, function() hl.dispatch("workspace", ws) end)
-  hl.bind(mod .. " SHIFT", ws, function() hl.dispatch("movetoworkspace", ws) end)
+  table.insert(binds, mod .. ", " .. ws .. ", workspace, " .. ws)
+  table.insert(binds, mod .. " SHIFT, " .. ws .. ", movetoworkspace, " .. ws)
 end
 
--- Mouse Bindings
-hl.bindm(mod, "mouse:272", "movewindow")
-hl.bindm(mod, "mouse:273", "resizewindow")
-
--- SwayOSD Media & Brightness Controls
-hl.bindel("", "XF86AudioRaiseVolume", function() hl.dispatch("exec", "swayosd-client --output-volume raise") end)
-hl.bindel("", "XF86AudioLowerVolume", function() hl.dispatch("exec", "swayosd-client --output-volume lower") end)
-hl.bindel("", "XF86AudioMute", function() hl.dispatch("exec", "swayosd-client --output-volume mute-toggle") end)
-hl.bindel("", "XF86MonBrightnessUp", function() hl.dispatch("exec", "swayosd-client --brightness raise") end)
-hl.bindel("", "XF86MonBrightnessDown", function() hl.dispatch("exec", "swayosd-client --brightness lower") end)
+hl.config({
+  bind = binds,
+  bindm = {
+    mod .. ", mouse:272, movewindow",
+    mod .. ", mouse:273, resizewindow",
+  },
+  bindel = {
+    ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise",
+    ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower",
+    ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle",
+    ", XF86MonBrightnessUp, exec, swayosd-client --brightness raise",
+    ", XF86MonBrightnessDown, exec, swayosd-client --brightness lower",
+  },
+})
