@@ -20,7 +20,7 @@ eval "$(starship init bash)"
 alias f="fastfetch"
 alias ga='git add .'
 alias gp='git push'
-alias gpp='git pull'
+alias gpp= 'git pull'
 alias gcm='git commit -m "updated"'
 
 function gc() {

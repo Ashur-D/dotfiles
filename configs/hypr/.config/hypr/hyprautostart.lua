@@ -1,6 +1,0 @@
-hl.exec_once("swayosd-server")
-hl.exec_once("mako")
-hl.exec_once("hypridle")
-hl.exec_once("wl-paste --watch cliphist store")
-hl.exec_once("~/.config/scripts/wallpaper.sh")
-hl.exec_once("~/.config/scripts/hypr-nightlight.sh")
