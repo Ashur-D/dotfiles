@@ -19,7 +19,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ```
 
 - **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
-- **(Optional):** If you need NVIDIA packages, go to `install/run.sh` and uncomment the NVIDIA script as well as envs in `~/.config/hypr/hyprenvs.conf`
+- **(Optional):** If you need NVIDIA packages, go to `install/run.sh` and uncomment the NVIDIA script as well as envs in `~/.config/hypr/hyprenvs.lua`
 - **Restart your system** after the installer completes.
 
 ---
