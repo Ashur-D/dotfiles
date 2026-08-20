@@ -60,7 +60,7 @@ hl.bind(mainMod .. " + ALT + S", hl.dsp.window.move({ workspace = "special:spoti
 hl.bind(mainMod .. " + ALT + D", hl.dsp.window.move({ workspace = "special:discord" }))
 
 -- Groups / Tabs
-hl.bind(mainMod .. " + G", hl.dsp.group.toggle(), { description = "Toggle window grouping" })
+hl.bind(mainMod .. " + G", hl.dsp.layout("togglegroup"), { description = "Toggle window grouping" })
 hl.bind(mainMod .. " + ALT + G", hl.dsp.layout("moveoutofgroup"), { description = "Move active window out of group" })
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.group.change_active("b"), { description = "Move grouped window focus left" })
-hl.bind(mainMod .. " + SHIFT + D", hl.dsp.group.change_active("f"), { description = "Move grouped window focus right" })
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.layout("changegroupactive", "b"), { description = "Move grouped window focus left" })
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.layout("changegroupactive", "f"), { description = "Move grouped window focus right" })
