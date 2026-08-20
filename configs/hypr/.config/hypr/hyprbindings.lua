@@ -64,3 +64,4 @@ hl.bind("SUPER + G", hl.dsp.group.toggle(), { description = "Toggle window group
 hl.bind("SUPER + ALT + G", hl.dsp.group.moveout(), { description = "Move active window out of group" })
 hl.bind("SUPER + SHIFT + A", hl.dsp.group.change_active("b"), { description = "Move grouped window focus left" })
 hl.bind("SUPER + SHIFT + D", hl.dsp.group.change_active("f"), { description = "Move grouped window focus right" })
+
