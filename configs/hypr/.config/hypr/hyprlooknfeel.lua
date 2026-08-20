@@ -7,7 +7,7 @@ hl.source("colors.conf")
 
 -- Animations
 local animation_path = os.getenv("HOME") .. "/.config/hypr/hyprAnimations"
-hl.source(animation_path .. "/ash.lua")
+-- hl.source(animation_path .. "/ash.lua")
 
 hl.config({
     -- ================ general ================

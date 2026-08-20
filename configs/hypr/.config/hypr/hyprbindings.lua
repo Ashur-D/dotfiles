@@ -2,99 +2,94 @@
 -- Hyprland bindings
 -- ==========================
 
--- Variables
 local osdclient = "swayosd-client"
 local terminal = "kitty"
 
--- ---------------- terminal & yazi ----------------
-hl.bindd("SUPER", "return", "Terminal", "exec", terminal)
-hl.bindd("SUPER", "E", "File manager", "exec", terminal .. " -e yazi")
+-- Terminal & yazi
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal), { description = "Terminal" })
+hl.bind("SUPER + E", hl.dsp.exec_cmd(terminal .. " -e yazi"), { description = "File manager" })
 
--- ---------------- Close windows ----------------
-hl.bindd("SUPER", "W", "Close active window", "killactive", "")
+-- Close windows
+hl.bind("SUPER + W", hl.dsp.killactive(), { description = "Close active window" })
 
--- ---------------- Rofi Menus ----------------
-hl.bindd("SUPER", "SPACE", "Launch apps", "exec", "rofi -show drun")
-hl.bindd("SUPER", "Escape", "Launch powermenu", "exec", "~/.config/scripts/rofi-power.sh")
-hl.bindd("SUPER SHIFT", "Escape", "Launch performance menu", "exec", "~/.config/scripts/rofi-performance.sh")
-hl.bindd("SUPER ALT", "SPACE", "Launch wallpaper", "exec", "~/.config/scripts/rofi-wallpaper.sh")
-hl.bindd("SUPER", "V", "Clipboard history", "exec", "/bin/bash $HOME/.config/scripts/rofi-clipboard.sh")
+-- Rofi Menus
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"), { description = "Launch apps" })
+hl.bind("SUPER + Escape", hl.dsp.exec_cmd("~/.config/scripts/rofi-power.sh"), { description = "Launch powermenu" })
+hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd("~/.config/scripts/rofi-performance.sh"), { description = "Launch performance menu" })
+hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/scripts/rofi-wallpaper.sh"), { description = "Launch wallpaper" })
+hl.bind("SUPER + V", hl.dsp.exec_cmd("/bin/bash $HOME/.config/scripts/rofi-clipboard.sh"), { description = "Clipboard history" })
 
--- ---------------- screenshots & recording ----------------
-hl.bind("", "PRINT", "exec", [[bash -c "hyprshot -m region --raw | satty --filename - --output-filename ~/Pictures/screenshot_\$(date '+%Y-%m-%d_%H-%M-%S').png --copy-command wl-copy --early-exit"]])
-hl.bindd("SHIFT", "PRINT", "Screenshot DP-2 monitor", "exec", "hyprshot -m output -m DP-2 -o ~/Pictures")
+-- Screenshots & recording
+hl.bind("PRINT", hl.dsp.exec_cmd([[bash -c "hyprshot -m region --raw | satty --filename - --output-filename ~/Pictures/screenshot_\$(date '+%Y-%m-%d_%H-%M-%S').png --copy-command wl-copy --early-exit"]]))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output -m DP-2 -o ~/Pictures"), { description = "Screenshot DP-2 monitor" })
 
--- ---------------- nightlight ----------------
-hl.bindd("SUPER CTRL", "N", "Toggle nightlight", "exec", "~/.config/scripts/hypr-nightlight.sh")
+-- Nightlight
+hl.bind("SUPER + CTRL + N", hl.dsp.exec_cmd("~/.config/scripts/hypr-nightlight.sh"), { description = "Toggle nightlight" })
 
--- ---------------- waybar ----------------
-hl.bindd("SUPER SHIFT", "SPACE", "Toggle top bar", "exec", "pkill -x waybar || waybar")
+-- Waybar
+hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill -x waybar || waybar"), { description = "Toggle top bar" })
 
--- ---------------- Control tiling ----------------
-hl.bindd("SUPER", "J", "toggle split", "layoutmsg", "togglesplit")
-hl.bindd("SUPER", "P", "Pseudo window", "pseudo", "")
-hl.bindd("SUPER", "T", "Toggle window floating/tiling", "togglefloating", "")
-hl.bindd("SUPER", "F", "Full width", "fullscreen", "1")
-hl.bindd("SUPER ALT", "F", "Full screen", "fullscreen", "0")
+-- Control tiling
+hl.bind("SUPER + J", hl.dsp.layoutmsg("togglesplit"), { description = "toggle split" })
+hl.bind("SUPER + P", hl.dsp.pseudo(), { description = "Pseudo window" })
+hl.bind("SUPER + T", hl.dsp.togglefloating(), { description = "Toggle window floating/tiling" })
+hl.bind("SUPER + F", hl.dsp.fullscreen("1"), { description = "Full width" })
+hl.bind("SUPER + ALT + F", hl.dsp.fullscreen("0"), { description = "Full screen" })
 
--- ---------------- Move focus ----------------
-hl.bindd("SUPER", "left", "Move focus left", "movefocus", "l")
-hl.bindd("SUPER", "right", "Move focus right", "movefocus", "r")
-hl.bindd("SUPER", "up", "Move focus up", "movefocus", "u")
-hl.bindd("SUPER", "down", "Move focus down", "movefocus", "d")
+-- Move focus
+hl.bind("SUPER + left", hl.dsp.movefocus("l"), { description = "Move focus left" })
+hl.bind("SUPER + right", hl.dsp.movefocus("r"), { description = "Move focus right" })
+hl.bind("SUPER + up", hl.dsp.movefocus("u"), { description = "Move focus up" })
+hl.bind("SUPER + down", hl.dsp.movefocus("d"), { description = "Move focus down" })
 
--- ---------------- Swap active windows ----------------
-hl.bindd("SUPER SHIFT", "left", "Swap window to the left", "swapwindow", "l")
-hl.bindd("SUPER SHIFT", "right", "Swap window to the right", "swapwindow", "r")
-hl.bindd("SUPER SHIFT", "up", "Swap window up", "swapwindow", "u")
-hl.bindd("SUPER SHIFT", "down", "Swap window down", "swapwindow", "d")
+-- Swap active windows
+hl.bind("SUPER + SHIFT + left", hl.dsp.swapwindow("l"), { description = "Swap window to the left" })
+hl.bind("SUPER + SHIFT + right", hl.dsp.swapwindow("r"), { description = "Swap window to the right" })
+hl.bind("SUPER + SHIFT + up", hl.dsp.swapwindow("u"), { description = "Swap window up" })
+hl.bind("SUPER + SHIFT + down", hl.dsp.swapwindow("d"), { description = "Swap window down" })
 
--- ---------------- Resize active window ----------------
-hl.bindd("SUPER", "code:20", "Expand window left", "resizeactive", "-100 0")     -- - key
-hl.bindd("SUPER", "code:21", "Shrink window left", "resizeactive", "100 0")      -- = key
-hl.bindd("SUPER SHIFT", "code:20", "Shrink window up", "resizeactive", "0 -100")
-hl.bindd("SUPER SHIFT", "code:21", "Expand window down", "resizeactive", "0 100")
+-- Resize active window
+hl.bind("SUPER + code:20", hl.dsp.resizeactive("-100 0"), { description = "Expand window left" })
+hl.bind("SUPER + code:21", hl.dsp.resizeactive("100 0"), { description = "Shrink window left" })
+hl.bind("SUPER + SHIFT + code:20", hl.dsp.resizeactive("0 -100"), { description = "Shrink window up" })
+hl.bind("SUPER + SHIFT + code:21", hl.dsp.resizeactive("0 100"), { description = "Expand window down" })
 
--- ---------------- Scroll through existing workspaces ----------------
-hl.bindd("SUPER", "mouse_down", "Scroll active workspace forward", "workspace", "e+1")
-hl.bindd("SUPER", "mouse_up", "Scroll active workspace backward", "workspace", "e-1")
+-- Scroll through workspaces
+hl.bind("SUPER + mouse_down", hl.dsp.workspace("e+1"), { description = "Scroll active workspace forward" })
+hl.bind("SUPER + mouse_up", hl.dsp.workspace("e-1"), { description = "Scroll active workspace backward" })
 
--- ---------------- Move/resize windows with mouse ----------------
-hl.bindmd("SUPER", "mouse:272", "Move window", "movewindow")
-hl.bindmd("SUPER", "mouse:273", "Resize window", "resizewindow")
+-- Mouse move/resize
+hl.bind("SUPER + mouse:272", hl.dsp.movewindow(), { mouse = true, drag = true, description = "Move window" })
+hl.bind("SUPER + mouse:273", hl.dsp.resizewindow(), { mouse = true, drag = true, description = "Resize window" })
 
--- ---------------- workspaces ----------------
--- Switch workspaces and move active windows with SUPER + [0-9] using a Lua loop
+-- Workspaces loop
 for i = 1, 10 do
     local keycode = "code:" .. tostring(i + 9)
-    hl.bindd("SUPER", keycode, "Switch to workspace " .. i, "workspace", tostring(i))
-    hl.bindd("SUPER SHIFT", keycode, "Move window to workspace " .. i, "movetoworkspace", tostring(i))
+    hl.bind("SUPER + " .. keycode, hl.dsp.workspace(tostring(i)), { description = "Switch to workspace " .. i })
+    hl.bind("SUPER + SHIFT + " .. keycode, hl.dsp.movetoworkspace(tostring(i)), { description = "Move window to workspace " .. i })
 end
 
--- ---------------- media ----------------
-hl.bindld("", "XF86AudioNext", "Next track", "exec", osdclient .. " --playerctl next")
-hl.bindld("", "XF86AudioPause", "Pause", "exec", osdclient .. " --playerctl play-pause")
-hl.bindld("", "XF86AudioPlay", "Play", "exec", osdclient .. " --playerctl play-pause")
-hl.bindld("", "XF86AudioPrev", "Previous track", "exec", osdclient .. " --playerctl previous")
+-- Media
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(osdclient .. " --playerctl next"), { description = "Next track" })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { description = "Pause" })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { description = "Play" })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(osdclient .. " --playerctl previous"), { description = "Previous track" })
 
--- ---------------- special workspaces ----------------
+-- Scratchpads
 hl.workspace("special:anything")
 hl.workspace("special:spotify")
 hl.workspace("special:discord")
 
--- ---------------- Toggle specific scratchpads ----------------
-hl.bind("SUPER", "A", "togglespecialworkspace", "anything")
-hl.bind("SUPER", "S", "togglespecialworkspace", "spotify")
-hl.bind("SUPER", "D", "togglespecialworkspace", "discord")
+hl.bind("SUPER + A", hl.dsp.togglespecialworkspace("anything"))
+hl.bind("SUPER + S", hl.dsp.togglespecialworkspace("spotify"))
+hl.bind("SUPER + D", hl.dsp.togglespecialworkspace("discord"))
 
--- ---------------- Move windows silently to those exact same scratchpads ----------------
-hl.bindd("SUPER ALT", "A", "Move window to scratchpad 1", "movetoworkspacesilent", "special:anything")
-hl.bindd("SUPER ALT", "S", "Move window to scratchpad 2", "movetoworkspacesilent", "special:spotify")
-hl.bindd("SUPER ALT", "D", "Move window to scratchpad 3", "movetoworkspacesilent", "special:discord")
+hl.bind("SUPER + ALT + A", hl.dsp.movetoworkspacesilent("special:anything"), { description = "Move window to scratchpad 1" })
+hl.bind("SUPER + ALT + S", hl.dsp.movetoworkspacesilent("special:spotify"), { description = "Move window to scratchpad 2" })
+hl.bind("SUPER + ALT + D", hl.dsp.movetoworkspacesilent("special:discord"), { description = "Move window to scratchpad 3" })
 
--- ---------------- groups/tabs ----------------
-hl.bindd("SUPER", "G", "Toggle window grouping", "togglegroup", "")
-hl.bindd("SUPER ALT", "G", "Move active window out of group", "moveoutofgroup", "")
-
-hl.bindd("SUPER SHIFT", "A", "Move grouped window focus left", "changegroupactive", "b")
-hl.bindd("SUPER SHIFT", "D", "Move grouped window focus right", "changegroupactive", "f")
+-- Groups / Tabs
+hl.bind("SUPER + G", hl.dsp.togglegroup(), { description = "Toggle window grouping" })
+hl.bind("SUPER + ALT + G", hl.dsp.moveoutofgroup(), { description = "Move active window out of group" })
+hl.bind("SUPER + SHIFT + A", hl.dsp.changegroupactive("b"), { description = "Move grouped window focus left" })
+hl.bind("SUPER + SHIFT + D", hl.dsp.changegroupactive("f"), { description = "Move grouped window focus right" })
