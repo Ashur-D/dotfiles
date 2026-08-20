@@ -2,28 +2,23 @@
 -- Hyprland windows
 -- ==========================
 
-hl.windowrulev2("suppress_event maximize", "class:.*")
+hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
 
--- Tag all windows for default opacity (apps can override with -default-opacity tag)
-hl.windowrulev2("tag +default-opacity", "class:.*")
+-- Tag all windows for default opacity
+hl.window_rule({ match = { class = ".*" }, tag = "+default-opacity" })
 
 -- Fix some dragging issues with XWayland
-hl.windowrulev2("nofocus", "class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0")
+hl.window_rule({ match = { class = "^$", title = "^$", xwayland = 1, floating = 1, fullscreen = 0, pinned = 0 }, nofocus = true })
 
 -- Apply default opacity after apps have had a chance to opt out
-hl.windowrulev2("opacity 0.97 0.9", "tag:default-opacity")
+hl.window_rule({ match = { tag = "default-opacity" }, opacity = { 0.97, 0.9 } })
 
 -- Float Steam
-hl.windowrulev2("float", "class:steam")
-hl.windowrulev2("center", "class:steam,title:Steam")
-hl.windowrulev2("tag -default-opacity", "class:steam.*")
-hl.windowrulev2("opacity 1 1", "class:steam.*")
-hl.windowrulev2("size 1100 700", "class:steam,title:Steam")
-hl.windowrulev2("size 460 800", "class:steam,title:Friends List")
-hl.windowrulev2("idle_inhibit fullscreen", "class:steam")
+hl.window_rule({ match = { class = "steam" }, float = true })
+hl.window_rule({ match = { class = "steam", title = "Steam" }, center = true, size = { 1100, 700 } })
+hl.window_rule({ match = { class = "steam.*" }, tag = "-default-opacity", opacity = { 1, 1 } })
+hl.window_rule({ match = { class = "steam", title = "Friends List" }, size = { 460, 800 } })
+hl.window_rule({ match = { class = "steam" }, idle_inhibit = "fullscreen" })
 
--- float satty
-hl.windowrulev2("size 460 800", "class:com.gabm.satty")
-hl.windowrulev2("float", "class:com.gabm.satty")
-hl.windowrulev2("center", "class:com.gabm.satty")
-hl.windowrulev2("pin", "class:com.gabm.satty")
+-- Float satty
+hl.window_rule({ match = { class = "com.gabm.satty" }, float = true, center = true, pin = true, size = { 460, 800 } })
