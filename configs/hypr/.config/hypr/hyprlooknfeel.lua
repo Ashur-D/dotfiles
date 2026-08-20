@@ -1,10 +1,6 @@
--- ==========================
 -- Hyprland look and feel
 -- ==========================
 
--- Load matugen colors if it's a conf file, use dofile if it's lua
--- (If colors.conf is a legacy matugen file, use a standard dofile or let hyprland handle it, 
--- but since we are in pure Lua, let's wrap it safely)
 pcall(dofile, os.getenv("HOME") .. "/.config/hypr/colors.lua")
 
 hl.config({
@@ -20,7 +16,7 @@ hl.config({
     },
     decoration = {
         rounding = 16,
-        shadow = { enabled = false, range = 2, render_power = 3, color = "$primary" },
+        shadow = { enabled = false, range = 2, render_power = 3, color = "rgba(000000ff)" },
         blur = { enabled = true, size = 2, passes = 2, special = true }
     },
     group = {
@@ -47,8 +43,24 @@ hl.config({
             gradient_round_only_edges = false
         }
     },
-    dwindle = { pseudotile = true, preserve_split = true, force_split = 2 },
-    misc = { vfr = true, disable_hyprland_logo = true, disable_splash_rendering = true, focus_on_activate = true, anr_missed_pings = 3, on_focus_under_fullscreen = 1 },
-    cursor = { hide_on_key_press = true, warp_on_change_workspace = 1 },
-    binds = { hide_special_on_workspace_change = true }
+    dwindle = {
+        pseudotile = true,
+        preserve_split = true,
+        force_split = 2
+    },
+    misc = {
+        vfr = true,
+        disable_hyprland_logo = true,
+        disable_splash_rendering = true,
+        focus_on_activate = true,
+        anr_missed_pings = 3,
+        on_focus_under_fullscreen = 1
+    },
+    cursor = {
+        hide_on_key_press = true,
+        warp_on_change_workspace = 1
+    },
+    binds = {
+        hide_special_on_workspace_change = true
+    }
 })

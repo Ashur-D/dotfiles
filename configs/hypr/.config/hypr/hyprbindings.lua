@@ -7,7 +7,7 @@ local osdclient = "swayosd-client"
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal), { description = "Terminal" })
 hl.bind("SUPER + E", hl.dsp.exec_cmd(terminal .. " -e yazi"), { description = "File manager" })
-hl.bind("SUPER + W", hl.dispatch(hl.dsp.window.close()), { description = "Close active window" })
+hl.bind("SUPER + W", hl.dsp.window.close(), { description = "Close active window" })
 
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"), { description = "Launch apps" })
 hl.bind("SUPER + Escape", hl.dsp.exec_cmd("~/.config/scripts/rofi-power.sh"), { description = "Launch powermenu" })
@@ -21,21 +21,21 @@ hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output -m DP-2 -o ~/Pictur
 hl.bind("SUPER + CTRL + N", hl.dsp.exec_cmd("~/.config/scripts/hypr-nightlight.sh"), { description = "Toggle nightlight" })
 hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill -x waybar || waybar"), { description = "Toggle top bar" })
 
-hl.bind("SUPER + J", hl.dispatch(hl.dsp.layoutmsg("togglesplit")), { description = "toggle split" })
-hl.bind("SUPER + P", hl.dispatch(hl.dsp.window.pseudo()), { description = "Pseudo window" })
-hl.bind("SUPER + T", hl.dispatch(hl.dsp.window.float({ action = "toggle" })), { description = "Toggle window floating/tiling" })
-hl.bind("SUPER + F", hl.dispatch(hl.dsp.window.fullscreen({ mode = 1 })), { description = "Full width" })
-hl.bind("SUPER + ALT + F", hl.dispatch(hl.dsp.window.fullscreen({ mode = 0 })), { description = "Full screen" })
+hl.bind("SUPER + J", hl.dsp.layoutmsg("togglesplit"), { description = "toggle split" })
+hl.bind("SUPER + P", hl.dsp.window.pseudo(), { description = "Pseudo window" })
+hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle window floating/tiling" })
+hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = 1 }), { description = "Full width" })
+hl.bind("SUPER + ALT + F", hl.dsp.window.fullscreen({ mode = 0 }), { description = "Full screen" })
 
-hl.bind("SUPER + left", hl.dispatch(hl.dsp.focus({ direction = "l" })), { description = "Move focus left" })
-hl.bind("SUPER + right", hl.dispatch(hl.dsp.focus({ direction = "r" })), { description = "Move focus right" })
-hl.bind("SUPER + up", hl.dispatch(hl.dsp.focus({ direction = "u" })), { description = "Move focus up" })
-hl.bind("SUPER + down", hl.dispatch(hl.dsp.focus({ direction = "d" })), { description = "Move focus down" })
+hl.bind("SUPER + left", hl.dsp.focus({ direction = "l" }), { description = "Move focus left" })
+hl.bind("SUPER + right", hl.dsp.focus({ direction = "r" }), { description = "Move focus right" })
+hl.bind("SUPER + up", hl.dsp.focus({ direction = "u" }), { description = "Move focus up" })
+hl.bind("SUPER + down", hl.dsp.focus({ direction = "d" }), { description = "Move focus down" })
 
 for i = 1, 10 do
     local keycode = "code:" .. tostring(i + 9)
-    hl.bind("SUPER + " .. keycode, hl.dispatch(hl.dsp.focus({ workspace = tostring(i) })), { description = "Switch to workspace " .. i })
-    hl.bind("SUPER + SHIFT + " .. keycode, hl.dispatch(hl.dsp.window.movetoworkspace({ workspace = tostring(i) })), { description = "Move window to workspace " .. i })
+    hl.bind("SUPER + " .. keycode, hl.dsp.focus({ workspace = tostring(i) }), { description = "Switch to workspace " .. i })
+    hl.bind("SUPER + SHIFT + " .. keycode, hl.dsp.window.movetoworkspace({ workspace = tostring(i) }), { description = "Move window to workspace " .. i })
 end
 
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd(osdclient .. " --playerctl next"), { description = "Next track" })
@@ -47,15 +47,15 @@ hl.workspace("special:anything")
 hl.workspace("special:spotify")
 hl.workspace("special:discord")
 
-hl.bind("SUPER + A", hl.dispatch(hl.dsp.workspace({ name = "special:anything" })))
-hl.bind("SUPER + S", hl.dispatch(hl.dsp.workspace({ name = "special:spotify" })))
-hl.bind("SUPER + D", hl.dispatch(hl.dsp.workspace({ name = "special:discord" })))
+hl.bind("SUPER + A", hl.dsp.workspace({ name = "special:anything" }))
+hl.bind("SUPER + S", hl.dsp.workspace({ name = "special:spotify" }))
+hl.bind("SUPER + D", hl.dsp.workspace({ name = "special:discord" }))
 
-hl.bind("SUPER + ALT + A", hl.dispatch(hl.dsp.window.movetoworkspacesilent({ workspace = "special:anything" })), { description = "Move window to scratchpad 1" })
-hl.bind("SUPER + ALT + S", hl.dispatch(hl.dsp.window.movetoworkspacesilent({ workspace = "special:spotify" })), { description = "Move window to scratchpad 2" })
-hl.bind("SUPER + ALT + D", hl.dispatch(hl.dsp.window.movetoworkspacesilent({ workspace = "special:discord" })), { description = "Move window to scratchpad 3" })
+hl.bind("SUPER + ALT + A", hl.dsp.window.movetoworkspacesilent({ workspace = "special:anything" }), { description = "Move window to scratchpad 1" })
+hl.bind("SUPER + ALT + S", hl.dsp.window.movetoworkspacesilent({ workspace = "special:spotify" }), { description = "Move window to scratchpad 2" })
+hl.bind("SUPER + ALT + D", hl.dsp.window.movetoworkspacesilent({ workspace = "special:discord" }), { description = "Move window to scratchpad 3" })
 
-hl.bind("SUPER + G", hl.dispatch(hl.dsp.group.toggle()), { description = "Toggle window grouping" })
-hl.bind("SUPER + ALT + G", hl.dispatch(hl.dsp.group.moveout()), { description = "Move active window out of group" })
-hl.bind("SUPER + SHIFT + A", hl.dispatch(hl.dsp.group.change_active("b")), { description = "Move grouped window focus left" })
-hl.bind("SUPER + SHIFT + D", hl.dispatch(hl.dsp.group.change_active("f")), { description = "Move grouped window focus right" })
+hl.bind("SUPER + G", hl.dsp.group.toggle(), { description = "Toggle window grouping" })
+hl.bind("SUPER + ALT + G", hl.dsp.group.moveout(), { description = "Move active window out of group" })
+hl.bind("SUPER + SHIFT + A", hl.dsp.group.change_active("b"), { description = "Move grouped window focus left" })
+hl.bind("SUPER + SHIFT + D", hl.dsp.group.change_active("f"), { description = "Move grouped window focus right" })
