@@ -38,7 +38,7 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" 
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }), { description = "Swap window up" })
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }), { description = "Swap window down" })
 
--- Workspaces 1-10 (10 maps to key 0)
+-- Workspaces 1-10
 for i = 1, 10 do
     local key = tostring(i % 10)
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
@@ -61,6 +61,6 @@ hl.bind(mainMod .. " + ALT + D", hl.dsp.window.move({ workspace = "special:disco
 
 -- Groups / Tabs
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle(), { description = "Toggle window grouping" })
-hl.bind(mainMod .. " + ALT + G", hl.dsp.group.moveout(), { description = "Move active window out of group" })
+hl.bind(mainMod .. " + ALT + G", hl.dsp.layout("moveoutofgroup"), { description = "Move active window out of group" })
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.group.change_active("b"), { description = "Move grouped window focus left" })
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.group.change_active("f"), { description = "Move grouped window focus right" })
