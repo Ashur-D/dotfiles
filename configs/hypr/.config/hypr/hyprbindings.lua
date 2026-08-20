@@ -21,7 +21,8 @@ hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output -m DP-2 -o ~/Pictur
 hl.bind("SUPER + CTRL + N", hl.dsp.exec_cmd("~/.config/scripts/hypr-nightlight.sh"), { description = "Toggle nightlight" })
 hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill -x waybar || waybar"), { description = "Toggle top bar" })
 
-hl.bind("SUPER + J", hl.dsp.layoutmsg("togglesplit"), { description = "toggle split" })
+-- Fixed layout message call
+hl.bind("SUPER + J", hl.dsp.layout("togglesplit"), { description = "toggle split" })
 hl.bind("SUPER + P", hl.dsp.window.pseudo(), { description = "Pseudo window" })
 hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle window floating/tiling" })
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = 1 }), { description = "Full width" })

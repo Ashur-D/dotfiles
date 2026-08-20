@@ -2,15 +2,17 @@
 -- Hyprland look and feel
 -- ==========================
 
-pcall(dofile, os.getenv("HOME") .. "/.config/hypr/colors.lua")
+-- Define safe fallback colors if colors.lua hasn't set them as global Lua variables
+local primary = primary or "rgba(808080ff)"
+local on_primary_container = on_primary_container or "rgba(404040ff)"
 
 hl.config({
     general = {
         gaps_in = 5,
         gaps_out = 5,
         border_size = 0,
-        ["col.active_border"] = "$primary",
-        ["col.inactive_border"] = "$on_primary_container",
+        ["col.active_border"] = primary,
+        ["col.inactive_border"] = on_primary_container,
         resize_on_border = false,
         allow_tearing = false,
         layout = "dwindle"
@@ -21,8 +23,8 @@ hl.config({
         blur = { enabled = true, size = 2, passes = 2, special = true }
     },
     group = {
-        ["col.border_active"] = "$primary",
-        ["col.border_inactive"] = "$on_primary_container",
+        ["col.border_active"] = primary,
+        ["col.border_inactive"] = on_primary_container,
         ["col.border_locked_active"] = "-1",
         ["col.border_locked_inactive"] = "-1",
         groupbar = {
@@ -45,11 +47,11 @@ hl.config({
         }
     },
     dwindle = {
-        pseudotile = true,
         preserve_split = true,
         force_split = 2
     },
     misc = {
+        vfr = true,
         disable_hyprland_logo = true,
         disable_splash_rendering = true,
         focus_on_activate = true,
