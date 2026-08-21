@@ -153,7 +153,7 @@ hidden_apps=(
     "bssh"
     "bvnc"
     "avahi-discover"
-    "rofi-theme-rofi-theme-selector"
+    "rofi-theme-theme-selector"
     "thunar-bulk-rename"
     "thunar-settings"
     "wiremix"
@@ -162,7 +162,9 @@ hidden_apps=(
     "xdg-desktop-portal-gdk"
     "xgps"
     "xgpsspeed"
-
+    "qv4l2"
+    "qvidcap"
+    "lstopo"
 )
 
 # 3. Loop through the list, copy them locally, and append the hidden flag
