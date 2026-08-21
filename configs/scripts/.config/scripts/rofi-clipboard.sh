@@ -17,10 +17,10 @@ while IFS=$'\t' read -r id content; do
         fi
 
         # Override the display text for images to give it a unique name
-        display_name="Image_Capture_${id}"
+        display_name="Image-${id}"
 
         # Add to menu with icon
-        MENU_OPTIONS+="${id}\t${content}\x00icon\x1f${THUMB}\x1fdisplay\x1f${clean_content}\n"
+        MENU_OPTIONS+="${id}\t${content}\x00icon\x1f${THUMB}\x1fdisplay\x1f${display_name}\n"
     else
         # Add to menu as text
         MENU_OPTIONS+="${id}\t${content}\x00display\x1f${clean_content}\n"
