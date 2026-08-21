@@ -15,6 +15,10 @@ while IFS=$'\t' read -r id content; do
         if [ ! -s "$THUMB" ]; then
             printf "%s\t%s\n" "$id" "$content" | cliphist decode > "$THUMB"
         fi
+
+        # Override the display text for images to give it a unique name
+        display_name="Image_Capture_${id}"
+
         # Add to menu with icon
         MENU_OPTIONS+="${id}\t${content}\x00icon\x1f${THUMB}\x1fdisplay\x1f${clean_content}\n"
     else
@@ -22,6 +26,7 @@ while IFS=$'\t' read -r id content; do
         MENU_OPTIONS+="${id}\t${content}\x00display\x1f${clean_content}\n"
     fi
 done < <(cliphist list)
+
 
 # 2. Launch Rofi
 # Alt+Delete is mapped to Exit Code 10
