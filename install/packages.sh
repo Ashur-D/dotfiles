@@ -10,7 +10,7 @@ packages=(
 # ====================================================
 
     # ------------ Desktop UI Components ------------
-    waybar-git                  # topbar; git build includes Hyprland Lua IPC workspace-click fixes
+    waybar                 # topbar; git build includes Hyprland Lua IPC workspace-click fixes
     mako                        # notifications
     rofi                        # app launcher, controls wallpapers/power/session
     swayosd                     # on-screen display
