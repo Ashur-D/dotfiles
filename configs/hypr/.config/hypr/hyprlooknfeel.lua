@@ -60,10 +60,8 @@ hl.config({
 hl.config({
     group = {
         col = {
-            border_active         = colors.primary,
-            border_inactive        = colors.on_primary_container,
-            border_locked_active   = -1,
-            border_locked_inactive = -1,
+            border_active   = colors.primary,
+            border_inactive = colors.on_primary_container,
         },
         groupbar = {
             font_size   = 12,
