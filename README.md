@@ -37,6 +37,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 - [ ] Get `starship` colors working with Matugen *(mostly done, just need better colors for the dir and system icons)*.
 - [ ] Get GTK working with Matugen *(I think it works?)*.
 - [ ] [get this type of wallpaper menu](https://github.com/vyrx-dev/symphony)
+- [ ] add [https://github.com/hyprnux/hyprglass]
 
 # Some ways to change your hypr config
 - ⭐[hyprsettings](https://github.com/acropolis914/hyprsettings)
@@ -115,7 +116,6 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 | :--- | :--- |
 | `SUPER` + `[0-9]` | Switch to workspace 1-10 |
 | `SUPER` + `SHIFT` + `[0-9]` | Move active window to workspace 1-10 |
-| `SUPER` + `Scroll Wheel` | Scroll through active workspaces |
 
 ### Scratchpads (Special Workspaces)
 | Keybind | Action |

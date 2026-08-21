@@ -25,7 +25,7 @@ packages=(
     # ------------ Terminal & Shell ------------
     kitty                       # terminal emulator
     starship                    # terminal prompt
-    gum                         # shell scripts (menus, prompts)
+    # gum                       # shell scripts (menus, prompts)
     fastfetch                   # system info tool
 
     # ------------ File Management ------------
