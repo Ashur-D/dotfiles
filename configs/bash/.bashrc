@@ -49,36 +49,36 @@ function y() {
 }
 
 ###------------------- uninstall apps -----------------------###
-function apps() {
-    clear
-    gum style --border normal --margin "1" --padding "1 2" --border-foreground 212 "📦 Package Uninstaller"
-    echo "Fetching installed packages..."
+# function apps() {
+#     clear
+#     gum style --border normal --margin "1" --padding "1 2" --border-foreground 212 "📦 Package Uninstaller"
+#     echo "Fetching installed packages..."
 
-    # Use 'local' so these variables don't bleed into your active terminal session
-    local PACKAGES=$(yay -Qeq)
-    local SELECTED=$(echo "$PACKAGES" | gum filter --no-limit --placeholder "Search packages... (TAB to select multiple, ENTER to confirm)")
+#     # Use 'local' so these variables don't bleed into your active terminal session
+#     local PACKAGES=$(yay -Qeq)
+#     local SELECTED=$(echo "$PACKAGES" | gum filter --no-limit --placeholder "Search packages... (TAB to select multiple, ENTER to confirm)")
 
-    # If you press ESC or don't select anything, exit safely
-    if [ -z "$SELECTED" ]; then
-        gum style --foreground 212 "No packages selected. Exiting."
-        # CRITICAL: Use 'return' instead of 'exit'.
-        # 'exit' in a .bashrc function will completely close your terminal!
-        return 0
-    fi
+#     # If you press ESC or don't select anything, exit safely
+#     if [ -z "$SELECTED" ]; then
+#         gum style --foreground 212 "No packages selected. Exiting."
+#         # CRITICAL: Use 'return' instead of 'exit'.
+#         # 'exit' in a .bashrc function will completely close your terminal!
+#         return 0
+#     fi
 
-    # Show what is about to be deleted
-    clear
-    gum style --foreground 212 "⚠️ You selected the following packages for removal:"
-    echo "$SELECTED" | sed 's/^/ - /'
-    echo ""
+#     # Show what is about to be deleted
+#     clear
+#     gum style --foreground 212 "⚠️ You selected the following packages for removal:"
+#     echo "$SELECTED" | sed 's/^/ - /'
+#     echo ""
 
-    # Final confirmation before breaking anything
-    if gum confirm "Are you sure you want to completely remove these packages and their unneeded dependencies?"; then
-        local TO_REMOVE=$(echo "$SELECTED" | tr '\n' ' ')
-        yay -Rns $TO_REMOVE
-        echo ""
-        gum style --foreground 212 "✨ Cleanup complete!"
-    else
-        gum style --foreground 212 "Operation cancelled. Nothing was uninstalled."
-    fi
-}
+#     # Final confirmation before breaking anything
+#     if gum confirm "Are you sure you want to completely remove these packages and their unneeded dependencies?"; then
+#         local TO_REMOVE=$(echo "$SELECTED" | tr '\n' ' ')
+#         yay -Rns $TO_REMOVE
+#         echo ""
+#         gum style --foreground 212 "✨ Cleanup complete!"
+#     else
+#         gum style --foreground 212 "Operation cancelled. Nothing was uninstalled."
+#     fi
+# }
