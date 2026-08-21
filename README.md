@@ -39,7 +39,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 - [ ] [get this type of wallpaper menu](https://github.com/vyrx-dev/symphony)
 
 # Some ways to change your hypr config
-- [hyprsettings](https://github.com/acropolis914/hyprsettings)
+- ⭐[hyprsettings](https://github.com/acropolis914/hyprsettings)
 - [hyprmod](https://github.com/BlueManCZ/hyprmod)
 - [hyprviz](https://github.com/timasoft/hyprviz)
 
@@ -63,7 +63,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ## Rofi Wallpaper Selector
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08a543f1-9d84-4e78-8ef9-a8ed12dc574b" />
 
-## Rofi Clipbaord 
+## Rofi Clipboard 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dd4c57d5-f834-4eb5-ba2d-84a5687180d2" />
 
 ## Wifi & Audio TUI's
