@@ -1,9 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-# Define the absolute path to your dotfiles repository
-DOTFILES_REPO_DIR="$HOME/dotfiles"
-STOW_DIR="$DOTFILES_REPO_DIR/configs" # Point to the new wrapper folder
+# Resolve the repository from this script so it works from any clone location.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_REPO_DIR="$(dirname "$SCRIPT_DIR")"
+STOW_DIR="$DOTFILES_REPO_DIR/configs"
 
 echo "Starting dotfiles setup with stow..."
 echo "----------------------------------------------------------------------"

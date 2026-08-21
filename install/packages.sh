@@ -10,7 +10,7 @@ packages=(
 # ====================================================
 
     # ------------ Desktop UI Components ------------
-    waybar                      # topbar > look into https://github.com/wayle-rs/wayle
+    waybar-git                  # topbar; git build includes Hyprland Lua IPC workspace-click fixes
     mako                        # notifications
     rofi                        # app launcher, controls wallpapers/power/session
     swayosd                     # on-screen display

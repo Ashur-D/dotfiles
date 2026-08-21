@@ -28,7 +28,7 @@ post_hook = 'pkill -USR2 btop || true'
 index = -5
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/swayosd/colors.css'
-post_hook = "killall swayosd-server; hyprctl dispatch exec swayosd-server"
+post_hook = "pkill -x swayosd-server; swayosd-server >/dev/null 2>&1 &"
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
