@@ -21,6 +21,14 @@ fi
 # Ensure ~/.config exists so stow doesn't try to symlink the whole directory
 mkdir -p "$HOME/.config"
 
+# Most distributions create a default ~/.bashrc, which conflicts with Stow.
+# Preserve it before linking the version managed by this repository.
+if [ -f "$STOW_DIR/bash/.bashrc" ] && [ -e "$HOME/.bashrc" ] && [ ! -L "$HOME/.bashrc" ]; then
+    bashrc_backup="$HOME/.bashrc.pre-dotfiles.$(date +%Y%m%d-%H%M%S)"
+    mv "$HOME/.bashrc" "$bashrc_backup"
+    echo "Backed up existing ~/.bashrc to '$bashrc_backup'."
+fi
+
 echo "Attempting to stow packages..."
 
 # Iterate through every directory inside 'configs/'
