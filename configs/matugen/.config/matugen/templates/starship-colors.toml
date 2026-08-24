@@ -21,13 +21,13 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:color8 bg:color1)\
+[](fg:color8 bg:color8)\
 $docker_context\
 $conda\
 $pixi\
-[](fg:color1 bg:color9)\
+[](fg:color8 bg:color8)\
 $time\
-[ ](fg:color9)\
+[ ](fg:color8)\
 $line_break$character"""
 
 palette = 'colors'

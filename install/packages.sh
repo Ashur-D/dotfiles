@@ -31,6 +31,7 @@ packages=(
     yazi                        # tui file explorer
     thunar                      # gtk gui file manager
     7zip                        # the powerhouse engine Yazi uses for everything else
+    xdg-user-dirs               # standard Linux user directories
 
     # ------------ Clipboard ------------
     wl-clipboard                # command-line copy/paste
@@ -140,6 +141,11 @@ else
     echo "Please check the terminal output above."
     echo "------------------------------------------------------------"
 fi
+
+
+# Generate standard Linux user directories
+xdg-user-dirs-update
+
 
 # ====================================================
 #              HIDE UNWANTED APPS IN ROFI
