@@ -18,8 +18,7 @@ Once in the TTY, please run the following command:
 git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ```
 
-- **(Optional):** Before running the install script, review and uncomment your desired packages in `install/packages.sh`.
-- **(Optional):** If you need NVIDIA packages, go to `install/run.sh` and uncomment the NVIDIA script as well as envs in `~/.config/hypr/hyprenvs.lua`
+- **(Optional):** Before running the install script, uncomment any packages you may need in `install/packages.sh`.
 - **Restart your system** after the installer completes.
 
 ---

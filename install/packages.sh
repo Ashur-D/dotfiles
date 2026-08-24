@@ -63,7 +63,7 @@ packages=(
     # ------------ Screenshots & Screen Recording ------------
     hyprshot                    # screenshot tool
     satty                       # screenshot annotator
-    gpu-screen-recorder-ui      # screen recorder ui
+    gpu-screen-recorder-ui      # screen recorder ui (installs gpu-screen-recorder as well )
 
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power profiles, or use auto-cpufreq, never both.

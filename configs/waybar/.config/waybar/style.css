@@ -127,6 +127,13 @@ tooltip {
     color: shade(@primary, 0.94);
 }
 
+#custom-recording {
+    color: alpha(@primary, 1);
+    font-weight: bold;
+    padding: 0 8px;
+    font-size: 16px;
+}
+
 /* -----------------------------------------------------
  * Expand
  * ----------------------------------------------------- */
