@@ -20,12 +20,11 @@ packages=(
     matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
     maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
-    adw-gtk-theme
+    adw-gtk-theme               # gtk theme
 
     # ------------ Terminal & Shell ------------
-    kitty                       # terminal emulator
+    kitty                       # terminal
     starship                    # terminal prompt
-    # gum                       # shell scripts (menus, prompts)
     fastfetch                   # system info tool
 
     # ------------ File Management ------------
@@ -78,7 +77,7 @@ packages=(
     # ------------ Daily Apps ------------
     # zen-browser-bin           # web browser
     # helium-browser-bin        # web browser
-    # vesktop-bin               # discord client
+    # vesktop-bin               # discord client or just install discord
     # obsidian                  # note taking
     # localsend                 # local file sharing
     # spotatui-bin              # spotify tui (alternative: ncspot)
@@ -93,6 +92,7 @@ packages=(
     # lazygit                   # git tui
     # zed                       # gui code editor
     # openssh                   # ssh
+    # gum                       # shell scripts (some of my bashrc lines require this)
 
     # ------------ Advanced Terminal Utilities ------------
     # eza                       # ls replacement
