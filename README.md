@@ -35,13 +35,12 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 # 📝 To-Do
 
 - [ ] Get `starship` colors working with Matugen *(mostly done, just need better colors for the dir and system icons)*.
-- [x] Get GTK working with Matugen *(I think it works?)*.
 - [ ] [get this type of wallpaper menu](https://github.com/vyrx-dev/symphony)
 - [ ] add [hyprglass](https://github.com/hyprnux/hyprglass)
 
 # Some ways to change your hypr config
-- ⭐[hyprsettings](https://github.com/acropolis914/hyprsettings)
-- [hyprmod](https://github.com/BlueManCZ/hyprmod)
+- ⭐[hyprmod](https://github.com/BlueManCZ/hyprmod)
+- [hyprsettings](https://github.com/acropolis914/hyprsettings)
 - [hyprviz](https://github.com/timasoft/hyprviz)
 
 
