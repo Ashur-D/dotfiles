@@ -1,23 +1,32 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
 rev = "=5d5c480"
+hash = "7b625412411be411153886894d9acaf"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
 rev = "=5d5c480"
+hash = "9c7987da2d2a2120dac33abb64132004"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
 rev = "=5d5c480"
+hash = "e3260d0b1feded8c8e3ae3afa1169e30"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
 rev = "=5d5c480"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
 rev = "=5d5c480"
+hash = "3f8d49413bc8691b4c652eb417a20178"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:no-status"
 rev = "=5d5c480"
+hash = "3e023d31f29201efdac2a6ae35fedb78"
+
+[flavor]
+deps = []

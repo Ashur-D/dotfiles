@@ -86,8 +86,8 @@ chmod +x "$SCRIPT_DIR/services.sh"
 # Optional: Install Nvidia packages
 # ==========================
 
-# chmod +x "$SCRIPT_DIR/nvidia.sh"
-#"$SCRIPT_DIR/nvidia.sh"
+chmod +x "$SCRIPT_DIR/nvidia.sh"
+"$SCRIPT_DIR/nvidia.sh"
 
 # ------------------------------------------------------
 # misc

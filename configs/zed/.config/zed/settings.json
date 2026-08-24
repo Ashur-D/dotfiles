@@ -17,7 +17,7 @@
   // --- Appearance & Theming ---
   "icon_theme": "Catppuccin Macchiato",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Dark",
     "dark": "Catppuccin Macchiato (Blur) [Light]"
   },
@@ -55,7 +55,7 @@
     "button": false
   },
   "git_panel": {
-    "button": false
+    "button": true
   },
   "outline_panel": {
     "button": false

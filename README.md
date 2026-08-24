@@ -116,6 +116,7 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 | :--- | :--- |
 | `SUPER` + `[0-9]` | Switch to workspace 1-10 |
 | `SUPER` + `SHIFT` + `[0-9]` | Move active window to workspace 1-10 |
+| `SUPER` + `scroll` | Move active window to workspace 1-10 |
 
 ### Scratchpads (Special Workspaces)
 | Keybind | Action |

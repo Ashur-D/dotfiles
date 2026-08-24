@@ -1,0 +1,34 @@
+# Ignore installation log files
+install_log_*.log
+
+# Ignore backup directories
+.old/
+*.bak
+*.pre-dotfiles.*
+
+# Ignore Neovim swap files
+*.swp
+*.swo
+
+# Ignore fastfetch/Yazi cache if you ever generate any locally
+.cache/
+
+# General Linux/System trash
+.Trash-*
+
+# Ignore Matugen generated color files
+colors.css
+colors.conf
+colors.lua
+colors.sh
+colors.json
+mako-colors
+matugen.theme
+colors.rasi
+matugen.json
+theme.toml
+style.css
+matugen_theme.lua
+current-theme.conf
+matugen.conf
+Matugen.conf
