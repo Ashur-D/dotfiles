@@ -16,6 +16,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.statusline = " %F %m %= %l:%c "
+vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 -- =====================================================================
 -- 1. Bootstrap Lazy.nvim (The Plugin Manager)
