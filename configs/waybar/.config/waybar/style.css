@@ -15,7 +15,7 @@ window#waybar {
 .modules-left {
     padding: 7px;
     margin: 10px 0px 0px 10px;
-    border-radius: 24px;
+    border-radius: 12px;
     background: alpha(@background, 0.6);
     /*box-shadow: 0px 0px 2px alpha(@shadow, 0.6);*/
 }
@@ -23,7 +23,7 @@ window#waybar {
 .modules-center {
     padding: 7px;
     margin: 10px 0px 0px 0px;
-    border-radius: 24px;
+    border-radius: 12px;
     background: alpha(@background, 0.6);
     /*box-shadow: 0px 0px 0px alpha(@shadow, 0.6);*/
 }
@@ -31,7 +31,7 @@ window#waybar {
 .modules-right {
     padding: 7px;
     margin: 10px 10px 0px 0px;
-    border-radius: 24px;
+    border-radius: 12px;
     background: alpha(@background, 0.6);
     /*box-shadow: 0px 0px 2px alpha(@shadow, 0.6);*/
 }
