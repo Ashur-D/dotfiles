@@ -11,7 +11,7 @@
   // -----------------------------------------------------
   // Module Layout
   // -----------------------------------------------------
-  "modules-left": ["clock"],
+  "modules-left": ["clock","custom/recording"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "group/tray-expander",
@@ -28,6 +28,15 @@
     "format": "{:L%A %I:%M}",
     "format-alt": "{:L%d %B %Y}",
     "tooltip": false,
+  },
+
+  "custom/recording": {
+      "exec": "pgrep -f '^gpu-screen-recorder' >/dev/null 2>&1 && echo '' || echo ''",
+      "interval": "once",
+      "signal": 8,
+      "on-click": "bash ~/.config/scripts/recording.sh",
+      "format": "{}",
+      "tooltip": false
   },
 
   // -----------------------------------------------------
