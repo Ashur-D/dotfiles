@@ -1,0 +1,25 @@
+@import "colors.css";
+window {
+    border-radius: 16px;
+    opacity: 0.97;
+    border: 0px solid @accent_color;
+    background-color: @accent_fg_color;
+}
+
+label {
+    font-family: "MapleMono Bold";
+    font-size: 11pt;
+    color: @accent_color;
+}
+
+image {
+    color: @accent_color;
+}
+
+progressbar {
+    border-radius: 8px;
+}
+
+progress {
+    background-color: @window_fg_color;
+}

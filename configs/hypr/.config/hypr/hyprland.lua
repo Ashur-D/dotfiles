@@ -13,6 +13,12 @@ dofile(config_dir .. "hyprbindings.lua")
 dofile(config_dir .. "hyprwindows.lua")
 
 
+
+
+-- =============================
+-- plugin settings for hyprglass
+-- =============================
+
 if hl.plugin.hyprglass then
     local hg = hl.plugin.hyprglass
 
