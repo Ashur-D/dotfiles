@@ -1,0 +1,87 @@
+/* Import Matugen colors */
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+}
+
+configuration {
+    modi: "dmenu";
+    /* IMPORTANT: This must be true for the wallpaper thumbnails to render! */
+    show-icons: true;
+}
+
+window {
+    width: 65%; /* Slightly wider to fit the image grid */
+    height: 40%;
+    transparency: "real";
+    background-color: var(surface);
+    border: 0px solid;
+    border-color: var(primary);
+    border-radius: 16px;
+    padding: 25px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    /* Added inputbar so you can still type to search for wallpapers */
+    children: [ inputbar, listview ];
+    spacing: 15px;
+}
+
+inputbar {
+    background-color: var(surface-container-low);
+    border-radius: 16px;
+    padding: 15px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: var(primary);
+    padding: 0px 10px 0px 0px;
+}
+
+entry {
+    text-color: var(on-surface-variant);
+}
+
+listview {
+    columns: 5;
+    lines: 0;
+    spacing: 15px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+}
+
+element {
+    orientation: vertical;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: var(surface-container-low);
+    text-color: var(on-surface-variant);
+    cursor: pointer;
+}
+
+element selected.normal {
+    background-color: var(primary-container);
+    text-color: var(on-surface);
+}
+
+element-icon {
+    size: 10em; /* Scales the thumbnail images up */
+    cursor: inherit;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    /* Kept your font family, but shrank it so the long filenames fit under the images */
+    font: "JetBrainsMono Nerd Font 12";
+    background-color: transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    cursor: inherit;
+}

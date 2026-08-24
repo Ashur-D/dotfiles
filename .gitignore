@@ -2,7 +2,7 @@
 install_log_*.log
 
 # Ignore backup directories
-.old/
+# .old/
 *.bak
 *.pre-dotfiles.*
 
