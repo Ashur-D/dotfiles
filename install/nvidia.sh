@@ -4,7 +4,6 @@
 # Install nvidia packages
 # ==========================
 
-
 # List of packages to install
 packages=(
     #linux-headers
