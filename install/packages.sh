@@ -92,6 +92,7 @@ packages=(
     # git                       # version control
     # lazygit                   # git tui
     # zed                       # gui code editor
+    # openssh                   # ssh
 
     # ------------ Advanced Terminal Utilities ------------
     # eza                       # ls replacement
@@ -153,7 +154,7 @@ hidden_apps=(
     "bssh"
     "bvnc"
     "avahi-discover"
-    "rofi-theme-theme-selector"
+    "rofi-theme-selector"
     "thunar-bulk-rename"
     "thunar-settings"
     "wiremix"

@@ -1,14 +1,2 @@
 [mgr]
 show_hidden = true
-# ratio = [ 0, 2, 5 ]
-
-[opener]
-edit = [
-  { run = "nvim \"$@\"", block = true, for = "unix" },
-]
-image = [
-  { run = 'feh "$@"', orphan = true, desc = "Open Image", for = "unix" },
-]
-video = [
-  { run = 'mpv "$@"', orphan = true, desc = "Play Video", for = "unix" },
-]
