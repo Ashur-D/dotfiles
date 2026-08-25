@@ -12,6 +12,7 @@ if ! command -v yay &>/dev/null; then
   # Build and install
   cd "$WORK_DIR/yay" || exit
   echo "Building yay..."
+  sudo -v
   makepkg -si --noconfirm
 
   # Clean up and return
