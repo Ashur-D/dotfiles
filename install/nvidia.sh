@@ -17,8 +17,6 @@ packages=(
 
 echo "Starting batch installation of nvidia packages..."
 
-# Install EVERYTHING in one single, fast transaction.
-# --needed automatically skips already installed packages!
 if yay -S --needed --noconfirm "${packages[@]}"; then
     echo "------------------------------------------------------------"
     echo "✨ All nvidia packages installed successfully ✨"

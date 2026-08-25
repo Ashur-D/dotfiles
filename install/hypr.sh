@@ -18,8 +18,6 @@ packages=(
 
 echo "Starting batch installation of hyprland packages..."
 
-# Install EVERYTHING in one single, fast transaction.
-# --needed automatically skips already installed packages!
 if yay -S --needed --noconfirm "${packages[@]}"; then
     echo "------------------------------------------------------------"
     echo "✨ All hyprland packages installed successfully ✨"
