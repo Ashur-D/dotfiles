@@ -29,7 +29,7 @@ case $chosen in
         systemctl suspend
         ;;
     $logout)
-        hyprctl dispatch exit
+        hyprctl dispatch 'hl.dsp.exit()'
         ;;
     $lock)
         hyprlock
