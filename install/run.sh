@@ -34,20 +34,6 @@ clear
 set -e
 
 # ==========================
-# System Update
-# ==========================
-read -p "Would you like to update your system? (y/n): " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
-  echo "Updating system..."
-  if ! sudo pacman -Syu --noconfirm; then
-      echo "❌ System update failed! Please fix your pacman mirrors/keys and try again."
-      exit 1
-  fi
-else
-  echo "Skipping system update."
-fi
-
-# ==========================
 # installs yay if not already installed
 # ==========================
 
@@ -109,6 +95,55 @@ echo "✨ Yazi plugins installed ✨"
 echo "🎨 Generating initial system colors..."
 matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
 echo "✨ Colors generated ✨"
+
+echo "Generating user directories..."
+xdg-user-dirs-update
+echo "✨ User directories created ✨"
+
+# ====================================================
+#              HIDE UNWANTED APPS IN ROFI
+# ====================================================
+echo "Hiding cluttered apps from Rofi..."
+
+# 1. Ensure the local applications directory exists
+mkdir -p "$HOME/.local/share/applications"
+
+# 2. Define the exact names of the files you want to hide (without .desktop)
+hidden_apps=(
+    "bssh"
+    "bvnc"
+    "avahi-discover"
+    "rofi-theme-selector"
+    "thunar-bulk-rename"
+    "thunar-settings"
+    "wiremix"
+    "cmake-gui"
+    "org.gnupg.pinentry-qt"
+    "xdg-desktop-portal-gdk"
+    "xgps"
+    "xgpsspeed"
+    "qv4l2"
+    "qvidcap"
+    "lstopo"
+)
+
+# 3. Loop through the list, copy them locally, and append the hidden flag
+for app in "${hidden_apps[@]}"; do
+    global_file="/usr/share/applications/${app}.desktop"
+    local_file="$HOME/.local/share/applications/${app}.desktop"
+
+    # Only attempt to hide it if the application is actually installed globally
+    if [ -f "$global_file" ]; then
+        cp "$global_file" "$local_file"
+
+        # Check if we already added NoDisplay so we don't spam the file on re-runs
+        if ! grep -q "NoDisplay=true" "$local_file"; then
+            echo "NoDisplay=true" >> "$local_file"
+            echo "  Successfully hid: $app"
+        fi
+    fi
+done
+
 
 echo "-----------------------------------------------------------------------------------------------------"
 echo "✨ All packages installed successfully and configs linked, please reboot or log out and log back in ✨"
