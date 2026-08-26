@@ -8,9 +8,6 @@ local ipc = "noctalia msg "
 hl.bind("SUPER + return", hl.dsp.exec_cmd(terminal), { description = "Terminal" })
 hl.bind("SUPER + E", hl.dsp.exec_cmd(terminal .. " -e yazi"), { description = "File manager" })
 
--- ---------------- Close windows ----------------
-hl.bind("SUPER + W", hl.dsp.window.close(), { description = "Close active window" })
-
 -- ---------------- Noctalia Menus ----------------
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
@@ -20,6 +17,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 
 -- ---------------- Control tiling ----------------
+hl.bind("SUPER + W", hl.dsp.window.close(), { description = "Close active window" })
 hl.bind("SUPER + J", hl.dsp.layout("togglesplit"), { description = "toggle split" })
 hl.bind("SUPER + P", hl.dsp.window.pseudo(), { description = "Pseudo window" })
 hl.bind("SUPER + T", hl.dsp.window.float(), { description = "Toggle window floating/tiling" })
@@ -61,13 +59,13 @@ for i = 1, 10 do
 end
 
 -- ---------------- media ----------------
-hl.bind("XF86AudioMute",         hl.dsp.exec_cmd("noctalia msg volume-mute"),                      { locked = true })
-hl.bind("XF86AudioPlay",        hl.dsp.exec_cmd("noctalia msg media toggle"),                    { locked = true })
-hl.bind("XF86AudioNext",        hl.dsp.exec_cmd("noctalia msg media next"),                       { locked = true })
-hl.bind("XF86AudioPrev",        hl.dsp.exec_cmd("noctalia msg media previous"),                   { locked = true })
-hl.bind("XF86AudioStop",        hl.dsp.exec_cmd("noctalia msg media toggle"),                      { locked = true })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("noctalia msg volume-up 5%"),                    { locked = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg volume-down 5%"),                    { locked = true })
+hl.bind("XF86AudioMute",         hl.dsp.exec_cmd("ipc .. volume-mute"),                      { locked = true })
+hl.bind("XF86AudioPlay",        hl.dsp.exec_cmd("ipc .. media toggle"),                    { locked = true })
+hl.bind("XF86AudioNext",        hl.dsp.exec_cmd("ipc .. media next"),                       { locked = true })
+hl.bind("XF86AudioPrev",        hl.dsp.exec_cmd("ipc .. media previous"),                   { locked = true })
+hl.bind("XF86AudioStop",        hl.dsp.exec_cmd("ipc .. media toggle"),                      { locked = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("ipc .. volume-up 5%"),                    { locked = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("ipc .. volume-down 5%"),                    { locked = true })
 
 -- ---------------- special workspaces ----------------
 hl.workspace_rule({ workspace = "special:anything" })
