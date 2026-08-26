@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define paths based on your dotfiles structure
-WALL_DIR="$HOME/.config/wallpapers"
+WALL_DIR="$HOME/dotfiles/media/wallpapers"
 APPLY_SCRIPT="$HOME/.config/scripts/wallpaper.sh"
 
 # Check if the wallpaper directory exists

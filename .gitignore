@@ -16,21 +16,21 @@ install_log_*.log
 # General Linux/System trash
 .Trash-*
 
-# Ignore Matugen generated color files
-colors.css
-colors.conf
-colors.lua
-colors.sh
-colors.json
-mako-colors
-matugen.theme
-colors.rasi
-matugen.json
-theme.toml
-matugen_theme.lua
-current-theme.conf
-matugen.conf
-Matugen.conf
-hyprlock.conf
-# wallpapers/
-# ascii/
+# # Ignore Matugen generated color files
+# colors.css
+# colors.conf
+# colors.lua
+# colors.sh
+# colors.json
+# #mako-colors
+# matugen.theme
+# colors.rasi
+# matugen.json
+# theme.toml
+# matugen_theme.lua
+# current-theme.conf
+# matugen.conf
+# Matugen.conf
+# hyprlock.conf
+# # wallpapers/
+# # ascii/

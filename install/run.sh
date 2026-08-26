@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# quick update
+sudo pacman -Syu
+
 # ==========================
 # Root check
 # ==========================
@@ -93,7 +96,7 @@ ya pkg install
 echo "✨ Yazi plugins installed ✨"
 
 echo "🎨 Generating initial system colors..."
-matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
+matugen image ~/dotfiles/media/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
 echo "✨ Colors generated ✨"
 
 echo "Generating user directories..."
