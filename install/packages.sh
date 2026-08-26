@@ -46,7 +46,6 @@ packages=(
     imv                         # image viewer
 
     # ------------ Audio,Wifi,Bluetooth ------------
-    pipewire                    # audio core
     pipewire-pulse              # audio compatibility
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
