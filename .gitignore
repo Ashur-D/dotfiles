@@ -22,7 +22,7 @@ configs/yazi/.config/yazi/theme.toml
 configs/waybar/.config/waybar/colors.css
 configs/swayosd/.config/swayosd/colors.css
 configs/rofi/.config/rofi/colors.rasi
-configs/lua/.config/nvim/lua/matugen_theme.lua
+configs/nvim/.config/nvim/lua/matugen_theme.lua
 configs/mako/.config/mako/mako-colors
 configs/kitty/.config/kitty/themes/Matugen.conf
 configs/kitty/.config/kitty/current-theme.conf
@@ -30,3 +30,4 @@ configs/hypr/.config/hypr/colors.conf
 configs/hypr/.config/hypr/colors.lua
 configs/gtk-3.0/.config/gtk-3.0/colors.css
 configs/gtk-4.0/.config/gtk-4.0/colors.css
+configs/zed/.config/zed/themes/matugen.json

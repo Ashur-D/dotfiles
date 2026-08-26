@@ -4,14 +4,11 @@
 
 hl.on("hyprland.start", function()
 
-    -- Wallpaper and theme
+    -- Wallpaper
     hl.exec_cmd("awww-daemon")
 
     -- hl.exec_cmd(
-    -- [[bash -c 'awww daemon & sleep 2 && if [ ! -f ~/.config/.wall_initialized ]; then ~/.config/scripts/wallpaper.sh ~/dotfiles/media/wallpapers/wallpaper13.png && touch ~/.config/.wall_initialized && sleep 1 && touch ~/.cache/.hypr_first_boot && hyprctl reload; fi']])
-
-    -- Wait 2 seconds, pick a random image from the wallpapers folder, and apply it
-    hl.exec_cmd([[bash -c 'sleep 2 && RANDOM_WALL=$(find ~/dotfiles/media/wallpapers -type f | shuf -n 1) && ~/.config/scripts/wallpaper.sh "$RANDOM_WALL"']])
+    hl.exec_cmd([[bash -c 'awww daemon & sleep 2 && if [ ! -f ~/.config/.wall_initialized ]; then ~/.config/scripts/wallpaper.sh ~/dotfiles/media/wallpapers/wallpaper13.png && touch ~/.config/.wall_initialized && sleep 1 && touch ~/.cache/.hypr_first_boot && hyprctl reload; fi']])
 
     -- Session environment for systemd/dbus/portals
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE")
