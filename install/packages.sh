@@ -18,7 +18,7 @@ packages=(
 
     # ------------ Theming & Fonts ------------
     matugen                     # color generator
-    catppuccin-cursors-mocha    # cursor theme
+    bibata-cursor-theme-bin     # cursor theme
     maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
     adw-gtk-theme               # gtk theme
 
@@ -56,7 +56,6 @@ packages=(
     impala                      # wifi tui
 
     bluez                       # bluetooth daemon
-    bluez-utils                 # bluetooth utilities
     bluetui                     # bluetooth tui
 
     # ------------ Screenshots & Screen Recording ------------

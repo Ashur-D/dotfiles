@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# quick update
-sudo pacman -Syu
+# ==========================
+# logs the entire script and saves to the repo directory
+# ==========================
+LOGFILE="$REPO_DIR/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log"
+exec > >(tee -a "$LOGFILE") 2>&1
+echo "Log saving to: $LOGFILE"
 
 # ==========================
-# Root check
+# update
 # ==========================
-if [ "$EUID" -eq 0 ]; then
-  echo "❌ Error: Do not run this script as root! Run it as your normal user."
-  exit 1
-fi
+sudo pacman -Syu
 
 # ==========================
 # Authenticate upfront and keep sudo alive
@@ -23,12 +24,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="$(dirname "$SCRIPT_DIR")"
 
-# ==========================
-# logs the entire script and saves to the repo directory
-# ==========================
-LOGFILE="$REPO_DIR/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log"
-exec > >(tee -a "$LOGFILE") 2>&1
-echo "Log saving to: $LOGFILE"
 
 # ==========================
 # clears before starting, quits if an error occurs
