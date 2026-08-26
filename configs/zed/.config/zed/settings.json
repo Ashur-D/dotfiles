@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // --- Core Editor Settings ---
+  "cli_default_open_behavior": "existing_window",
   "indent_guides": {
     "background_coloring": "indent_aware",
     "coloring": "indent_aware"

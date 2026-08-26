@@ -10,17 +10,19 @@ packages=(
 # ====================================================
 
     # ------------ Desktop UI Components ------------
-    waybar                      # topbar
-    mako                        # notifications
-    rofi                        # app launcher, controls wallpapers/power/session
-    swayosd                     # on-screen display
-    awww                        # wallpaper daemon
+    Noctalia
+    # waybar                      # topbar
+    # mako                        # notifications
+    # rofi                        # app launcher, controls wallpapers/power/session
+    # swayosd                     # on-screen display
+    # awww                        # wallpaper daemon
 
     # ------------ Theming & Fonts ------------
-    matugen                     # color generator
+    # matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
     maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
-    adw-gtk-theme               # gtk theme
+    adw-gtk-theme
+    nwg-look
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal
@@ -30,7 +32,6 @@ packages=(
     # ------------ File Management ------------
     yazi                        # tui file explorer
     thunar                      # gtk gui file manager
-    7zip                        #
     xdg-user-dirs               # standard Linux user directories
 
     # ------------ Clipboard ------------
@@ -50,25 +51,25 @@ packages=(
     pipewire-pulse              # audio compatibility
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
-    wiremix                     # audio tui
+    # wiremix                     # audio tui
     playerctl                   # media player keybinds
 
     iwd                         # wifi daemon
-    impala                      # wifi tui
+    # impala                      # wifi tui
 
     bluez                       # bluetooth daemon
     bluez-utils                 # bluetooth utilities
-    bluetui                     # bluetooth tui
+    # bluetui                     # bluetooth tui
 
     # ------------ Screenshots & Screen Recording ------------
-    hyprshot                    # screenshot tool
+    #hyprshot                    # screenshot tool
     satty                       # screenshot annotator
     gpu-screen-recorder-ui      # screen recorder ui (installs gpu-screen-recorder as well )
 
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power profiles, or use auto-cpufreq, never both.
     btop                        # system resource monitor
-    brightnessctl               # controls screen and keyboard brightness
+    # brightnessctl               # controls screen and keyboard brightness
     stow                        # symlinks
 
 # ====================================================
@@ -111,6 +112,7 @@ packages=(
     # efibootmgr                # modify UEFI boot entries
     # pachub                    # Front End for Pacman/AUR
     # dust git                  # A more intuitive version of du in rust
+    # 7zip
 
     # ------------ Terminal Rice (Visuals & Fun) ------------
     # astroterm                 # terminal planetarium

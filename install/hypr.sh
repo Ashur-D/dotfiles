@@ -8,12 +8,12 @@
 packages=(
     hyprland # hyprland!
     hyprcursor # cursor
-    hyprlock # lock screen
-    hyprsunset # warm light
-    hypridle # idler
+    # hyprlock # lock screen
+    # hyprsunset # warm light
+    # hypridle # idler
     hyprpolkitagent # authentication
     xdg-desktop-portal-hyprland #  xdg-desktop-portal backend for hyprland
-    hyprshutdown # shutdown and restart tool, will be used with rofi
+    # hyprshutdown # shutdown and restart tool, will be used with rofi
 )
 
 echo "Starting batch installation of hyprland packages..."

@@ -22,3 +22,10 @@ hl.window_rule({ match = { class = "steam" }, idle_inhibit = "fullscreen" })
 
 -- Float satty
 hl.window_rule({ match = { class = "com.gabm.satty" }, float = true, center = true, pin = true, size = { 460, 800 } })
+
+-- Noctalia
+hl.window_rule({
+    match = { class = "dev.noctalia.Noctalia" },
+    float = true,
+    size = { 1080, 920 },
+})

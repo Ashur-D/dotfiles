@@ -1,8 +1,12 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-###------------------- always open in home -----------------------###
-# cd ~
+###------------------- hyprland auto start -----------------------###
+alias hyprland='start-hyprland'
+
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec start-hyprland
+fi
 
 ###------------------- Editor used by CLI -----------------------###
 export EDITOR="nvim"
@@ -21,7 +25,7 @@ alias f="fastfetch"
 alias ga='git add .'
 alias gp='git push'
 alias gpp='git pull'
-alias gcm='git commit -m "updated"'
+# alias gcm='git commit -m "updated"'
 
 function gc() {
     MESSAGE=$(gum input --placeholder "Enter commit message..." --width 50)
@@ -31,13 +35,6 @@ function gc() {
         echo "Commit aborted."
     fi
 }
-
-###------------------- hyprland auto start -----------------------###
-alias hyprland='start-hyprland'
-
-if [ "$(tty)" = "/dev/tty1" ]; then
-  exec start-hyprland
-fi
 
 ###------------------- shell wrapper -----------------------###
 function y() {

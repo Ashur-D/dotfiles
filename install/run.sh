@@ -69,32 +69,15 @@ chmod +x "$SCRIPT_DIR/services.sh"
 "$SCRIPT_DIR/services.sh"
 
 # ==========================
-# Optional: Install Nvidia packages
-# ==========================
-
-read -p "Do you have an Nvidia GPU? (y/N): " use_nvidia
-
-if [[ "$use_nvidia" =~ ^[Yy]$ ]]; then
-    echo "Running Nvidia installation script..."
-    chmod +x install/nvidia.sh
-    ./install/nvidia.sh
-
-    echo "Enabling Nvidia environment variables..."
-    sed -i '/nvidia/s/-- hl.env/hl.env/g' ~/.config/hypr/hyprenvs.lua
-else
-    echo "AMD/Intel detected. Skipping Nvidia drivers and variables."
-fi
-
-# ==========================
 # misc
 # ==========================
 echo "Installing Yazi plugins..."
 ya pkg install
 echo "✨ Yazi plugins installed ✨"
 
-echo "🎨 Generating initial system colors..."
-matugen image ~/.config/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
-echo "✨ Colors generated ✨"
+echo "🎨 Generating initial system colors and setting wallpaper..."
+noctalia msg wallpaper-random
+echo "✨ Colors and wallpapers generated ✨"
 
 echo "Generating user directories..."
 xdg-user-dirs-update

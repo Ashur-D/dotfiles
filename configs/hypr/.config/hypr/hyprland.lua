@@ -15,6 +15,11 @@ dofile(config_dir .. "hyprwindows.lua")
 
 
 
+
+
+
+
+
 -- =============================
 -- plugin settings for hyprglass
 -- =============================

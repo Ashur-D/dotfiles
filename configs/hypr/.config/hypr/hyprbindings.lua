@@ -1,33 +1,23 @@
 -- ==========================
 -- Hyprland bindings
 -- ==========================
--- local osdclient = "swayosd-client --monitor ..." -- this is for more than 1 monitor
-local osdclient = "swayosd-client"
 local terminal  = "kitty"
+local ipc = "noctalia msg "
 
 -- ---------------- terminal & yazi ----------------
 hl.bind("SUPER + return", hl.dsp.exec_cmd(terminal), { description = "Terminal" })
 hl.bind("SUPER + E", hl.dsp.exec_cmd(terminal .. " -e yazi"), { description = "File manager" })
+
 -- ---------------- Close windows ----------------
 hl.bind("SUPER + W", hl.dsp.window.close(), { description = "Close active window" })
 
--- ---------------- Rofi Menus ----------------
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"), { description = "Launch apps" })
-hl.bind("SUPER + Escape", hl.dsp.exec_cmd("~/.config/scripts/rofi-power.sh"), { description = "Launch powermenu" })
-hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd("~/.config/scripts/rofi-performance.sh"), { description = "Launch performance menu" })
-hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/scripts/rofi-wallpaper.sh"), { description = "Launch wallpaper" })
-hl.bind("SUPER + V", hl.dsp.exec_cmd("/bin/bash $HOME/.config/scripts/rofi-clipboard.sh"), { description = "Clipboard history" })
-
--- ---------------- screenshots & recording ----------------
-hl.bind("PRINT", hl.dsp.exec_cmd([[bash -c "hyprshot -m region --raw | satty --filename - --output-filename ~/Pictures/screenshot_$(date '+%Y-%m-%d_%H-%M-%S').png --copy-command wl-copy --early-exit"]]))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o ~/Pictures"), { description = "Screenshot DP-1 monitor" })
-hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("~/.config/scripts/recording.sh"), {description = "recording"})
-
--- ---------------- nightlight ----------------
-hl.bind("SUPER + CTRL + N", hl.dsp.exec_cmd("~/.config/scripts/hypr-nightlight.sh"), { description = "Toggle nightlight" })
-
--- ---------------- waybar ----------------
-hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill -x waybar || waybar"), { description = "Toggle top bar" })
+-- ---------------- Noctalia Menus ----------------
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind("SUPER + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
+hl.bind("SUPER + Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
+hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 
 -- ---------------- Control tiling ----------------
 hl.bind("SUPER + J", hl.dsp.layout("togglesplit"), { description = "toggle split" })
@@ -53,6 +43,7 @@ hl.bind("SUPER + code:20", hl.dsp.window.resize({ x = -100, y = 0, relative = tr
 hl.bind("SUPER + code:21", hl.dsp.window.resize({ x = 100, y = 0, relative = true }),  { description = "Shrink window left" })       -- = key
 hl.bind("SUPER + SHIFT + code:20", hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { description = "Shrink window up" })
 hl.bind("SUPER + SHIFT + code:21", hl.dsp.window.resize({ x = 0, y = 100, relative = true }),  { description = "Expand window down" })
+
 -- ---------------- Scroll through existing workspaces with SUPER + scroll ----------------
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }), { description = "Scroll active workspace forward" })
 hl.bind("SUPER + mouse_up",   hl.dsp.focus({ workspace = "e-1" }), { description = "Scroll active workspace backward" })
@@ -70,10 +61,10 @@ for i = 1, 10 do
 end
 
 -- ---------------- media ----------------
-hl.bind("XF86AudioNext",  hl.dsp.exec_cmd(osdclient .. " --playerctl next"),       { locked = true, description = "Next track" })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Pause" })
-hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Play" })
-hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd(osdclient .. " --playerctl previous"),   { locked = true, description = "Previous track" })
+-- hl.bind("XF86AudioNext",  hl.dsp.exec_cmd(osdclient .. " --playerctl next"),       { locked = true, description = "Next track" })
+-- hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Pause" })
+-- hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Play" })
+-- hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd(osdclient .. " --playerctl previous"),   { locked = true, description = "Previous track" })
 
 -- ---------------- special workspaces ----------------
 hl.workspace_rule({ workspace = "special:anything" })
