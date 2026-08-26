@@ -10,15 +10,9 @@ packages=(
 # ====================================================
 
     # ------------ Desktop UI Components ------------
-    Noctalia
-    # waybar                      # topbar
-    # mako                        # notifications
-    # rofi                        # app launcher, controls wallpapers/power/session
-    # swayosd                     # on-screen display
-    # awww                        # wallpaper daemon
+    Noctalia                    # Shell
 
     # ------------ Theming & Fonts ------------
-    # matugen                     # color generator
     catppuccin-cursors-mocha    # cursor theme
     maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
     adw-gtk-theme
@@ -47,27 +41,20 @@ packages=(
     imv                         # image viewer
 
     # ------------ Audio,Wifi,Bluetooth ------------
-    pipewire                    # audio core
+    # pipewire                    # audio core
     pipewire-pulse              # audio compatibility
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
-    # wiremix                     # audio tui
     playerctl                   # media player keybinds
-
     iwd                         # wifi daemon
-    # impala                      # wifi tui
-
     bluez                       # bluetooth daemon
-    bluez-utils                 # bluetooth utilities
-    # bluetui                     # bluetooth tui
 
     # ------------ Screenshots & Screen Recording ------------
-    #hyprshot                    # screenshot tool
     satty                       # screenshot annotator
-    gpu-screen-recorder-ui      # screen recorder ui (installs gpu-screen-recorder as well )
+    # gpu-screen-recorder-ui      # screen recorder ui (installs gpu-screen-recorder as well )
 
     # ------------ System & Hardware Management ------------
-    power-profiles-daemon       # power profiles, or use auto-cpufreq, never both.
+    power-profiles-daemon       # power-profiles-daemon, or use auto-cpufreq, never both.
     btop                        # system resource monitor
     # brightnessctl               # controls screen and keyboard brightness
     stow                        # symlinks

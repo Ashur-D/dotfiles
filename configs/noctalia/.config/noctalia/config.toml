@@ -1,0 +1,204 @@
+[bar]
+order = [ "main" ]
+
+    [bar.main]
+    background_opacity = 0.0
+    capsule = true
+    capsule_foreground = "primary"
+    capsule_opacity = 0.59999998658895493
+    capsule_padding = 24.0
+    capsule_radius = 12
+    capsule_thickness = 0.99999998137354851
+    center = [ "workspaces" ]
+    end = [ "media", "tray", "notifications", "clipboard", "volume", "wallpaper_2" ]
+    font_family = "Maple Mono"
+    margin_edge = 5
+    margin_ends = 5
+    margin_opposite_edge = 5
+    padding = 5
+    shadow = false
+    start = [ "clock", "recorder" ]
+    thickness = 37
+
+        [bar.main.dead_zone.actions]
+        left = "wallpaper-next"
+
+[control_center]
+show_shortcut_labels = false
+
+    [[control_center.shortcuts]]
+    type = "session"
+
+    [[control_center.shortcuts]]
+    type = "clipboard"
+
+    [[control_center.shortcuts]]
+    type = "wallpaper"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "weather"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+[desktop_widgets]
+enabled = false
+
+[location]
+address = "Oakville,Ontario"
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-widget-0000000000000001" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 784.0
+    cx = 973.0
+    cy = 898.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 240.0
+    box_width = 448.0
+    cx = 944.0
+    cy = 356.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        color = "primary"
+        font_family = "Maple Mono"
+        shadow = false
+
+[osd]
+offset_y = 70
+position = "bottom_center"
+
+[plugin_settings."noctalia/screen_recorder"]
+hide_inactive = true
+
+[plugins]
+enabled = []
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+avatar_path = "/home/ash/Downloads/3c223a02d512059985adac41c0c30380.jpg"
+font_family = "Maple Mono"
+settings_window_translucent = true
+
+    [shell.launcher]
+    categories = false
+    sort_by_usage = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    control_center_position = "top_center"
+    session_placement = "floating"
+    transparency_mode = "glass"
+    wallpaper_placement = "floating"
+
+    [shell.session]
+    show_shortcuts = false
+
+[system.monitor]
+enabled = false
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "soft"
+
+    [theme.templates]
+    enable_builtin_templates = false
+    enable_community_templates = false
+
+[wallpaper]
+directory = "/home/ash/.config/wallpapers"
+transition = [ "disc" ]
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/ash/.config/wallpapers/wallpaper72.jpg"
+
+    [wallpaper.last]
+    path = "/home/ash/.config/wallpapers/wallpaper72.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/ash/.config/wallpapers/wallpaper72.jpg"
+
+[widget.clipboard]
+enabled = false
+
+[widget.clock]
+color = "primary"
+format = "{:L%A %I:%M}"
+interactive = false
+
+[widget.notifications]
+enabled = false
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.tray]
+enabled = false
+
+[widget.volume]
+enabled = false
+
+[widget.wallpaper_2]
+enabled = false
+type = "wallpaper"
+
+[widget.workspaces]
+show_labels = false
+
+    [widget.workspaces.actions]
+    right = "wallpaper-random"
