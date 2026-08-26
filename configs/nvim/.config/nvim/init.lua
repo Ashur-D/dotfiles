@@ -38,6 +38,23 @@ vim.g.mapleader = " "
 -- 2. Load Plugins
 -- =====================================================================
 require("lazy").setup({
+
+    -- Transparent Neovim
+    {
+      "xiyaowong/transparent.nvim",
+      config = function()
+        require("transparent").setup({
+          -- Optional: add extra groups to clear if you notice stubborn backgrounds
+          extra_groups = {
+            "NvimTreeNormal",
+            "TelescopeNormal",
+            "TelescopeBorder",
+          },
+            })
+        vim.cmd("TransparentEnable")
+      end
+    },
+
     -- Colorizer: Highlights hex colors in your config files
     {
         "NvChad/nvim-colorizer.lua",

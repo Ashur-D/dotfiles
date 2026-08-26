@@ -5,19 +5,19 @@ order = [ "main" ]
     background_opacity = 0.0
     capsule = true
     capsule_foreground = "primary"
-    capsule_opacity = 0.59999998658895493
+    capsule_opacity = 0.6
     capsule_padding = 24.0
     capsule_radius = 12
     capsule_thickness = 0.99999998137354851
     center = [ "workspaces" ]
-    end = [ "media", "tray", "notifications", "clipboard", "volume", "wallpaper_2" ]
+    end = [ "media", "tray" ]
     font_family = "Maple Mono"
     margin_edge = 5
     margin_ends = 5
     margin_opposite_edge = 5
     padding = 5
     shadow = false
-    start = [ "clock", "recorder" ]
+    start = [ "clock" ]
     thickness = 37
 
         [bar.main.dead_zone.actions]
@@ -25,6 +25,9 @@ order = [ "main" ]
 
 [control_center]
 show_shortcut_labels = false
+
+    [control_center.calendar]
+    show_events_card = false
 
     [[control_center.shortcuts]]
     type = "session"
@@ -46,9 +49,21 @@ show_shortcut_labels = false
 
 [desktop_widgets]
 enabled = false
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[hooks]
+started = "noctalia msg random-wallpaper"
 
 [location]
-address = "Oakville,Ontario"
+address = ""
 
 [lockscreen_widgets]
 enabled = true
@@ -56,15 +71,15 @@ schema_version = 2
 widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-widget-0000000000000001" ]
 
     [lockscreen_widgets.grid]
-    cell_size = 16
+    cell_size = 8
     major_interval = 4
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 196.0
-    box_width = 784.0
-    cx = 973.0
-    cy = 898.0
+    box_height = 70.0
+    box_width = 400.0
+    cx = 952.0
+    cy = 812.0
     output = "DP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -74,24 +89,24 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-widget-000000000000000
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
         background_color = "surface_variant"
         background_opacity = 0.88
-        background_radius = 12.0
+        background_radius = 32.0
         center_password_text = false
         input_opacity = 1.0
-        input_radius = 6.0
-        layout = "regular"
-        show_caps_lock = true
+        input_radius = 32.0
+        layout = "compact"
+        show_caps_lock = false
         show_keyboard_layout = true
-        show_login_button = true
+        show_login_button = false
         show_media = true
         show_session_buttons = true
-        show_unlock_hint = true
+        show_unlock_hint = false
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 240.0
-    box_width = 448.0
-    cx = 944.0
-    cy = 356.0
+    box_height = 320.0
+    box_width = 544.0
+    cx = 952.0
+    cy = 364.0
     output = "DP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -117,23 +132,34 @@ hide_inactive = true
 enabled = []
 
     [[plugins.source]]
+    enabled = false
     kind = "git"
     location = "https://github.com/noctalia-dev/official-plugins"
     name = "official"
 
     [[plugins.source]]
+    enabled = false
     kind = "git"
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
 
 [shell]
+app_icon_color = "secondary"
 avatar_path = "/home/ash/Downloads/3c223a02d512059985adac41c0c30380.jpg"
+clipboard_confirm_clear_history = false
+corner_radius_scale = 2.0
 font_family = "Maple Mono"
 settings_window_translucent = true
 
     [shell.launcher]
     categories = false
+    compact = true
+    fetch_exchange_rates = false
+    show_app_origin_indicator = false
     sort_by_usage = false
+
+        [shell.launcher.providers.calculator]
+        global = false
 
     [shell.panel]
     control_center_placement = "floating"
@@ -142,22 +168,29 @@ settings_window_translucent = true
     transparency_mode = "glass"
     wallpaper_placement = "floating"
 
+    [shell.screenshot]
+    pipe_command = "satty -f - --early-exit"
+    pipe_to_command = true
+
     [shell.session]
+    grid_columns = 5
     show_shortcuts = false
 
 [system.monitor]
 enabled = false
 
 [theme]
-builtin = "Noctalia"
+builtin = "Gruvbox"
 community_palette = "Oxocarbon"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "soft"
+wallpaper_scheme = "vibrant"
 
     [theme.templates]
-    enable_builtin_templates = false
-    enable_community_templates = false
+    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "starship" ]
+    community_ids = [ "zen-browser", "discord", "yazi" ]
+    enable_builtin_templates = true
+    enable_community_templates = true
 
 [wallpaper]
 directory = "/home/ash/.config/wallpapers"
@@ -165,13 +198,16 @@ transition = [ "disc" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/ash/.config/wallpapers/wallpaper72.jpg"
+    path = "/home/ash/dotfiles/media/wallpapers/wallpaper32.jpg"
 
     [wallpaper.last]
-    path = "/home/ash/.config/wallpapers/wallpaper72.jpg"
+    path = "/home/ash/dotfiles/media/wallpapers/wallpaper32.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/ash/.config/wallpapers/wallpaper72.jpg"
+    path = "/home/ash/dotfiles/media/wallpapers/wallpaper32.jpg"
+
+[weather]
+enabled = false
 
 [widget.clipboard]
 enabled = false
@@ -182,12 +218,13 @@ format = "{:L%A %I:%M}"
 interactive = false
 
 [widget.notifications]
-enabled = false
+enabled = true
 
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
 
 [widget.tray]
+drawer = true
 enabled = false
 
 [widget.volume]

@@ -65,8 +65,8 @@ chmod +x "$SCRIPT_DIR/stow.sh"
 # Enable services
 # ==========================
 
-chmod +x "$SCRIPT_DIR/services.sh"
-"$SCRIPT_DIR/services.sh"
+# chmod +x "$SCRIPT_DIR/services.sh"
+# "$SCRIPT_DIR/services.sh"
 
 # ==========================
 # misc
@@ -74,10 +74,6 @@ chmod +x "$SCRIPT_DIR/services.sh"
 echo "Installing Yazi plugins..."
 ya pkg install
 echo "✨ Yazi plugins installed ✨"
-
-echo "🎨 Generating initial system colors and setting wallpaper..."
-noctalia msg wallpaper-random
-echo "✨ Colors and wallpapers generated ✨"
 
 echo "Generating user directories..."
 xdg-user-dirs-update
@@ -96,9 +92,6 @@ hidden_apps=(
     "bssh"
     "bvnc"
     "avahi-discover"
-    "rofi-theme-selector"
-    "thunar-bulk-rename"
-    "thunar-settings"
     "wiremix"
     "cmake-gui"
     "org.gnupg.pinentry-qt"

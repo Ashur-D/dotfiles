@@ -10,13 +10,13 @@ packages=(
 # ====================================================
 
     # ------------ Desktop UI Components ------------
-    Noctalia                    # Shell
+    noctalia                    # Shell
 
     # ------------ Theming & Fonts ------------
     catppuccin-cursors-mocha    # cursor theme
     maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
-    adw-gtk-theme
-    nwg-look
+    adw-gtk-theme               # gtk theme
+    nwg-look                    # gtk gui
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal
@@ -25,13 +25,7 @@ packages=(
 
     # ------------ File Management ------------
     yazi                        # tui file explorer
-    thunar                      # gtk gui file manager
     xdg-user-dirs               # standard Linux user directories
-
-    # ------------ Clipboard ------------
-    wl-clipboard                # command-line copy/paste
-    cliphist                    # tui clipboard manager - `win11-clipboard-history-bin` and `clipse` are also great
-    wl-clip-persist             # clipboard stays persist after closing app
 
     # ------------ Editors ------------
     neovim                      # terminal text editor
@@ -41,7 +35,6 @@ packages=(
     imv                         # image viewer
 
     # ------------ Audio,Wifi,Bluetooth ------------
-    # pipewire                    # audio core
     pipewire-pulse              # audio compatibility
     pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
@@ -49,14 +42,12 @@ packages=(
     iwd                         # wifi daemon
     bluez                       # bluetooth daemon
 
-    # ------------ Screenshots & Screen Recording ------------
+    # ------------ Screenshots ------------
     satty                       # screenshot annotator
-    # gpu-screen-recorder-ui      # screen recorder ui (installs gpu-screen-recorder as well )
 
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power-profiles-daemon, or use auto-cpufreq, never both.
     btop                        # system resource monitor
-    # brightnessctl               # controls screen and keyboard brightness
     stow                        # symlinks
 
 # ====================================================
@@ -70,6 +61,7 @@ packages=(
     # obsidian                  # note taking
     # localsend                 # local file sharing
     # spotatui-bin              # spotify tui (alternative: ncspot)
+    # thunar                     # gtk gui file manager
 
     # ------------ Gaming ------------
     # steam                     # game launcher
@@ -99,7 +91,8 @@ packages=(
     # efibootmgr                # modify UEFI boot entries
     # pachub                    # Front End for Pacman/AUR
     # dust git                  # A more intuitive version of du in rust
-    # 7zip
+    # 7zip                      # zip and unzip files
+    # gpu-screen-recorder-ui    # screen recorder ui (installs gpu-screen-recorder as well )
 
     # ------------ Terminal Rice (Visuals & Fun) ------------
     # astroterm                 # terminal planetarium

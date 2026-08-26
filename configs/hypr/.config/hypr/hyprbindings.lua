@@ -61,10 +61,13 @@ for i = 1, 10 do
 end
 
 -- ---------------- media ----------------
--- hl.bind("XF86AudioNext",  hl.dsp.exec_cmd(osdclient .. " --playerctl next"),       { locked = true, description = "Next track" })
--- hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Pause" })
--- hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Play" })
--- hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd(osdclient .. " --playerctl previous"),   { locked = true, description = "Previous track" })
+hl.bind("XF86AudioMute",         hl.dsp.exec_cmd("noctalia msg volume-mute"),                      { locked = true })
+hl.bind("XF86AudioPlay",        hl.dsp.exec_cmd("noctalia msg media toggle"),                    { locked = true })
+hl.bind("XF86AudioNext",        hl.dsp.exec_cmd("noctalia msg media next"),                       { locked = true })
+hl.bind("XF86AudioPrev",        hl.dsp.exec_cmd("noctalia msg media previous"),                   { locked = true })
+hl.bind("XF86AudioStop",        hl.dsp.exec_cmd("noctalia msg media toggle"),                      { locked = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("noctalia msg volume-up 5%"),                    { locked = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg volume-down 5%"),                    { locked = true })
 
 -- ---------------- special workspaces ----------------
 hl.workspace_rule({ workspace = "special:anything" })
