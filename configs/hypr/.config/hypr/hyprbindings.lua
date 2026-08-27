@@ -17,8 +17,8 @@ hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/scripts/rofi-wallpaper
 hl.bind("SUPER + V", hl.dsp.exec_cmd("/bin/bash $HOME/.config/scripts/rofi-clipboard.sh"), { description = "Clipboard history" })
 
 -- ---------------- media ----------------
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("~/.config/scripts/media.sh play-pause"))
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("~/.config/scripts/media.sh next"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("~/.config/scripts/mako-media.sh play-pause"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("~/.config/scripts/mako-media.sh next"))
 
 -- ---------------- screenshots & recording ----------------
 hl.bind("PRINT", hl.dsp.exec_cmd([[bash -c "hyprshot -m region --raw | satty --filename - --output-filename ~/Pictures/screenshot_$(date '+%Y-%m-%d_%H-%M-%S').png --copy-command wl-copy --early-exit"]]))
