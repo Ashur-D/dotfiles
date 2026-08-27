@@ -1,4 +1,3 @@
-# Pull in Matugen colors and mode overrides
 include=~/.config/mako/mako-colors
 
 font=MapleMono Bold 12
@@ -6,7 +5,7 @@ width=350
 height=150
 margin=10
 padding=15
-border-size=0
+border-size=3
 border-radius=16
 icons=1
 max-icon-size=48
@@ -15,3 +14,11 @@ ignore-timeout=0
 format=<b>%s</b>\n%b
 layer=overlay
 anchor=top-right
+
+[app-name=media-control]
+anchor=bottom-center
+default-timeout=1500
+max-icon-size=64
+
+[anchor=bottom-center]
+outer-margin=0,0,80,0

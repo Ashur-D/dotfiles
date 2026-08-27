@@ -34,6 +34,4 @@ hl.on("hyprland.start", function()
     -- Idle/lock handling
     hl.exec_cmd("hypridle")
 
-    -- OSD
-    hl.exec_cmd("swayosd-server")
 end)

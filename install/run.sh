@@ -1,93 +1,87 @@
 #!/bin/bash
+set -e
 
 # ==========================
-# logs the entire script and saves to the repo directory
+# 1. Resolve paths first
+# ==========================
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
+
+# ==========================
+# 2. Setup logging
 # ==========================
 LOGFILE="$REPO_DIR/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log"
 exec > >(tee -a "$LOGFILE") 2>&1
 echo "Log saving to: $LOGFILE"
 
 # ==========================
-# update
-# ==========================
-sudo pacman -Syu
-
-# ==========================
-# Authenticate upfront and keep sudo alive
+# 3. System Update & Sudo Auth
 # ==========================
 echo "Please enter your password for the installation process." > /dev/tty
 sudo -k
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Dynamically find script and repo paths
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_DIR="$(dirname "$SCRIPT_DIR")"
+sudo pacman -Syu
 
-
-# ==========================
-# clears before starting, quits if an error occurs
-# ==========================
 clear
-set -e
 
 # ==========================
-# installs yay if not already installed
+# 4. Installations (Yay, Core, Hyprland)
 # ==========================
-
 chmod +x "$SCRIPT_DIR/yay.sh"
 "$SCRIPT_DIR/yay.sh"
 
-# ==========================
-# Install core packages
-# ==========================
-
 chmod +x "$SCRIPT_DIR/packages.sh"
 "$SCRIPT_DIR/packages.sh"
-
-# ==========================
-# installs hypr packages
-# ==========================
 
 chmod +x "$SCRIPT_DIR/hypr.sh"
 "$SCRIPT_DIR/hypr.sh"
 
 # ==========================
-# symlink configs
+# 5. Configs & Services
 # ==========================
-
 chmod +x "$SCRIPT_DIR/stow.sh"
 "$SCRIPT_DIR/stow.sh"
-
-# ==========================
-# Enable services
-# ==========================
 
 chmod +x "$SCRIPT_DIR/services.sh"
 "$SCRIPT_DIR/services.sh"
 
 # ==========================
-# Optional: Install Nvidia packages
+# 6. Nvidia Optional Setup
 # ==========================
-
 read -p "Do you have an Nvidia GPU? (y/N): " use_nvidia
 
 if [[ "$use_nvidia" =~ ^[Yy]$ ]]; then
     echo "Running Nvidia installation script..."
-    chmod +x install/nvidia.sh
-    ./install/nvidia.sh
+    chmod +x "$SCRIPT_DIR/nvidia.sh"
+    "$SCRIPT_DIR/nvidia.sh"
 
     echo "Enabling Nvidia environment variables..."
-    sed -i '/nvidia/s/-- hl.env/hl.env/g' ~/.config/hypr/hyprenvs.lua
+    if [ -f ~/.config/hypr/hyprenvs.lua ]; then
+        sed -i --follow-symlinks '/nvidia/s/-- hl.env/hl.env/g' ~/.config/hypr/hyprenvs.lua
+    fi
 else
     echo "AMD/Intel detected. Skipping Nvidia drivers and variables."
 fi
 
 # ==========================
-# misc
+# 7. Font Installation via Git (~/.fonts)
+# ==========================
+echo "Installing Maple Mono font via Git..."
+TEMP_DIR=$(mktemp -d)
+git clone --depth 1 https://github.com/subframe7536/maple-font.git "$TEMP_DIR/maple-font"
+mkdir -p ~/.fonts/MapleMono
+cp "$TEMP_DIR/maple-font/fonts/TTF/"*.ttf ~/.fonts/MapleMono/
+rm -rf "$TEMP_DIR"
+fc-cache -f
+echo "✅ Maple Mono font installed successfully to ~/.fonts!"
+
+# ==========================
+# 8. Misc Setup (Yazi plugins, Colors, User Dirs, Rofi)
 # ==========================
 echo "Installing Yazi plugins..."
-ya pkg install
+ya pkg install || true
 echo "✨ Yazi plugins installed ✨"
 
 echo "🎨 Generating initial system colors..."
@@ -98,50 +92,28 @@ echo "Generating user directories..."
 xdg-user-dirs-update
 echo "✨ User directories created ✨"
 
-# ====================================================
-#              HIDE UNWANTED APPS IN ROFI
-# ====================================================
 echo "Hiding cluttered apps from Rofi..."
-
-# 1. Ensure the local applications directory exists
 mkdir -p "$HOME/.local/share/applications"
 
-# 2. Define the exact names of the files you want to hide (without .desktop)
 hidden_apps=(
-    "bssh"
-    "bvnc"
-    "avahi-discover"
-    "rofi-theme-selector"
-    "thunar-bulk-rename"
-    "thunar-settings"
-    "wiremix"
-    "cmake-gui"
-    "org.gnupg.pinentry-qt"
-    "xdg-desktop-portal-gdk"
-    "xgps"
-    "xgpsspeed"
-    "qv4l2"
-    "qvidcap"
-    "lstopo"
+    "bssh" "bvnc" "avahi-discover" "rofi-theme-selector"
+    "thunar-bulk-rename" "thunar-settings" "wiremix" "cmake-gui"
+    "org.gnupg.pinentry-qt" "xdg-desktop-portal-gdk" "xgps"
+    "xgpsspeed" "qv4l2" "qvidcap" "lstopo"
 )
 
-# 3. Loop through the list, copy them locally, and append the hidden flag
 for app in "${hidden_apps[@]}"; do
     global_file="/usr/share/applications/${app}.desktop"
     local_file="$HOME/.local/share/applications/${app}.desktop"
 
-    # Only attempt to hide it if the application is actually installed globally
     if [ -f "$global_file" ]; then
         cp "$global_file" "$local_file"
-
-        # Check if we already added NoDisplay so we don't spam the file on re-runs
         if ! grep -q "NoDisplay=true" "$local_file"; then
             echo "NoDisplay=true" >> "$local_file"
             echo "  Successfully hid: $app"
         fi
     fi
 done
-
 
 echo "-----------------------------------------------------------------------------------------------------"
 echo "✨ All packages installed successfully and configs linked, please reboot or log out and log back in ✨"

@@ -24,11 +24,6 @@ input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 post_hook = 'pkill -USR2 btop || true'
 
-[templates.swayosd]
-index = -5
-input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/swayosd/colors.css'
-post_hook = "pkill -x swayosd-server; swayosd-server >/dev/null 2>&1 &"
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'

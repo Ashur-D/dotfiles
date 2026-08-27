@@ -13,13 +13,11 @@ packages=(
     waybar                      # topbar
     mako                        # notifications
     rofi                        # app launcher, controls wallpapers/power/session
-    swayosd                     # on-screen display
     awww                        # wallpaper daemon
 
-    # ------------ Theming & Fonts ------------
+    # ------------ Theming & Fonts (fonts are installed in run.sh) ------------
     matugen                     # color generator
     bibata-cursor-theme-bin     # cursor theme
-    maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
     adw-gtk-theme               # gtk theme
 
     # ------------ Terminal & Shell ------------

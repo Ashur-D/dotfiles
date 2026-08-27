@@ -1,8 +1,6 @@
 -- ==========================
 -- Hyprland bindings
 -- ==========================
--- local osdclient = "swayosd-client --monitor ..." -- this is for more than 1 monitor
-local osdclient = "swayosd-client"
 local terminal  = "kitty"
 
 -- ---------------- terminal & yazi ----------------
@@ -70,10 +68,8 @@ for i = 1, 10 do
 end
 
 -- ---------------- media ----------------
-hl.bind("XF86AudioNext",  hl.dsp.exec_cmd(osdclient .. " --playerctl next"),       { locked = true, description = "Next track" })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Pause" })
-hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd(osdclient .. " --playerctl play-pause"), { locked = true, description = "Play" })
-hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd(osdclient .. " --playerctl previous"),   { locked = true, description = "Previous track" })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("~/.config/scripts/media.sh play-pause"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("~/.config/scripts/media.sh next"))
 
 -- ---------------- special workspaces ----------------
 hl.workspace_rule({ workspace = "special:anything" })

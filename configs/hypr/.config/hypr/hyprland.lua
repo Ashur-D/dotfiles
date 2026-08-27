@@ -37,7 +37,6 @@ if hl.plugin.hyprglass then
     -- Layer surfaces: each call whitelists the namespace and configures it
     -- Note: You can override the default preset for specific layers here
     hg.layer("waybar", { preset = "apple", mask_threshold = 0.05 })
-    hg.layer("swaync")
     hg.layer("quickshell:bezel", { preset = "ui", mask_threshold = 0.3 })
     hg.layer("debug-panel", { exclude = true })
 

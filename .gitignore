@@ -20,7 +20,6 @@ install_log_*.log
 /media
 configs/yazi/.config/yazi/theme.toml
 configs/waybar/.config/waybar/colors.css
-configs/swayosd/.config/swayosd/colors.css
 configs/rofi/.config/rofi/colors.rasi
 configs/nvim/.config/nvim/lua/matugen_theme.lua
 configs/mako/.config/mako/mako-colors
