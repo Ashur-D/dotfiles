@@ -68,11 +68,14 @@ fi
 # ==========================
 # 7. Font Installation via Git (~/.fonts)
 # ==========================
-echo "Installing Maple Mono font via Git..."
+echo "Installing Maple Mono font..."
 TEMP_DIR=$(mktemp -d)
-git clone --depth 1 https://github.com/subframe7536/maple-font.git "$TEMP_DIR/maple-font"
+# Download the latest TTF release zip directly
+curl -sL https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-TTF.zip -o "$TEMP_DIR/MapleMono-TTF.zip"
+mkdir -p "$TEMP_DIR/maple-extracted"
+unzip -q "$TEMP_DIR/MapleMono-TTF.zip" -d "$TEMP_DIR/maple-extracted"
 mkdir -p ~/.fonts/MapleMono
-cp "$TEMP_DIR/maple-font/fonts/TTF/"*.ttf ~/.fonts/MapleMono/
+cp "$TEMP_DIR/maple-extracted"/*.ttf ~/.fonts/MapleMono/
 rm -rf "$TEMP_DIR"
 fc-cache -f
 echo "✅ Maple Mono font installed successfully to ~/.fonts!"
