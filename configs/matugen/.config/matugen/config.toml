@@ -52,10 +52,6 @@ output_path = '~/.config/zed/themes/matugen.json'
 input_path = '~/.config/matugen/templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
 
-[templates.vesktop]
-input_path = '~/.config/matugen/templates/vesktop.css'
-output_path = '~/.config/vesktop/themes/midnight-discord.css'
-
 [templates.gtk3]
 index = -6
 input_path = '~/.config/matugen/templates/gtk-colors.css'
