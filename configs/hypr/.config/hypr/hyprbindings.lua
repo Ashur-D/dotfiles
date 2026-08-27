@@ -6,6 +6,7 @@ local terminal  = "kitty"
 -- ---------------- terminal & yazi ----------------
 hl.bind("SUPER + return", hl.dsp.exec_cmd(terminal), { description = "Terminal" })
 hl.bind("SUPER + E", hl.dsp.exec_cmd(terminal .. " -e yazi"), { description = "File manager" })
+
 -- ---------------- Close windows ----------------
 hl.bind("SUPER + W", hl.dsp.window.close(), { description = "Close active window" })
 
