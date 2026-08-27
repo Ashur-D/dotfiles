@@ -16,6 +16,10 @@ hl.bind("SUPER + SHIFT + Escape", hl.dsp.exec_cmd("~/.config/scripts/rofi-perfor
 hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/scripts/rofi-wallpaper.sh"), { description = "Launch wallpaper" })
 hl.bind("SUPER + V", hl.dsp.exec_cmd("/bin/bash $HOME/.config/scripts/rofi-clipboard.sh"), { description = "Clipboard history" })
 
+-- ---------------- media ----------------
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("~/.config/scripts/media.sh play-pause"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("~/.config/scripts/media.sh next"))
+
 -- ---------------- screenshots & recording ----------------
 hl.bind("PRINT", hl.dsp.exec_cmd([[bash -c "hyprshot -m region --raw | satty --filename - --output-filename ~/Pictures/screenshot_$(date '+%Y-%m-%d_%H-%M-%S').png --copy-command wl-copy --early-exit"]]))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o ~/Pictures"), { description = "Screenshot DP-1 monitor" })
@@ -66,10 +70,6 @@ for i = 1, 10 do
     hl.bind("SUPER + " .. code, hl.dsp.focus({ workspace = i }), { description = "Switch to workspace " .. i })
     hl.bind("SUPER + SHIFT + " .. code, hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace " .. i })
 end
-
--- ---------------- media ----------------
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("~/.config/scripts/media.sh play-pause"))
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("~/.config/scripts/media.sh next"))
 
 -- ---------------- special workspaces ----------------
 hl.workspace_rule({ workspace = "special:anything" })

@@ -24,7 +24,6 @@ input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 post_hook = 'pkill -USR2 btop || true'
 
-
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
 output_path = '~/.config/hypr/colors.lua'

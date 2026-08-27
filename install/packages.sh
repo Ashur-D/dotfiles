@@ -28,7 +28,7 @@ packages=(
     # ------------ File Management ------------
     yazi                        # tui file explorer
     thunar                      # gtk gui file manager
-    7zip                        #
+    7zip                        # zip and unzip files
     xdg-user-dirs               # standard Linux user directories
 
     # ------------ Clipboard ------------
