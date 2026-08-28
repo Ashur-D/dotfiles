@@ -24,10 +24,10 @@ hl.config({
         gaps_in = 5,
         gaps_out = 5,
         border_size = 0,
-        -- col = {
-            -- active_border   = colors.primary,
-            -- inactive_border = colors.on_primary_container,
-        --},
+        col = {
+            active_border   = colors.primary,
+            inactive_border = colors.on_primary_container,
+        },
         resize_on_border = false,
         allow_tearing = false,
         layout = "dwindle",
@@ -43,7 +43,7 @@ hl.config({
             enabled = false,
             range = 2,
             render_power = 3,
-            -- color = colors.primary,
+            color = colors.primary,
         },
         blur = {
             enabled = true,
@@ -59,10 +59,10 @@ hl.config({
 -- ================ groups ================
 hl.config({
     group = {
-        -- col = {
-        --     border_active   = colors.primary,
-        --     border_inactive = colors.on_primary_container,
-        -- },
+        col = {
+            border_active   = colors.primary,
+            border_inactive = colors.on_primary_container,
+        },
         groupbar = {
             font_size   = 12,
             font_family = "monospace",
