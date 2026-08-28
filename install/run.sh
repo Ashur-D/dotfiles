@@ -70,10 +70,10 @@ fi
 # ==========================
 
 echo "Installing Maple Mono font..."
-curl -LO https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-TTF.zip
+curl -LO https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF.zip
 mkdir -p ~/.fonts/MapleMono
-bsdtar -xf MapleMono-TTF.zip -C ~/.fonts/MapleMono
-rm MapleMono-TTF.zip
+unzip -o MapleMono-NF.zip -d ~/.fonts/MapleMono
+rm MapleMono-NF.zip
 fc-cache -f
 echo "✅ Maple Mono font installed successfully to ~/.fonts!"
 
