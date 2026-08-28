@@ -7,7 +7,7 @@ FULL_PATH="$1"
 awww img "$FULL_PATH" --transition-type random --transition-fps 144
 
 # 3. Generate colors in the background
-RANDOM_INDEX=$((RANDOM % 5))
+RANDOM_INDEX=$((RANDOM % 4))
 TYPES=("scheme-expressive" "scheme-fidelity" "scheme-fruit-salad" "scheme-rainbow" "scheme-tonal-spot" "scheme-vibrant")
 RANDOM_TYPE=${TYPES[$RANDOM % ${#TYPES[@]}]}
 
