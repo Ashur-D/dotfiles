@@ -6,13 +6,13 @@
 
 # List of packages to install
 packages=(
-    #linux-headers
+    # linux-headers
     linux-zen-headers
     egl-wayland
     libva-nvidia-driver
-    lib32-nvidia-utils
+    lib32-nvidia-utils #(requires multilib for 32bit programs)
     nvidia-open-dkms
-    nvidia-utils
+    # nvidia-utils
 )
 
 echo "Starting batch installation of nvidia packages..."
