@@ -49,11 +49,11 @@
       "key": " ",
       "keyColor": "33"
     },
-    // {
-    //   "type": "terminalfont",
-    //   "key": "",
-    //   "keyColor": "33"
-    // },
+    {
+      "type": "terminalfont",
+      "key": "",
+      "keyColor": "33"
+    },
     {
       "type": "command",
       "key": " ",
