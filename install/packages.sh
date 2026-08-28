@@ -19,7 +19,7 @@ packages=(
     matugen                     # color generator
     bibata-cursor-theme-bin     # cursor theme
     adw-gtk-theme               # gtk theme
-    maplemono-nf                # fonts
+    maplemono-ttf               # fonts
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal
@@ -28,7 +28,6 @@ packages=(
 
     # ------------ File Management ------------
     yazi                        # tui file explorer
-    thunar                      # gtk gui file manager
     xdg-user-dirs               # standard Linux user directories
 
     # ------------ Clipboard ------------
@@ -78,7 +77,9 @@ packages=(
     # vesktop-bin               # discord client or just install discord
     # obsidian                  # note taking
     # localsend                 # local file sharing
-    # Fastpotify              # spotify tui (alternative: spotatui-bin, ncspot)
+    # Fastpotify                # spotify tui (alternative: spotatui-bin, ncspot)
+    # thunar                    # gtk gui file manager
+    
 
     # ------------ Gaming ------------
     # steam                     # game launcher
