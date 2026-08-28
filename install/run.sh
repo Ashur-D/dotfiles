@@ -10,7 +10,7 @@ REPO_DIR="$(dirname "$SCRIPT_DIR")"
 # ==========================
 # 2. Setup logging
 # ==========================
-LOGFILE="$REPO_DIR/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log"
+LOGFILE="$REPO_DIR/tmp/install_log_$(date +"%Y-%m-%d_%H-%M-%S").log"
 exec > >(tee -a "$LOGFILE") 2>&1
 echo "Log saving to: $LOGFILE"
 
