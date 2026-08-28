@@ -6,6 +6,9 @@ install_log_*.log
 *.bak
 *.pre-dotfiles.*
 
+# Ignore yazi plugins
+configs/yazi/.config/yazi/plugins
+
 # Ignore Neovim swap files
 *.swp
 *.swo
