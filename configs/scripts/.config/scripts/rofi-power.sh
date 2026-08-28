@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Define exactly 6 icons for a 3x2 grid
-lock=""
-logout="󰍃"
-reboot=""
-suspend=""
-hibernate="󰏤"
-shutdown="⏻"
+lock="\uf023"
+logout="\uf2f5"
+reboot="\uf01e"
+suspend="\uf186"
+hibernate="\uf2dc"
+shutdown="\uf011"
 
 # Combine them into a single string
 options="$lock\n$logout\n$reboot\n$suspend\n$hibernate\n$shutdown"
