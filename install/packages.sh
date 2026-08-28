@@ -19,6 +19,7 @@ packages=(
     matugen                     # color generator
     bibata-cursor-theme-bin     # cursor theme
     adw-gtk-theme               # gtk theme
+    maplemono-nf                # fonts
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal
