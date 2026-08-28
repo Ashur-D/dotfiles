@@ -66,18 +66,6 @@ else
 fi
 
 # ==========================
-# 7. Font Installation via Git (~/.fonts)
-# ==========================
-
-echo "Installing Maple Mono font..."
-curl -LO https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF.zip
-mkdir -p ~/.fonts/MapleMono
-unzip -o MapleMono-NF.zip -d ~/.fonts/MapleMono
-rm MapleMono-NF.zip
-fc-cache -f
-echo "✅ Maple Mono font installed successfully to ~/.fonts!"
-
-# ==========================
 # 8. Misc Setup (Yazi plugins, Colors, User Dirs, Rofi)
 # ==========================
 echo "Installing Yazi plugins..."
