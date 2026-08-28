@@ -63,6 +63,7 @@ packages=(
 
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power profiles, or use auto-cpufreq, never both.
+    python-gobject              # needed for power profiles
     btop                        # system resource monitor
     brightnessctl               # controls screen and keyboard brightness
     stow                        # symlinks
