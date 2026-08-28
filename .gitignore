@@ -21,7 +21,7 @@ configs/yazi/.config/yazi/plugins
 
 # Ignore Matugen generated color files
 /media
-/tmp
+# /tmp
 configs/yazi/.config/yazi/theme.toml
 configs/waybar/.config/waybar/colors.css
 configs/rofi/.config/rofi/colors.rasi
