@@ -1,7 +1,7 @@
 # will be over-written
 
 return {
-    image = "/home/ash/dotfiles/media/wallpapers/wallpaper91.jpg",
+    image = "~/dotfiles/media/wallpapers/wallpaper91.jpg",
 
     background = "0xff0c1512",
 
