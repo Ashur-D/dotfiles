@@ -12,7 +12,7 @@ TYPES=("scheme-expressive" "scheme-fidelity" "scheme-fruit-salad" "scheme-rainbo
 RANDOM_TYPE=${TYPES[$RANDOM % ${#TYPES[@]}]}
 
 # Apply matugen and create a file to view the current colors
-matugen image -m dark -t "$RANDOM_TYPE" --source-color-index "$RANDOM_INDEX" --verbose --show-colors "$FULL_PATH" 2>&1 | sed 's/\x1b[[0-9;]*m//g' > ~/.config/colors.txt
+matugen image -m dark -t "$RANDOM_TYPE" --source-color-index "$RANDOM_INDEX" --verbose --show-colors "$FULL_PATH" 2>&1 | sed 's/\x1b[[0-9;]*m//g' > ~/dotfiles/colors.txt
 
 # 4. Sync lockscreen
 sed -i "s|path = .*|path = $FULL_PATH|" "$HOME/.config/hypr/hyprlock.conf"
