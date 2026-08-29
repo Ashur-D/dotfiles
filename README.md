@@ -42,17 +42,18 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 ## Desktop Overview
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d69b2db-53c5-4944-b423-f2749750e1d5" />
 
-## Rofi Power Menu
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/99bd5858-1c32-4129-be43-2653779952cf" />
+## Rofi Wallpaper Selector
+<!-- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08a543f1-9d84-4e78-8ef9-a8ed12dc574b" /> -->
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/30008799-29dc-467d-96f8-9abffde3ece9" />
 
 ## Rofi App Launcher
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d8e4370-7d54-4366-9ffb-9b5cf9798470" />
 
+## Rofi Power Menu
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/99bd5858-1c32-4129-be43-2653779952cf" />
+
 ## Rofi Performance Menu
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ddfb8c2d-050a-46a2-9a37-668becbf647d" />
-
-## Rofi Wallpaper Selector
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08a543f1-9d84-4e78-8ef9-a8ed12dc574b" />
 
 ## Rofi Clipboard 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dd4c57d5-f834-4eb5-ba2d-84a5687180d2" />
