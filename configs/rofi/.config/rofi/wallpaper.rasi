@@ -1,67 +1,58 @@
-/* Import Matugen colors */
 @import "colors.rasi"
+
+configuration {
+    show-icons: true;
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
 
 * {
     background-color: transparent;
-    font: "MapleMono 12";
     text-color: var(on-surface);
 }
 
 window {
-    width: 65%; /* Slightly wider to fit the image grid */
-    height: 40%;
-    transparency: "real";
+    width: 80%;
+    border: 0;
+    border-radius: 1.2em;
+    padding: 1em;
     background-color: var(surface);
-    border-radius: 16px;
-    padding: 25px;
+    location: center;
+    anchor: center;
 }
 
 mainbox {
-    children: [ inputbar, listview ];
-    spacing: 15px;
-}
-
-inputbar {
-    background-color: var(surface-container-low);
-    border-radius: 16px;
-    padding: 15px;
-    children: [ entry ];
-}
-
-prompt {
-    text-color: var(primary-fixed-dim);
-}
-
-entry {
-    font: "MapleMono Bold Italic 12";
-    placeholder: " Search wallpapers...";
-    text-color: var(on-surface-variant);
+    padding: 1em;
+    spacing: 1em;
+    children: [ "listview" ];
 }
 
 listview {
-    columns: 5;
-    spacing: 15px;
+    /* Columns are dynamically injected by the bash script */
+    lines: 1;
+    spacing: 1.5em;
+    padding: 0;
+    flow: horizontal;
+    fixed-height: true;
+    fixed-columns: true;
+    scrollbar: false;
 }
 
 element {
     orientation: vertical;
-    padding: 15px;
-    border-radius: 16px;
-    background-color: var(surface-container-low);
+    padding: 0.6em;
+    border-radius: 1.2em;
     cursor: pointer;
+    children: [ "element-icon" ];
 }
 
 element selected.normal {
-    background-color: var(primary-container);
+    background-color: var(secondary-container);
 }
 
 element-icon {
-    size: 10em; /* Scales the thumbnail images up */
-    cursor: inherit;
-}
-
-element-text {
-    text-color: inherit;
-    horizontal-align: 0.5;
+    size: 22em;
+    border-radius: 0.8em;
     cursor: inherit;
 }

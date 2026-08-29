@@ -1,38 +1,55 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Define paths based on your dotfiles structure
-WALL_DIR="$HOME/dotfiles/media/wallpapers"
-APPLY_SCRIPT="$HOME/.config/scripts/wallpaper.sh"
+wall_dir="$HOME/dotfiles/media/wallpapers"
+thumb_dir="$HOME/dotfiles/tmp/thumbnails"
+mkdir -p "$thumb_dir"
 
-# Check if the wallpaper directory exists
-if [ ! -d "$WALL_DIR" ]; then
-    rofi -e "Directory $WALL_DIR does not exist!"
-    exit 1
+# calculate optimal columns based on screen width
+if command -v hyprctl &>/dev/null; then
+    mon_width=$(hyprctl monitors -j | jq '.[0].width // 1920')
+elif command -v xrandr &>/dev/null; then
+    mon_width=$(xrandr | grep '\*' | head -n 1 | awk '{print $1}' | cut -d'x' -f1)
+else
+    mon_width=1920
 fi
 
-# Build the list of files, injecting the image path as an icon for Rofi to render
-file_list=""
-for file in "$WALL_DIR"/*.{jpg,jpeg,png,gif,webp}; do
-    # Skip if no files match
-    [ -e "$file" ] || continue
+cols=$(( (mon_width * 80 / 100) / 280 ))
+[[ $cols -lt 3 ]] && cols=3
+[[ $cols -gt 5 ]] && cols=5
 
-    filename=$(basename "$file")
-    # The magic Rofi syntax: "Text to display\0icon\x1f/path/to/image"
-    file_list="${file_list}${filename}\0icon\x1f${file}\n"
+# Use an associative array to track unique names and prevent duplicates
+declare -A seen_names
+options=""
+
+for img in "$wall_dir"/*; do
+    [[ -f "$img" ]] || continue
+
+    filename=$(basename "$img")
+    name="${filename%.*}"
+
+    # Skip if we already processed a wallpaper with this exact name
+    [[ -n "${seen_names[$name]}" ]] && continue
+    seen_names[$name]=1
+
+    thumb="$thumb_dir/${name}.jpg"
+
+    # Generate a tall, high-res vertical thumbnail for the pill shape
+    if [[ ! -f "$thumb" ]]; then
+        magick -define jpeg:size=500x600 "$img" -thumbnail 480x600^ -gravity center -extent 480x600 -quality 80 "$thumb"
+    fi
+
+    options+="$name\0icon\x1f$thumb\n"
 done
 
-# Check if the directory is empty
-if [ -z "$file_list" ]; then
-    rofi -e "No images found in $WALL_DIR!"
-    exit 1
-fi
-
-# Launch Rofi with our new dedicated wallpaper theme
-selected=$(echo -en "$file_list" | rofi -dmenu \
-    -i \
+# Launch Rofi, injecting the calculated columns
+choice=$(echo -e "$options" | rofi -dmenu -i -p "" -show-icons \
+    -theme-str "listview { columns: $cols; }" \
     -theme ~/.config/rofi/wallpaper.rasi)
 
-# If a wallpaper was selected (i.e., you didn't press Esc), apply it!
-if [ -n "$selected" ]; then
-    "$APPLY_SCRIPT" "$WALL_DIR/$selected"
+[[ -z "$choice" ]] && exit 0
+
+# Apply wallpaper using your existing dotfiles wrapper
+selected_file=$(find "$wall_dir" -type f -name "${choice}.*" | head -n 1)
+if [[ -n "$selected_file" ]]; then
+    ~/.config/scripts/wallpaper.sh "$selected_file"
 fi

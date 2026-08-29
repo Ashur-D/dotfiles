@@ -59,6 +59,7 @@ packages=(
     hyprshot                    # screenshot tool
     satty                       # screenshot annotator
     gpu-screen-recorder-ui      # screen recorder ui (installs gpu-screen-recorder as well )
+    imagemagick
 
     # ------------ System & Hardware Management ------------
     power-profiles-daemon       # power profiles, or use auto-cpufreq, never both.
@@ -79,7 +80,7 @@ packages=(
     # localsend                 # local file sharing
     # Fastpotify                # spotify tui (alternative: spotatui-bin, ncspot)
     # thunar                    # gtk gui file manager
-    
+
 
     # ------------ Gaming ------------
     # steam                     # game launcher
