@@ -13,7 +13,7 @@ packages=(
     noctalia                    # Shell
 
     # ------------ Theming & Fonts ------------
-    catppuccin-cursors-mocha    # cursor theme
+    bibata-cursor-theme-bin    # cursor theme
     maplemono-ttf               # system font, alternatives - ttf-jetbrains-mono-nerd or ttf-cascadia-mono-nerd
     adw-gtk-theme               # gtk theme
     nwg-look                    # gtk gui
