@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Configuration
 CACHE_DIR="$HOME/.cache/cliphist_thumbs"
 mkdir -p "$CACHE_DIR"
@@ -29,15 +31,23 @@ done < <(cliphist list)
 
 
 # 2. Launch Rofi
-# Alt+Delete is mapped to Exit Code 10
+# Alt+Delete is mapped to Exit Code 10, Alt+c is mapped to Exit Code 11 (Clear All)
 SELECTED=$(echo -en "$MENU_OPTIONS" | rofi -dmenu -show-icons -markup-rows \
     -p "Clipboard" \
-    -kb-custom-1 "Alt+Delete" \
+    -kb-custom-1 "SUPER+Delete" \
+    -kb-custom-2 "Alt+Delete" \
     -theme "$HOME/.config/rofi/clipboard.rasi")
 
 ROFI_EXIT=$?
 
 # 3. Handle the outcome
+if [ $ROFI_EXIT -eq 11 ]; then
+    # Clear entire cliphist database and wipe thumbnail cache
+    cliphist wipe
+    rm -rf "$CACHE_DIR"/*
+    exit 0
+fi
+
 if [ -n "$SELECTED" ]; then
     # Extract ID (everything before the first tab)
     ID=$(printf "%s\n" "$SELECTED" | cut -f1)
