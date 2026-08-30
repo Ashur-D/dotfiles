@@ -35,3 +35,4 @@ configs/gtk-3.0/.config/gtk-3.0/colors.css
 configs/gtk-4.0/.config/gtk-4.0/colors.css
 configs/zed/.config/zed/themes/matugen.json
 configs/hypr/.config/hypr/colors.lua
+# configs/zed/.config/zed/settings.json

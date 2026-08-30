@@ -19,7 +19,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Dark",
-    "dark": "Catppuccin Macchiato (Blur) [Heavy]"
+    "dark": "Gruvbox Dark Hard"
   },
 
   // --- UI Elements ---
@@ -55,7 +55,7 @@
     "button": false
   },
   "git_panel": {
-    "button": true
+    "button": false
   },
   "outline_panel": {
     "button": false
