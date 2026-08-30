@@ -8,6 +8,7 @@
 window {
     width: 80%;
     border-radius: 1.2em;
+    padding: 0.5em;
     background-color: var(surface);
     location: center;
     anchor: center;
@@ -41,7 +42,7 @@ element selected.normal {
 }
 
 element-icon {
-    size: 17em;
+    size: 18em;
     border-radius: 0.8em;
     cursor: inherit;
 }
