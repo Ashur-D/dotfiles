@@ -35,6 +35,10 @@ git clone https://github.com/Ashur-D/dotfiles && ./dotfiles/install/run.sh
 
 - [ ] Get `starship` colors working with Matugen *(mostly done, just need better colors for the dir and system icons)*.
 
+# Future
+- [ ] Looking to switch into Noctalia and its wayland compositor Umbriel.
+
+
 ---
 
 # 🖼️ Previews
