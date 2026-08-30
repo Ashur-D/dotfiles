@@ -27,10 +27,13 @@ sudo pacman -Syu
 clear
 
 # ==========================
-# 4. Installations (Yay, Core, Hyprland)
+# 4. Installations (Yay, Core, Hyprland, cachy(optional) )
 # ==========================
 chmod +x "$SCRIPT_DIR/yay.sh"
 "$SCRIPT_DIR/yay.sh"
+
+chmod +x "$SCRIPT_DIR/cachy.sh"
+"$SCRIPT_DIR/cachy.sh"
 
 chmod +x "$SCRIPT_DIR/packages.sh"
 "$SCRIPT_DIR/packages.sh"
@@ -50,20 +53,8 @@ chmod +x "$SCRIPT_DIR/services.sh"
 # ==========================
 # 6. Nvidia Optional Setup
 # ==========================
-read -p "Do you have an Nvidia GPU? (y/N): " use_nvidia
-
-if [[ "$use_nvidia" =~ ^[Yy]$ ]]; then
-    echo "Running Nvidia installation script..."
-    chmod +x "$SCRIPT_DIR/nvidia.sh"
-    "$SCRIPT_DIR/nvidia.sh"
-
-    echo "Enabling Nvidia environment variables..."
-    if [ -f ~/.config/hypr/hyprenvs.lua ]; then
-        sed -i --follow-symlinks '/nvidia/s/-- hl.env/hl.env/g' ~/.config/hypr/hyprenvs.lua
-    fi
-else
-    echo "AMD/Intel detected. Skipping Nvidia drivers and variables."
-fi
+chmod +x "$SCRIPT_DIR/nvidia.sh"
+"$SCRIPT_DIR/nvidia.sh"
 
 # ==========================
 # 8. Misc Setup (Yazi plugins, Colors, User Dirs, Rofi)
