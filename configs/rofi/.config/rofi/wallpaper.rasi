@@ -1,12 +1,5 @@
 @import "colors.rasi"
 
-configuration {
-    show-icons: true;
-    hover-select: true;
-    me-select-entry: "";
-    me-accept-entry: "MousePrimary";
-}
-
 * {
     background-color: transparent;
     text-color: var(on-surface);
@@ -14,9 +7,7 @@ configuration {
 
 window {
     width: 80%;
-    border: 0;
     border-radius: 1.2em;
-    padding: 1em;
     background-color: var(surface);
     location: center;
     anchor: center;
@@ -24,15 +15,13 @@ window {
 
 mainbox {
     padding: 1em;
-    spacing: 1em;
     children: [ "listview" ];
 }
 
 listview {
     /* Columns are dynamically injected by the bash script */
     lines: 1;
-    spacing: 1.5em;
-    padding: 0;
+    spacing: 1em;
     flow: horizontal;
     fixed-height: true;
     fixed-columns: true;
@@ -41,7 +30,7 @@ listview {
 
 element {
     orientation: vertical;
-    padding: 0.6em;
+    padding: 0.5em;
     border-radius: 1.2em;
     cursor: pointer;
     children: [ "element-icon" ];
@@ -52,7 +41,7 @@ element selected.normal {
 }
 
 element-icon {
-    size: 22em;
+    size: 17em;
     border-radius: 0.8em;
     cursor: inherit;
 }
