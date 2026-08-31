@@ -31,7 +31,7 @@ listview {
 
 element {
     orientation: vertical;
-    padding: 0.5em;
+    padding: 0.4em;
     border-radius: 1.2em;
     cursor: pointer;
     children: [ "element-icon" ];
