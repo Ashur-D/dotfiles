@@ -64,7 +64,7 @@ ya pkg install || true
 echo "✨ Yazi plugins installed ✨"
 
 echo "🎨 Generating initial system colors..."
-touch configs/hypr/.config/hypr/colors.lua
+touch ~/dotfiles/configs/hypr/.config/hypr/colors.lua
 matugen image ~/dotfiles/media/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
 echo "✨ Colors generated ✨"
 
