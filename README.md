@@ -1,7 +1,6 @@
 
 # 🛠️ Recommended Arch Install Options
 - **Disk Configuration:** default structure: yes + use compression
-- **Bootloader:** grub
 - **Kernel:** zen-kernel
 - **Profile:** minimal
 - **Applications:** none
