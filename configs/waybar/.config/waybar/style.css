@@ -59,7 +59,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-    color: alpha(@primary, 0.3);
+    color: alpha(@primary, 0.4);
     border: none;
     transition: all 1s ease;
 }
@@ -124,7 +124,7 @@ tooltip {
 #pulseaudio:hover,
 #clock:hover {
     transition: all 0.3s ease;
-    color: shade(@primary, 0.84);
+    color: shade(@primary, 0.74);
 }
 
 #custom-recording {
