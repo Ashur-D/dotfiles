@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-wall_dir="$HOME/dotfiles/media/wallpapers"
+wall_dir="$HOME/Pictures/wallpapers/wallpapers"
 thumb_dir="$HOME/dotfiles/tmp/thumbnails"
 mkdir -p "$thumb_dir"
 

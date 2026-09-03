@@ -59,6 +59,16 @@ chmod +x "$SCRIPT_DIR/nvidia.sh"
 # ==========================
 # 8. Misc Setup (Yazi plugins, Colors, User Dirs, Rofi)
 # ==========================
+
+echo "Generating user directories..."
+xdg-user-dirs-update
+echo "✨ User directories created ✨"
+
+if [ ! -d "$HOME/Pictures/wallpapers" ]; then
+    echo "Fetching wallpapers..."
+    git clone --depth 1 https://github.com/Ashur-D/wallpapers.git "$HOME/Pictures/wallpapers"
+fi
+
 echo "Installing Yazi plugins..."
 ya pkg install || true
 echo "✨ Yazi plugins installed ✨"
@@ -67,10 +77,6 @@ echo "🎨 Generating initial system colors..."
 touch ~/dotfiles/configs/hypr/.config/hypr/colors.lua
 matugen image ~/dotfiles/media/wallpapers/wallpaper13.png > /dev/null 2>&1 || true
 echo "✨ Colors generated ✨"
-
-echo "Generating user directories..."
-xdg-user-dirs-update
-echo "✨ User directories created ✨"
 
 echo "Hiding cluttered apps from Rofi..."
 mkdir -p "$HOME/.local/share/applications"

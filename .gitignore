@@ -20,7 +20,7 @@ configs/yazi/.config/yazi/plugins
 .Trash-*
 
 # Ignore Matugen generated color files
-/media
+# /media
 /tmp
 configs/yazi/.config/yazi/theme.toml
 configs/waybar/.config/waybar/colors.css
