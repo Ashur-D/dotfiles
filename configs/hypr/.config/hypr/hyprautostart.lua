@@ -8,7 +8,7 @@ hl.on("hyprland.start", function()
         hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE")
 
         -- 2. Core system agents & wallpaper daemon setup
-        hl.exec_cmd("systemctl --user start hyprpolkitagent")
+        -- hl.exec_cmd("systemctl --user start hyprpolkitagent")
         hl.exec_cmd([[bash -c 'awww daemon & sleep 2 && if [ ! -f ~/.config/.wall_initialized ]; then init_wall=$(find "$HOME/Pictures/wallpapers" -type f \( -iname "*.jpg" -o -iname "*.png" \) 2>/dev/null | head -n 1); [ -n "$init_wall" ] && ~/.config/scripts/wallpaper.sh "$init_wall" && touch ~/.config/.wall_initialized && sleep 1 && touch ~/.cache/.hypr_first_boot && hyprctl reload; fi']])
         hl.exec_cmd("awww-daemon")
 
