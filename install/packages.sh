@@ -20,6 +20,8 @@ packages=(
     bibata-cursor-theme-bin     # cursor theme
     adw-gtk-theme               # gtk theme
     maplemono-ttf               # fonts
+    noto-fonts
+    noto-fonts-emoji
 
     # ------------ Terminal & Shell ------------
     kitty                       # terminal
@@ -44,7 +46,6 @@ packages=(
 
     # ------------ Audio,Wifi,Bluetooth ------------
     pipewire-pulse              # audio compatibility
-    pipewire-alsa               # audio compatibility
     wireplumber                 # audio session manager
     wiremix                     # audio tui
     playerctl                   # media player keybinds
@@ -67,60 +68,6 @@ packages=(
     btop                        # system resource monitor
     brightnessctl               # controls screen and keyboard brightness
     stow                        # symlinks
-
-# ====================================================
-#                  OPTIONAL PACKAGES
-# ====================================================
-
-    # ------------ Daily Apps ------------
-    # zen-browser-bin           # web browser
-    # helium-browser-bin        # web browser
-    # vesktop-bin               # discord client or just install discord
-    # obsidian                  # note taking
-    # localsend                 # local file sharing
-    # Fastpotify                # spotify tui (alternative: spotatui-bin, ncspot)
-    # thunar                    # gtk gui file manager
-
-
-    # ------------ Gaming ------------
-    # steam                     # game launcher
-    # gamescope                 # micro-compositor for gaming
-    # proton-cachyos            # optimized proton compatibility tool
-
-    # ------------ Development ------------
-    # git                       # version control
-    # lazygit                   # git tui
-    # zed                       # gui code editor
-    # openssh                   # ssh
-    # gum                       # shell scripts (some of my bashrc lines require this)
-
-    # ------------ Advanced Terminal Utilities ------------
-    # eza                       # ls replacement
-    # fd                        # faster alternative to 'find'
-    # zoxide                    # smarter 'cd' directory jumping
-    # fzf                       # fuzzy finder
-
-    # ------------ Advanced System Utilities ------------
-    # bottom                    # alternative system monitor
-    # systemctl-tui             # manage systemd services
-    # stacer-bin                # system optimizer & GUI monitor
-    # netsonar-bin              # network monitoring
-    # gdu                       # disk usage analyzer
-    # ncdu                      # disk usage analyzer (alternative)
-    # efibootmgr                # modify UEFI boot entries
-    # pachub                    # Front End for Pacman/AUR
-    # dust git                  # A more intuitive version of du in rust
-
-    # ------------ Terminal Rice (Visuals & Fun) ------------
-    # astroterm                 # terminal planetarium
-    # asciinema                 # terminal session recorder
-    # cbonsai                   # bonsai tree generator
-    # catnap-git                # system fetch tool
-    # stormy-bin                # weather fetch
-    # terminaltexteffects       # text animations
-    # scope-tui                 # A simple oscilloscope/vectorscope/spectroscope for your terminal
-    # weathr                    # a terminal weather app with ascii animation
-    # terminal-rain-lightning
 )
 
 # ====================================================
